@@ -1,0 +1,750 @@
+{
+ "site": "rollup/newrelic/nomaps",
+ "url": "https://app.corpus.test/index.html",
+ "browser": "chromium 153.0.8010.12",
+ "settleMs": 3000,
+ "snapshot": {
+  "holders": 1962,
+  "descriptors": 15442
+ },
+ "mutations": [
+  {
+   "target": "console.debug",
+   "holder": "console",
+   "holderKind": "namespace",
+   "interface": "console",
+   "key": "debug",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "own:nr@original:<uuid>",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-CZ9zif83.js",
+    "line": 1,
+    "column": 42396
+   }
+  },
+  {
+   "target": "console.error",
+   "holder": "console",
+   "holderKind": "namespace",
+   "interface": "console",
+   "key": "error",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "own:nr@original:<uuid>",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-CZ9zif83.js",
+    "line": 1,
+    "column": 42396
+   }
+  },
+  {
+   "target": "console.info",
+   "holder": "console",
+   "holderKind": "namespace",
+   "interface": "console",
+   "key": "info",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "own:nr@original:<uuid>",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-CZ9zif83.js",
+    "line": 1,
+    "column": 42396
+   }
+  },
+  {
+   "target": "console.log",
+   "holder": "console",
+   "holderKind": "namespace",
+   "interface": "console",
+   "key": "log",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "own:nr@original:<uuid>",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-CZ9zif83.js",
+    "line": 1,
+    "column": 42396
+   }
+  },
+  {
+   "target": "console.trace",
+   "holder": "console",
+   "holderKind": "namespace",
+   "interface": "console",
+   "key": "trace",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "own:nr@original:<uuid>",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-CZ9zif83.js",
+    "line": 1,
+    "column": 42396
+   }
+  },
+  {
+   "target": "console.warn",
+   "holder": "console",
+   "holderKind": "namespace",
+   "interface": "console",
+   "key": "warn",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "own:nr@original:<uuid>",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-CZ9zif83.js",
+    "line": 1,
+    "column": 42396
+   }
+  },
+  {
+   "target": "EventTarget.prototype.addEventListener",
+   "holder": "EventTarget.prototype",
+   "holderKind": "prototype",
+   "interface": "EventTarget",
+   "key": "addEventListener",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "own:nr@original:<uuid>",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-CZ9zif83.js",
+    "line": 1,
+    "column": 42396
+   }
+  },
+  {
+   "target": "EventTarget.prototype.removeEventListener",
+   "holder": "EventTarget.prototype",
+   "holderKind": "prototype",
+   "interface": "EventTarget",
+   "key": "removeEventListener",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "own:nr@original:<uuid>",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-CZ9zif83.js",
+    "line": 1,
+    "column": 42396
+   }
+  },
+  {
+   "target": "history.pushState",
+   "holder": "history",
+   "holderKind": "singleton",
+   "interface": "History",
+   "key": "pushState",
+   "change": "shadow",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "shadows": "History.prototype.pushState",
+   "effect": "wrap",
+   "wrapEvidence": "own:nr@original:<uuid>",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-CZ9zif83.js",
+    "line": 1,
+    "column": 42396
+   }
+  },
+  {
+   "target": "history.replaceState",
+   "holder": "history",
+   "holderKind": "singleton",
+   "interface": "History",
+   "key": "replaceState",
+   "change": "shadow",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "shadows": "History.prototype.replaceState",
+   "effect": "wrap",
+   "wrapEvidence": "own:nr@original:<uuid>",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-CZ9zif83.js",
+    "line": 1,
+    "column": 42396
+   }
+  },
+  {
+   "target": "Request.prototype.arrayBuffer",
+   "holder": "Request.prototype",
+   "holderKind": "prototype",
+   "interface": "Request",
+   "key": "arrayBuffer",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "closure:i",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-CZ9zif83.js",
+    "line": 1,
+    "column": 45704
+   }
+  },
+  {
+   "target": "Request.prototype.blob",
+   "holder": "Request.prototype",
+   "holderKind": "prototype",
+   "interface": "Request",
+   "key": "blob",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "closure:i",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-CZ9zif83.js",
+    "line": 1,
+    "column": 45704
+   }
+  },
+  {
+   "target": "Request.prototype.formData",
+   "holder": "Request.prototype",
+   "holderKind": "prototype",
+   "interface": "Request",
+   "key": "formData",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "closure:i",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-CZ9zif83.js",
+    "line": 1,
+    "column": 45704
+   }
+  },
+  {
+   "target": "Request.prototype.json",
+   "holder": "Request.prototype",
+   "holderKind": "prototype",
+   "interface": "Request",
+   "key": "json",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "closure:i",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-CZ9zif83.js",
+    "line": 1,
+    "column": 45704
+   }
+  },
+  {
+   "target": "Request.prototype.text",
+   "holder": "Request.prototype",
+   "holderKind": "prototype",
+   "interface": "Request",
+   "key": "text",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "closure:i",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-CZ9zif83.js",
+    "line": 1,
+    "column": 45704
+   }
+  },
+  {
+   "target": "Response.prototype.arrayBuffer",
+   "holder": "Response.prototype",
+   "holderKind": "prototype",
+   "interface": "Response",
+   "key": "arrayBuffer",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "closure:i",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-CZ9zif83.js",
+    "line": 1,
+    "column": 45704
+   }
+  },
+  {
+   "target": "Response.prototype.blob",
+   "holder": "Response.prototype",
+   "holderKind": "prototype",
+   "interface": "Response",
+   "key": "blob",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "closure:i",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-CZ9zif83.js",
+    "line": 1,
+    "column": 45704
+   }
+  },
+  {
+   "target": "Response.prototype.formData",
+   "holder": "Response.prototype",
+   "holderKind": "prototype",
+   "interface": "Response",
+   "key": "formData",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "closure:i",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-CZ9zif83.js",
+    "line": 1,
+    "column": 45704
+   }
+  },
+  {
+   "target": "Response.prototype.json",
+   "holder": "Response.prototype",
+   "holderKind": "prototype",
+   "interface": "Response",
+   "key": "json",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "closure:i",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-CZ9zif83.js",
+    "line": 1,
+    "column": 45704
+   }
+  },
+  {
+   "target": "Response.prototype.text",
+   "holder": "Response.prototype",
+   "holderKind": "prototype",
+   "interface": "Response",
+   "key": "text",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "closure:i",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-CZ9zif83.js",
+    "line": 1,
+    "column": 45704
+   }
+  },
+  {
+   "target": "Window.fetch",
+   "holder": "Window",
+   "holderKind": "global",
+   "interface": "Window",
+   "key": "fetch",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "closure:i",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-CZ9zif83.js",
+    "line": 1,
+    "column": 45704
+   }
+  },
+  {
+   "target": "Window.XMLHttpRequest",
+   "holder": "Window",
+   "holderKind": "global",
+   "interface": "Window",
+   "key": "XMLHttpRequest",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "closure:i->own:inPlace->closure:bn",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-CZ9zif83.js",
+    "line": 1,
+    "column": 44491
+   }
+  },
+  {
+   "target": "XMLHttpRequest.prototype.open",
+   "holder": "XMLHttpRequest.prototype",
+   "holderKind": "prototype",
+   "interface": "XMLHttpRequest",
+   "key": "open",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "own:nr@original:<uuid>",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-CZ9zif83.js",
+    "line": 1,
+    "column": 42396
+   }
+  },
+  {
+   "target": "XMLHttpRequest.prototype.send",
+   "holder": "XMLHttpRequest.prototype",
+   "holderKind": "prototype",
+   "interface": "XMLHttpRequest",
+   "key": "send",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "own:nr@original:<uuid>",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-CZ9zif83.js",
+    "line": 1,
+    "column": 42396
+   }
+  },
+  {
+   "target": "XMLHttpRequest.prototype.setRequestHeader",
+   "holder": "XMLHttpRequest.prototype",
+   "holderKind": "prototype",
+   "interface": "XMLHttpRequest",
+   "key": "setRequestHeader",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "own:nr@original:<uuid>",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-CZ9zif83.js",
+    "line": 1,
+    "column": 42396
+   }
+  }
+ ],
+ "expandos": [],
+ "newGlobals": [
+  "NREUM",
+  "__corpusReady",
+  "newrelic"
+ ],
+ "workers": [],
+ "blockedOrigins": [
+  "https://bam.example.invalid"
+ ],
+ "pageErrors": []
+}

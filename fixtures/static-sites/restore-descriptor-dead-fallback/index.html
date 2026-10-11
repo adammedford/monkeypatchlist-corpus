@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>fixture: restore-descriptor-dead-fallback</title></head>
+<body>
+<h1>restore-descriptor-dead-fallback</h1>
+<button id="corpus-button" type="button">click</button>
+<script>
+function hook(t, k) {
+  var d = Object.getOwnPropertyDescriptor(t, k);
+  Object.defineProperty(t, k, { set: function (v) { d.set.call(this, v); } });
+  return function () { /*R{*/Object.defineProperty(t, k, d || {});/*}R*/ };
+}
+window.__corpusTeardown = hook(HTMLInputElement.prototype, 'value');
+</script>
+<script>window.__corpusReady = true;</script>
+</body>
+</html>

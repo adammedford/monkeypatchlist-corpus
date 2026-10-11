@@ -1,0 +1,230 @@
+{
+ "site": "vite/appinsights/nomaps",
+ "url": "https://app.corpus.test/index.html",
+ "browser": "chromium 153.0.8010.12",
+ "settleMs": 3000,
+ "snapshot": {
+  "holders": 1962,
+  "descriptors": 15442
+ },
+ "mutations": [
+  {
+   "target": "History.prototype.pushState",
+   "holder": "History.prototype",
+   "holderKind": "prototype",
+   "interface": "History",
+   "key": "pushState",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "closure:e.f",
+   "definedAt": {
+    "url": "https://app.corpus.test/assets/index-CUHnmtAp.js",
+    "line": 2,
+    "column": 60001
+   }
+  },
+  {
+   "target": "History.prototype.replaceState",
+   "holder": "History.prototype",
+   "holderKind": "prototype",
+   "interface": "History",
+   "key": "replaceState",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "closure:e.f",
+   "definedAt": {
+    "url": "https://app.corpus.test/assets/index-CUHnmtAp.js",
+    "line": 2,
+    "column": 60001
+   }
+  },
+  {
+   "target": "Window.fetch",
+   "holder": "Window",
+   "holderKind": "global",
+   "interface": "Window",
+   "key": "fetch",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "closure:e.f",
+   "definedAt": {
+    "url": "https://app.corpus.test/assets/index-CUHnmtAp.js",
+    "line": 2,
+    "column": 60001
+   }
+  },
+  {
+   "target": "XMLHttpRequest.prototype.abort",
+   "holder": "XMLHttpRequest.prototype",
+   "holderKind": "prototype",
+   "interface": "XMLHttpRequest",
+   "key": "abort",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "closure:e.f",
+   "definedAt": {
+    "url": "https://app.corpus.test/assets/index-CUHnmtAp.js",
+    "line": 2,
+    "column": 60001
+   }
+  },
+  {
+   "target": "XMLHttpRequest.prototype.open",
+   "holder": "XMLHttpRequest.prototype",
+   "holderKind": "prototype",
+   "interface": "XMLHttpRequest",
+   "key": "open",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "closure:e.f",
+   "definedAt": {
+    "url": "https://app.corpus.test/assets/index-CUHnmtAp.js",
+    "line": 2,
+    "column": 60001
+   }
+  },
+  {
+   "target": "XMLHttpRequest.prototype.send",
+   "holder": "XMLHttpRequest.prototype",
+   "holderKind": "prototype",
+   "interface": "XMLHttpRequest",
+   "key": "send",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "closure:e.f",
+   "definedAt": {
+    "url": "https://app.corpus.test/assets/index-CUHnmtAp.js",
+    "line": 2,
+    "column": 60001
+   }
+  },
+  {
+   "target": "XMLHttpRequest.prototype.setRequestHeader",
+   "holder": "XMLHttpRequest.prototype",
+   "holderKind": "prototype",
+   "interface": "XMLHttpRequest",
+   "key": "setRequestHeader",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "closure:e.f",
+   "definedAt": {
+    "url": "https://app.corpus.test/assets/index-CUHnmtAp.js",
+    "line": 2,
+    "column": 60001
+   }
+  }
+ ],
+ "expandos": [
+  "document._aiDataEvents_3_4_48_<rand>"
+ ],
+ "newGlobals": [
+  "__corpusReady",
+  "__dynProto$Gbl",
+  "__tsUtils$gblCfg",
+  "_aiDataEvents_3_4_48_<rand>"
+ ],
+ "workers": [],
+ "blockedOrigins": [
+  "https://ai.example.invalid",
+  "https://js.monitor.azure.com"
+ ],
+ "pageErrors": []
+}

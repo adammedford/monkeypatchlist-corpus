@@ -1,0 +1,17 @@
+{
+  "name": "patchline-scale-fixture",
+  "private": true,
+  "type": "module",
+  "description": "Filler libraries for the scale fixture (corpus/README.md, Scale fixture). The SDKs resolve from the corpus root's node_modules.",
+  "dependencies": {
+    "chart.js": "4.5.1",
+    "d3": "7.9.0",
+    "echarts": "6.1.0",
+    "lodash": "4.18.1",
+    "moment": "2.31.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "rxjs": "7.8.2",
+    "three": "0.186.1"
+  }
+}

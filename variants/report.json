@@ -1,0 +1,1379 @@
+{
+ "invariance": [
+  {
+   "source": "features-on",
+   "run": "appinsights",
+   "builds": 8,
+   "identical": true
+  },
+  {
+   "source": "features-on",
+   "run": "core-js",
+   "builds": 8,
+   "identical": true
+  },
+  {
+   "source": "features-on",
+   "run": "core-js--members",
+   "builds": 8,
+   "identical": true
+  },
+  {
+   "source": "features-on",
+   "run": "datadog",
+   "builds": 8,
+   "identical": true
+  },
+  {
+   "source": "features-on",
+   "run": "newrelic",
+   "builds": 8,
+   "identical": true
+  },
+  {
+   "source": "features-on",
+   "run": "sentry-10",
+   "builds": 8,
+   "identical": true
+  },
+  {
+   "source": "features-on",
+   "run": "sentry-11",
+   "builds": 8,
+   "identical": true
+  },
+  {
+   "source": "lazy-chunks",
+   "run": "datadog",
+   "builds": 8,
+   "identical": true
+  },
+  {
+   "source": "lazy-chunks",
+   "run": "newrelic",
+   "builds": 8,
+   "identical": true
+  },
+  {
+   "source": "native-absent",
+   "run": "core-js.array-iterator",
+   "builds": 8,
+   "identical": true
+  },
+  {
+   "source": "native-absent",
+   "run": "core-js.members",
+   "builds": 8,
+   "identical": true
+  },
+  {
+   "source": "native-absent",
+   "run": "core-js.promise",
+   "builds": 8,
+   "identical": true
+  },
+  {
+   "source": "native-absent",
+   "run": "datadog.css-grouping-rule",
+   "builds": 8,
+   "identical": true
+  },
+  {
+   "source": "native-absent",
+   "run": "es6-promise.constructor",
+   "builds": 8,
+   "identical": true
+  },
+  {
+   "source": "native-absent",
+   "run": "newrelic.rrweb",
+   "builds": 8,
+   "identical": true
+  },
+  {
+   "source": "native-absent",
+   "run": "otel.event-target",
+   "builds": 8,
+   "identical": true
+  },
+  {
+   "source": "native-absent",
+   "run": "promise-polyfill.constructor",
+   "builds": 8,
+   "identical": true
+  },
+  {
+   "source": "native-absent",
+   "run": "promise-polyfill.members",
+   "builds": 8,
+   "identical": true
+  },
+  {
+   "source": "native-absent",
+   "run": "sentry-10.rrweb",
+   "builds": 8,
+   "identical": true
+  },
+  {
+   "source": "native-absent",
+   "run": "sentry-11.rrweb",
+   "builds": 8,
+   "identical": true
+  },
+  {
+   "source": "native-absent",
+   "run": "sentry-7.rrweb",
+   "builds": 8,
+   "identical": true
+  },
+  {
+   "source": "native-absent",
+   "run": "whatwg-fetch.fetch",
+   "builds": 8,
+   "identical": true
+  },
+  {
+   "source": "native-absent",
+   "run": "core-js.array-symbol-iterator",
+   "builds": 6,
+   "identical": true
+  }
+ ],
+ "conflicts": [
+  {
+   "library": "es6-promise",
+   "target": "Window.Promise",
+   "hand": "conditional",
+   "derived": "guarded-native-absence",
+   "corrected": true
+  }
+ ],
+ "dormant": {
+  "source": "prototypes/resolver/out/full-triage.json",
+  "libraries": {
+   "appinsights": {
+    "counts": {
+     "dormant": 2,
+     "features-on": 0,
+     "lazy-chunks": 0,
+     "native-absent": 0,
+     "base": 0,
+     "anyVariant": 0,
+     "none": 2
+    },
+    "confirmed": [],
+    "unreached": [
+     "history.pushState",
+     "history.replaceState"
+    ]
+   },
+   "core-js": {
+    "counts": {
+     "dormant": 118,
+     "features-on": 3,
+     "lazy-chunks": 0,
+     "native-absent": 10,
+     "base": 0,
+     "anyVariant": 10,
+     "none": 108
+    },
+    "confirmed": [
+     {
+      "target": "Array.prototype.[Symbol.iterator]",
+      "reach": "conditional",
+      "reachedBy": [
+       "native-absent"
+      ]
+     },
+     {
+      "target": "Array.prototype.[Symbol.unscopables]",
+      "reach": "conditional",
+      "reachedBy": [
+       "native-absent"
+      ]
+     },
+     {
+      "target": "Array.prototype.entries",
+      "reach": "conditional",
+      "reachedBy": [
+       "native-absent"
+      ]
+     },
+     {
+      "target": "Array.prototype.values",
+      "reach": "conditional",
+      "reachedBy": [
+       "native-absent"
+      ]
+     },
+     {
+      "target": "Promise.prototype.[[Prototype]]",
+      "reach": "conditional",
+      "reachedBy": [
+       "features-on",
+       "native-absent"
+      ]
+     },
+     {
+      "target": "Promise.prototype.constructor",
+      "reach": "conditional",
+      "reachedBy": [
+       "features-on",
+       "native-absent"
+      ]
+     },
+     {
+      "target": "Window.fetch",
+      "reach": "conditional",
+      "reachedBy": [
+       "native-absent"
+      ]
+     },
+     {
+      "target": "Window.Request",
+      "reach": "conditional",
+      "reachedBy": [
+       "native-absent"
+      ]
+     },
+     {
+      "target": "Request.prototype.constructor",
+      "reach": "conditional",
+      "reachedBy": [
+       "native-absent"
+      ]
+     },
+     {
+      "target": "String.fromCodePoint",
+      "reach": "conditional",
+      "reachedBy": [
+       "features-on",
+       "native-absent"
+      ]
+     }
+    ],
+    "unreached": [
+     "Array.prototype.[Symbol.local]:Symbol.iterator",
+     "Array.prototype.[Symbol.local]:Symbol.unscopables",
+     "Array.prototype.keys",
+     "Array.prototype.name",
+     "Array.prototype.Promise",
+     "Object.prototype.__proto__",
+     "Object.prototype.[Symbol.iterator]",
+     "Object.prototype.[Symbol.local]:Symbol.iterator",
+     "Object.prototype.Promise",
+     "Promise.constructor",
+     "Promise.hasOwnProperty",
+     "Promise.isPrototypeOf",
+     "Promise.length",
+     "Promise.propertyIsEnumerable",
+     "Promise.prototype.__proto__",
+     "Promise.prototype.[Symbol.local]:Symbol.toStringTag",
+     "Promise.prototype.[Symbol.toStringTag]",
+     "Promise.toLocaleString",
+     "Promise.toString",
+     "Promise.valueOf",
+     "String.prototype.[Symbol.iterator]",
+     "String.prototype.[Symbol.local]:Symbol.iterator",
+     "String.prototype.name",
+     "String.prototype.Promise",
+     "Window.String",
+     "Promise.[Symbol.local]:Symbol.species",
+     "Promise.[Symbol.species]",
+     "Promise.fromCodePoint",
+     "Promise.inspectSource",
+     "Promise.keys",
+     "Promise.prototype.Promise",
+     "Promise.state",
+     "Promise.versions",
+     "Promise.wks",
+     "Promise.Promise",
+     "Function.__proto__",
+     "Function.[[Prototype]]",
+     "Function.[Symbol.iterator]",
+     "Function.[Symbol.local]:Symbol.iterator",
+     "Function.[Symbol.local]:Symbol.toStringTag",
+     "Function.[Symbol.toStringTag]",
+     "Function.append",
+     "Function.catch",
+     "Function.delete",
+     "Function.entries",
+     "Function.finally",
+     "Function.forEach",
+     "Function.get",
+     "Function.getAll",
+     "Function.has",
+     "Function.hash",
+     "Function.host",
+     "Function.hostname",
+     "Function.href",
+     "Function.keys",
+     "Function.origin",
+     "Function.password",
+     "Function.pathname",
+     "Function.port",
+     "Function.Promise",
+     "Function.protocol",
+     "Function.search",
+     "Function.searchParams",
+     "Function.set",
+     "Function.size",
+     "Function.sort",
+     "Function.then",
+     "Function.toJSON",
+     "Function.toString",
+     "Function.username",
+     "Function.values",
+     "Promise.prototype.source",
+     "URLSearchParams.prototype.[Symbol.iterator]",
+     "URLSearchParams.prototype.[Symbol.local]:Symbol.iterator",
+     "URLSearchParams.prototype.[Symbol.local]:Symbol.toStringTag",
+     "URLSearchParams.prototype.[Symbol.toStringTag]",
+     "URLSearchParams.prototype.append",
+     "URLSearchParams.prototype.delete",
+     "URLSearchParams.prototype.entries",
+     "URLSearchParams.prototype.forEach",
+     "URLSearchParams.prototype.get",
+     "URLSearchParams.prototype.getAll",
+     "URLSearchParams.prototype.has",
+     "URLSearchParams.prototype.keys",
+     "URLSearchParams.prototype.Promise",
+     "URLSearchParams.prototype.set",
+     "URLSearchParams.prototype.size",
+     "URLSearchParams.prototype.sort",
+     "URLSearchParams.prototype.toString",
+     "URLSearchParams.prototype.values",
+     "webkitURL.prototype.[Symbol.local]:Symbol.toStringTag",
+     "webkitURL.prototype.[Symbol.toStringTag]",
+     "webkitURL.prototype.hash",
+     "webkitURL.prototype.host",
+     "webkitURL.prototype.hostname",
+     "webkitURL.prototype.href",
+     "webkitURL.prototype.origin",
+     "webkitURL.prototype.password",
+     "webkitURL.prototype.pathname",
+     "webkitURL.prototype.port",
+     "webkitURL.prototype.Promise",
+     "webkitURL.prototype.protocol",
+     "webkitURL.prototype.search",
+     "webkitURL.prototype.searchParams",
+     "webkitURL.prototype.toJSON",
+     "webkitURL.prototype.toString",
+     "webkitURL.prototype.username",
+     "Window.toString"
+    ]
+   },
+   "datadog": {
+    "counts": {
+     "dormant": 1,
+     "features-on": 0,
+     "lazy-chunks": 0,
+     "native-absent": 0,
+     "base": 0,
+     "anyVariant": 0,
+     "none": 1
+    },
+    "confirmed": [],
+    "unreached": [
+     "Date.prototype.toJSON"
+    ]
+   },
+   "newrelic": {
+    "counts": {
+     "dormant": 479,
+     "features-on": 18,
+     "lazy-chunks": 17,
+     "native-absent": 25,
+     "base": 0,
+     "anyVariant": 26,
+     "none": 453
+    },
+    "confirmed": [
+     {
+      "target": "CSSConditionRule.prototype.deleteRule",
+      "reach": "guarded-native-absence",
+      "reachedBy": [
+       "native-absent"
+      ]
+     },
+     {
+      "target": "CSSConditionRule.prototype.insertRule",
+      "reach": "guarded-native-absence",
+      "reachedBy": [
+       "native-absent"
+      ]
+     },
+     {
+      "target": "CSSGroupingRule.prototype.deleteRule",
+      "reach": "conditional",
+      "reachedBy": [
+       "features-on",
+       "lazy-chunks",
+       "native-absent"
+      ]
+     },
+     {
+      "target": "CSSGroupingRule.prototype.insertRule",
+      "reach": "conditional",
+      "reachedBy": [
+       "features-on",
+       "lazy-chunks",
+       "native-absent"
+      ]
+     },
+     {
+      "target": "CSSMediaRule.prototype.deleteRule",
+      "reach": "guarded-native-absence",
+      "reachedBy": [
+       "native-absent"
+      ]
+     },
+     {
+      "target": "CSSMediaRule.prototype.insertRule",
+      "reach": "guarded-native-absence",
+      "reachedBy": [
+       "native-absent"
+      ]
+     },
+     {
+      "target": "CSSStyleDeclaration.prototype.removeProperty",
+      "reach": "conditional",
+      "reachedBy": [
+       "features-on",
+       "lazy-chunks",
+       "native-absent"
+      ]
+     },
+     {
+      "target": "CSSStyleDeclaration.prototype.setProperty",
+      "reach": "conditional",
+      "reachedBy": [
+       "features-on",
+       "lazy-chunks",
+       "native-absent"
+      ]
+     },
+     {
+      "target": "CSSStyleSheet.prototype.addRule",
+      "reach": "conditional",
+      "reachedBy": [
+       "features-on",
+       "lazy-chunks",
+       "native-absent"
+      ]
+     },
+     {
+      "target": "CSSStyleSheet.prototype.deleteRule",
+      "reach": "conditional",
+      "reachedBy": [
+       "features-on",
+       "lazy-chunks",
+       "native-absent"
+      ]
+     },
+     {
+      "target": "CSSStyleSheet.prototype.insertRule",
+      "reach": "conditional",
+      "reachedBy": [
+       "features-on",
+       "lazy-chunks",
+       "native-absent"
+      ]
+     },
+     {
+      "target": "CSSStyleSheet.prototype.removeRule",
+      "reach": "conditional",
+      "reachedBy": [
+       "features-on",
+       "lazy-chunks",
+       "native-absent"
+      ]
+     },
+     {
+      "target": "CSSStyleSheet.prototype.replace",
+      "reach": "conditional",
+      "reachedBy": [
+       "features-on",
+       "lazy-chunks",
+       "native-absent"
+      ]
+     },
+     {
+      "target": "CSSStyleSheet.prototype.replaceSync",
+      "reach": "conditional",
+      "reachedBy": [
+       "features-on",
+       "lazy-chunks",
+       "native-absent"
+      ]
+     },
+     {
+      "target": "CSSSupportsRule.prototype.deleteRule",
+      "reach": "guarded-native-absence",
+      "reachedBy": [
+       "native-absent"
+      ]
+     },
+     {
+      "target": "CSSSupportsRule.prototype.insertRule",
+      "reach": "guarded-native-absence",
+      "reachedBy": [
+       "native-absent"
+      ]
+     },
+     {
+      "target": "DOMTokenList.prototype.forEach",
+      "reach": "guarded-native-absence",
+      "reachedBy": [
+       "native-absent"
+      ]
+     },
+     {
+      "target": "NodeList.prototype.forEach",
+      "reach": "guarded-native-absence",
+      "reachedBy": [
+       "native-absent"
+      ]
+     },
+     {
+      "target": "Window.FontFace",
+      "reach": "conditional",
+      "reachedBy": [
+       "features-on"
+      ]
+     },
+     {
+      "target": "customElements.define",
+      "reach": "conditional",
+      "reachedBy": [
+       "features-on",
+       "lazy-chunks",
+       "native-absent"
+      ]
+     },
+     {
+      "target": "HTMLInputElement.prototype.checked",
+      "reach": "conditional",
+      "reachedBy": [
+       "features-on",
+       "lazy-chunks",
+       "native-absent"
+      ]
+     },
+     {
+      "target": "HTMLInputElement.prototype.value",
+      "reach": "conditional",
+      "reachedBy": [
+       "features-on",
+       "lazy-chunks",
+       "native-absent"
+      ]
+     },
+     {
+      "target": "HTMLOptionElement.prototype.selected",
+      "reach": "conditional",
+      "reachedBy": [
+       "features-on",
+       "lazy-chunks",
+       "native-absent"
+      ]
+     },
+     {
+      "target": "HTMLSelectElement.prototype.selectedIndex",
+      "reach": "conditional",
+      "reachedBy": [
+       "features-on",
+       "lazy-chunks",
+       "native-absent"
+      ]
+     },
+     {
+      "target": "HTMLSelectElement.prototype.value",
+      "reach": "conditional",
+      "reachedBy": [
+       "features-on",
+       "lazy-chunks",
+       "native-absent"
+      ]
+     },
+     {
+      "target": "HTMLTextAreaElement.prototype.value",
+      "reach": "conditional",
+      "reachedBy": [
+       "features-on",
+       "lazy-chunks",
+       "native-absent"
+      ]
+     }
+    ],
+    "unreached": [
+     "CanvasRenderingContext2D.prototype.arc",
+     "CanvasRenderingContext2D.prototype.arcTo",
+     "CanvasRenderingContext2D.prototype.beginPath",
+     "CanvasRenderingContext2D.prototype.bezierCurveTo",
+     "CanvasRenderingContext2D.prototype.canvas",
+     "CanvasRenderingContext2D.prototype.clearRect",
+     "CanvasRenderingContext2D.prototype.clip",
+     "CanvasRenderingContext2D.prototype.closePath",
+     "CanvasRenderingContext2D.prototype.constructor",
+     "CanvasRenderingContext2D.prototype.createConicGradient",
+     "CanvasRenderingContext2D.prototype.createImageData",
+     "CanvasRenderingContext2D.prototype.createLinearGradient",
+     "CanvasRenderingContext2D.prototype.createPattern",
+     "CanvasRenderingContext2D.prototype.createRadialGradient",
+     "CanvasRenderingContext2D.prototype.direction",
+     "CanvasRenderingContext2D.prototype.drawFocusIfNeeded",
+     "CanvasRenderingContext2D.prototype.drawImage",
+     "CanvasRenderingContext2D.prototype.ellipse",
+     "CanvasRenderingContext2D.prototype.fill",
+     "CanvasRenderingContext2D.prototype.fillRect",
+     "CanvasRenderingContext2D.prototype.fillStyle",
+     "CanvasRenderingContext2D.prototype.fillText",
+     "CanvasRenderingContext2D.prototype.filter",
+     "CanvasRenderingContext2D.prototype.font",
+     "CanvasRenderingContext2D.prototype.fontKerning",
+     "CanvasRenderingContext2D.prototype.fontStretch",
+     "CanvasRenderingContext2D.prototype.fontVariantCaps",
+     "CanvasRenderingContext2D.prototype.getContextAttributes",
+     "CanvasRenderingContext2D.prototype.getImageData",
+     "CanvasRenderingContext2D.prototype.getLineDash",
+     "CanvasRenderingContext2D.prototype.getTransform",
+     "CanvasRenderingContext2D.prototype.globalAlpha",
+     "CanvasRenderingContext2D.prototype.globalCompositeOperation",
+     "CanvasRenderingContext2D.prototype.imageSmoothingEnabled",
+     "CanvasRenderingContext2D.prototype.imageSmoothingQuality",
+     "CanvasRenderingContext2D.prototype.isContextLost",
+     "CanvasRenderingContext2D.prototype.isPointInPath",
+     "CanvasRenderingContext2D.prototype.isPointInStroke",
+     "CanvasRenderingContext2D.prototype.lang",
+     "CanvasRenderingContext2D.prototype.letterSpacing",
+     "CanvasRenderingContext2D.prototype.lineCap",
+     "CanvasRenderingContext2D.prototype.lineDashOffset",
+     "CanvasRenderingContext2D.prototype.lineJoin",
+     "CanvasRenderingContext2D.prototype.lineTo",
+     "CanvasRenderingContext2D.prototype.lineWidth",
+     "CanvasRenderingContext2D.prototype.measureText",
+     "CanvasRenderingContext2D.prototype.miterLimit",
+     "CanvasRenderingContext2D.prototype.moveTo",
+     "CanvasRenderingContext2D.prototype.putImageData",
+     "CanvasRenderingContext2D.prototype.quadraticCurveTo",
+     "CanvasRenderingContext2D.prototype.rect",
+     "CanvasRenderingContext2D.prototype.reset",
+     "CanvasRenderingContext2D.prototype.resetTransform",
+     "CanvasRenderingContext2D.prototype.restore",
+     "CanvasRenderingContext2D.prototype.rotate",
+     "CanvasRenderingContext2D.prototype.roundRect",
+     "CanvasRenderingContext2D.prototype.save",
+     "CanvasRenderingContext2D.prototype.scale",
+     "CanvasRenderingContext2D.prototype.setLineDash",
+     "CanvasRenderingContext2D.prototype.setTransform",
+     "CanvasRenderingContext2D.prototype.shadowBlur",
+     "CanvasRenderingContext2D.prototype.shadowColor",
+     "CanvasRenderingContext2D.prototype.shadowOffsetX",
+     "CanvasRenderingContext2D.prototype.shadowOffsetY",
+     "CanvasRenderingContext2D.prototype.stroke",
+     "CanvasRenderingContext2D.prototype.strokeRect",
+     "CanvasRenderingContext2D.prototype.strokeStyle",
+     "CanvasRenderingContext2D.prototype.strokeText",
+     "CanvasRenderingContext2D.prototype.textAlign",
+     "CanvasRenderingContext2D.prototype.textBaseline",
+     "CanvasRenderingContext2D.prototype.textRendering",
+     "CanvasRenderingContext2D.prototype.transform",
+     "CanvasRenderingContext2D.prototype.translate",
+     "CanvasRenderingContext2D.prototype.wordSpacing",
+     "HTMLCanvasElement.prototype.getContext",
+     "WebGL2RenderingContext.prototype.activeTexture",
+     "WebGL2RenderingContext.prototype.attachShader",
+     "WebGL2RenderingContext.prototype.beginQuery",
+     "WebGL2RenderingContext.prototype.beginTransformFeedback",
+     "WebGL2RenderingContext.prototype.bindAttribLocation",
+     "WebGL2RenderingContext.prototype.bindBuffer",
+     "WebGL2RenderingContext.prototype.bindBufferBase",
+     "WebGL2RenderingContext.prototype.bindBufferRange",
+     "WebGL2RenderingContext.prototype.bindFramebuffer",
+     "WebGL2RenderingContext.prototype.bindRenderbuffer",
+     "WebGL2RenderingContext.prototype.bindSampler",
+     "WebGL2RenderingContext.prototype.bindTexture",
+     "WebGL2RenderingContext.prototype.bindTransformFeedback",
+     "WebGL2RenderingContext.prototype.bindVertexArray",
+     "WebGL2RenderingContext.prototype.blendColor",
+     "WebGL2RenderingContext.prototype.blendEquation",
+     "WebGL2RenderingContext.prototype.blendEquationSeparate",
+     "WebGL2RenderingContext.prototype.blendFunc",
+     "WebGL2RenderingContext.prototype.blendFuncSeparate",
+     "WebGL2RenderingContext.prototype.blitFramebuffer",
+     "WebGL2RenderingContext.prototype.bufferData",
+     "WebGL2RenderingContext.prototype.bufferSubData",
+     "WebGL2RenderingContext.prototype.canvas",
+     "WebGL2RenderingContext.prototype.checkFramebufferStatus",
+     "WebGL2RenderingContext.prototype.clear",
+     "WebGL2RenderingContext.prototype.clearBufferfi",
+     "WebGL2RenderingContext.prototype.clearBufferfv",
+     "WebGL2RenderingContext.prototype.clearBufferiv",
+     "WebGL2RenderingContext.prototype.clearBufferuiv",
+     "WebGL2RenderingContext.prototype.clearColor",
+     "WebGL2RenderingContext.prototype.clearDepth",
+     "WebGL2RenderingContext.prototype.clearStencil",
+     "WebGL2RenderingContext.prototype.clientWaitSync",
+     "WebGL2RenderingContext.prototype.colorMask",
+     "WebGL2RenderingContext.prototype.compileShader",
+     "WebGL2RenderingContext.prototype.compressedTexImage2D",
+     "WebGL2RenderingContext.prototype.compressedTexImage3D",
+     "WebGL2RenderingContext.prototype.compressedTexSubImage2D",
+     "WebGL2RenderingContext.prototype.compressedTexSubImage3D",
+     "WebGL2RenderingContext.prototype.constructor",
+     "WebGL2RenderingContext.prototype.copyBufferSubData",
+     "WebGL2RenderingContext.prototype.copyTexImage2D",
+     "WebGL2RenderingContext.prototype.copyTexSubImage2D",
+     "WebGL2RenderingContext.prototype.copyTexSubImage3D",
+     "WebGL2RenderingContext.prototype.createBuffer",
+     "WebGL2RenderingContext.prototype.createFramebuffer",
+     "WebGL2RenderingContext.prototype.createProgram",
+     "WebGL2RenderingContext.prototype.createQuery",
+     "WebGL2RenderingContext.prototype.createRenderbuffer",
+     "WebGL2RenderingContext.prototype.createSampler",
+     "WebGL2RenderingContext.prototype.createShader",
+     "WebGL2RenderingContext.prototype.createTexture",
+     "WebGL2RenderingContext.prototype.createTransformFeedback",
+     "WebGL2RenderingContext.prototype.createVertexArray",
+     "WebGL2RenderingContext.prototype.cullFace",
+     "WebGL2RenderingContext.prototype.deleteBuffer",
+     "WebGL2RenderingContext.prototype.deleteFramebuffer",
+     "WebGL2RenderingContext.prototype.deleteProgram",
+     "WebGL2RenderingContext.prototype.deleteQuery",
+     "WebGL2RenderingContext.prototype.deleteRenderbuffer",
+     "WebGL2RenderingContext.prototype.deleteSampler",
+     "WebGL2RenderingContext.prototype.deleteShader",
+     "WebGL2RenderingContext.prototype.deleteSync",
+     "WebGL2RenderingContext.prototype.deleteTexture",
+     "WebGL2RenderingContext.prototype.deleteTransformFeedback",
+     "WebGL2RenderingContext.prototype.deleteVertexArray",
+     "WebGL2RenderingContext.prototype.depthFunc",
+     "WebGL2RenderingContext.prototype.depthMask",
+     "WebGL2RenderingContext.prototype.depthRange",
+     "WebGL2RenderingContext.prototype.detachShader",
+     "WebGL2RenderingContext.prototype.disable",
+     "WebGL2RenderingContext.prototype.disableVertexAttribArray",
+     "WebGL2RenderingContext.prototype.drawArrays",
+     "WebGL2RenderingContext.prototype.drawArraysInstanced",
+     "WebGL2RenderingContext.prototype.drawBuffers",
+     "WebGL2RenderingContext.prototype.drawElements",
+     "WebGL2RenderingContext.prototype.drawElementsInstanced",
+     "WebGL2RenderingContext.prototype.drawingBufferColorSpace",
+     "WebGL2RenderingContext.prototype.drawingBufferFormat",
+     "WebGL2RenderingContext.prototype.drawingBufferHeight",
+     "WebGL2RenderingContext.prototype.drawingBufferStorage",
+     "WebGL2RenderingContext.prototype.drawingBufferWidth",
+     "WebGL2RenderingContext.prototype.drawRangeElements",
+     "WebGL2RenderingContext.prototype.enable",
+     "WebGL2RenderingContext.prototype.enableVertexAttribArray",
+     "WebGL2RenderingContext.prototype.endQuery",
+     "WebGL2RenderingContext.prototype.endTransformFeedback",
+     "WebGL2RenderingContext.prototype.fenceSync",
+     "WebGL2RenderingContext.prototype.finish",
+     "WebGL2RenderingContext.prototype.flush",
+     "WebGL2RenderingContext.prototype.framebufferRenderbuffer",
+     "WebGL2RenderingContext.prototype.framebufferTexture2D",
+     "WebGL2RenderingContext.prototype.framebufferTextureLayer",
+     "WebGL2RenderingContext.prototype.frontFace",
+     "WebGL2RenderingContext.prototype.generateMipmap",
+     "WebGL2RenderingContext.prototype.getActiveAttrib",
+     "WebGL2RenderingContext.prototype.getActiveUniform",
+     "WebGL2RenderingContext.prototype.getActiveUniformBlockName",
+     "WebGL2RenderingContext.prototype.getActiveUniformBlockParameter",
+     "WebGL2RenderingContext.prototype.getActiveUniforms",
+     "WebGL2RenderingContext.prototype.getAttachedShaders",
+     "WebGL2RenderingContext.prototype.getAttribLocation",
+     "WebGL2RenderingContext.prototype.getBufferParameter",
+     "WebGL2RenderingContext.prototype.getBufferSubData",
+     "WebGL2RenderingContext.prototype.getContextAttributes",
+     "WebGL2RenderingContext.prototype.getError",
+     "WebGL2RenderingContext.prototype.getExtension",
+     "WebGL2RenderingContext.prototype.getFragDataLocation",
+     "WebGL2RenderingContext.prototype.getFramebufferAttachmentParameter",
+     "WebGL2RenderingContext.prototype.getIndexedParameter",
+     "WebGL2RenderingContext.prototype.getInternalformatParameter",
+     "WebGL2RenderingContext.prototype.getParameter",
+     "WebGL2RenderingContext.prototype.getProgramInfoLog",
+     "WebGL2RenderingContext.prototype.getProgramParameter",
+     "WebGL2RenderingContext.prototype.getQuery",
+     "WebGL2RenderingContext.prototype.getQueryParameter",
+     "WebGL2RenderingContext.prototype.getRenderbufferParameter",
+     "WebGL2RenderingContext.prototype.getSamplerParameter",
+     "WebGL2RenderingContext.prototype.getShaderInfoLog",
+     "WebGL2RenderingContext.prototype.getShaderParameter",
+     "WebGL2RenderingContext.prototype.getShaderPrecisionFormat",
+     "WebGL2RenderingContext.prototype.getShaderSource",
+     "WebGL2RenderingContext.prototype.getSupportedExtensions",
+     "WebGL2RenderingContext.prototype.getSyncParameter",
+     "WebGL2RenderingContext.prototype.getTexParameter",
+     "WebGL2RenderingContext.prototype.getTransformFeedbackVarying",
+     "WebGL2RenderingContext.prototype.getUniform",
+     "WebGL2RenderingContext.prototype.getUniformBlockIndex",
+     "WebGL2RenderingContext.prototype.getUniformIndices",
+     "WebGL2RenderingContext.prototype.getUniformLocation",
+     "WebGL2RenderingContext.prototype.getVertexAttrib",
+     "WebGL2RenderingContext.prototype.getVertexAttribOffset",
+     "WebGL2RenderingContext.prototype.hint",
+     "WebGL2RenderingContext.prototype.invalidateFramebuffer",
+     "WebGL2RenderingContext.prototype.invalidateSubFramebuffer",
+     "WebGL2RenderingContext.prototype.isBuffer",
+     "WebGL2RenderingContext.prototype.isContextLost",
+     "WebGL2RenderingContext.prototype.isEnabled",
+     "WebGL2RenderingContext.prototype.isFramebuffer",
+     "WebGL2RenderingContext.prototype.isProgram",
+     "WebGL2RenderingContext.prototype.isQuery",
+     "WebGL2RenderingContext.prototype.isRenderbuffer",
+     "WebGL2RenderingContext.prototype.isSampler",
+     "WebGL2RenderingContext.prototype.isShader",
+     "WebGL2RenderingContext.prototype.isSync",
+     "WebGL2RenderingContext.prototype.isTexture",
+     "WebGL2RenderingContext.prototype.isTransformFeedback",
+     "WebGL2RenderingContext.prototype.isVertexArray",
+     "WebGL2RenderingContext.prototype.lineWidth",
+     "WebGL2RenderingContext.prototype.linkProgram",
+     "WebGL2RenderingContext.prototype.makeXRCompatible",
+     "WebGL2RenderingContext.prototype.pauseTransformFeedback",
+     "WebGL2RenderingContext.prototype.pixelStorei",
+     "WebGL2RenderingContext.prototype.polygonOffset",
+     "WebGL2RenderingContext.prototype.readBuffer",
+     "WebGL2RenderingContext.prototype.readPixels",
+     "WebGL2RenderingContext.prototype.renderbufferStorage",
+     "WebGL2RenderingContext.prototype.renderbufferStorageMultisample",
+     "WebGL2RenderingContext.prototype.resumeTransformFeedback",
+     "WebGL2RenderingContext.prototype.sampleCoverage",
+     "WebGL2RenderingContext.prototype.samplerParameterf",
+     "WebGL2RenderingContext.prototype.samplerParameteri",
+     "WebGL2RenderingContext.prototype.scissor",
+     "WebGL2RenderingContext.prototype.shaderSource",
+     "WebGL2RenderingContext.prototype.stencilFunc",
+     "WebGL2RenderingContext.prototype.stencilFuncSeparate",
+     "WebGL2RenderingContext.prototype.stencilMask",
+     "WebGL2RenderingContext.prototype.stencilMaskSeparate",
+     "WebGL2RenderingContext.prototype.stencilOp",
+     "WebGL2RenderingContext.prototype.stencilOpSeparate",
+     "WebGL2RenderingContext.prototype.texImage2D",
+     "WebGL2RenderingContext.prototype.texImage3D",
+     "WebGL2RenderingContext.prototype.texParameterf",
+     "WebGL2RenderingContext.prototype.texParameteri",
+     "WebGL2RenderingContext.prototype.texStorage2D",
+     "WebGL2RenderingContext.prototype.texStorage3D",
+     "WebGL2RenderingContext.prototype.texSubImage2D",
+     "WebGL2RenderingContext.prototype.texSubImage3D",
+     "WebGL2RenderingContext.prototype.transformFeedbackVaryings",
+     "WebGL2RenderingContext.prototype.uniform1f",
+     "WebGL2RenderingContext.prototype.uniform1fv",
+     "WebGL2RenderingContext.prototype.uniform1i",
+     "WebGL2RenderingContext.prototype.uniform1iv",
+     "WebGL2RenderingContext.prototype.uniform1ui",
+     "WebGL2RenderingContext.prototype.uniform1uiv",
+     "WebGL2RenderingContext.prototype.uniform2f",
+     "WebGL2RenderingContext.prototype.uniform2fv",
+     "WebGL2RenderingContext.prototype.uniform2i",
+     "WebGL2RenderingContext.prototype.uniform2iv",
+     "WebGL2RenderingContext.prototype.uniform2ui",
+     "WebGL2RenderingContext.prototype.uniform2uiv",
+     "WebGL2RenderingContext.prototype.uniform3f",
+     "WebGL2RenderingContext.prototype.uniform3fv",
+     "WebGL2RenderingContext.prototype.uniform3i",
+     "WebGL2RenderingContext.prototype.uniform3iv",
+     "WebGL2RenderingContext.prototype.uniform3ui",
+     "WebGL2RenderingContext.prototype.uniform3uiv",
+     "WebGL2RenderingContext.prototype.uniform4f",
+     "WebGL2RenderingContext.prototype.uniform4fv",
+     "WebGL2RenderingContext.prototype.uniform4i",
+     "WebGL2RenderingContext.prototype.uniform4iv",
+     "WebGL2RenderingContext.prototype.uniform4ui",
+     "WebGL2RenderingContext.prototype.uniform4uiv",
+     "WebGL2RenderingContext.prototype.uniformBlockBinding",
+     "WebGL2RenderingContext.prototype.uniformMatrix2fv",
+     "WebGL2RenderingContext.prototype.uniformMatrix2x3fv",
+     "WebGL2RenderingContext.prototype.uniformMatrix2x4fv",
+     "WebGL2RenderingContext.prototype.uniformMatrix3fv",
+     "WebGL2RenderingContext.prototype.uniformMatrix3x2fv",
+     "WebGL2RenderingContext.prototype.uniformMatrix3x4fv",
+     "WebGL2RenderingContext.prototype.uniformMatrix4fv",
+     "WebGL2RenderingContext.prototype.uniformMatrix4x2fv",
+     "WebGL2RenderingContext.prototype.uniformMatrix4x3fv",
+     "WebGL2RenderingContext.prototype.unpackColorSpace",
+     "WebGL2RenderingContext.prototype.useProgram",
+     "WebGL2RenderingContext.prototype.validateProgram",
+     "WebGL2RenderingContext.prototype.vertexAttrib1f",
+     "WebGL2RenderingContext.prototype.vertexAttrib1fv",
+     "WebGL2RenderingContext.prototype.vertexAttrib2f",
+     "WebGL2RenderingContext.prototype.vertexAttrib2fv",
+     "WebGL2RenderingContext.prototype.vertexAttrib3f",
+     "WebGL2RenderingContext.prototype.vertexAttrib3fv",
+     "WebGL2RenderingContext.prototype.vertexAttrib4f",
+     "WebGL2RenderingContext.prototype.vertexAttrib4fv",
+     "WebGL2RenderingContext.prototype.vertexAttribDivisor",
+     "WebGL2RenderingContext.prototype.vertexAttribI4i",
+     "WebGL2RenderingContext.prototype.vertexAttribI4iv",
+     "WebGL2RenderingContext.prototype.vertexAttribI4ui",
+     "WebGL2RenderingContext.prototype.vertexAttribI4uiv",
+     "WebGL2RenderingContext.prototype.vertexAttribIPointer",
+     "WebGL2RenderingContext.prototype.vertexAttribPointer",
+     "WebGL2RenderingContext.prototype.viewport",
+     "WebGL2RenderingContext.prototype.waitSync",
+     "WebGLRenderingContext.prototype.activeTexture",
+     "WebGLRenderingContext.prototype.attachShader",
+     "WebGLRenderingContext.prototype.bindAttribLocation",
+     "WebGLRenderingContext.prototype.bindBuffer",
+     "WebGLRenderingContext.prototype.bindFramebuffer",
+     "WebGLRenderingContext.prototype.bindRenderbuffer",
+     "WebGLRenderingContext.prototype.bindTexture",
+     "WebGLRenderingContext.prototype.blendColor",
+     "WebGLRenderingContext.prototype.blendEquation",
+     "WebGLRenderingContext.prototype.blendEquationSeparate",
+     "WebGLRenderingContext.prototype.blendFunc",
+     "WebGLRenderingContext.prototype.blendFuncSeparate",
+     "WebGLRenderingContext.prototype.bufferData",
+     "WebGLRenderingContext.prototype.bufferSubData",
+     "WebGLRenderingContext.prototype.canvas",
+     "WebGLRenderingContext.prototype.checkFramebufferStatus",
+     "WebGLRenderingContext.prototype.clear",
+     "WebGLRenderingContext.prototype.clearColor",
+     "WebGLRenderingContext.prototype.clearDepth",
+     "WebGLRenderingContext.prototype.clearStencil",
+     "WebGLRenderingContext.prototype.colorMask",
+     "WebGLRenderingContext.prototype.compileShader",
+     "WebGLRenderingContext.prototype.compressedTexImage2D",
+     "WebGLRenderingContext.prototype.compressedTexSubImage2D",
+     "WebGLRenderingContext.prototype.constructor",
+     "WebGLRenderingContext.prototype.copyTexImage2D",
+     "WebGLRenderingContext.prototype.copyTexSubImage2D",
+     "WebGLRenderingContext.prototype.createBuffer",
+     "WebGLRenderingContext.prototype.createFramebuffer",
+     "WebGLRenderingContext.prototype.createProgram",
+     "WebGLRenderingContext.prototype.createRenderbuffer",
+     "WebGLRenderingContext.prototype.createShader",
+     "WebGLRenderingContext.prototype.createTexture",
+     "WebGLRenderingContext.prototype.cullFace",
+     "WebGLRenderingContext.prototype.deleteBuffer",
+     "WebGLRenderingContext.prototype.deleteFramebuffer",
+     "WebGLRenderingContext.prototype.deleteProgram",
+     "WebGLRenderingContext.prototype.deleteRenderbuffer",
+     "WebGLRenderingContext.prototype.deleteShader",
+     "WebGLRenderingContext.prototype.deleteTexture",
+     "WebGLRenderingContext.prototype.depthFunc",
+     "WebGLRenderingContext.prototype.depthMask",
+     "WebGLRenderingContext.prototype.depthRange",
+     "WebGLRenderingContext.prototype.detachShader",
+     "WebGLRenderingContext.prototype.disable",
+     "WebGLRenderingContext.prototype.disableVertexAttribArray",
+     "WebGLRenderingContext.prototype.drawArrays",
+     "WebGLRenderingContext.prototype.drawElements",
+     "WebGLRenderingContext.prototype.drawingBufferColorSpace",
+     "WebGLRenderingContext.prototype.drawingBufferFormat",
+     "WebGLRenderingContext.prototype.drawingBufferHeight",
+     "WebGLRenderingContext.prototype.drawingBufferStorage",
+     "WebGLRenderingContext.prototype.drawingBufferWidth",
+     "WebGLRenderingContext.prototype.enable",
+     "WebGLRenderingContext.prototype.enableVertexAttribArray",
+     "WebGLRenderingContext.prototype.finish",
+     "WebGLRenderingContext.prototype.flush",
+     "WebGLRenderingContext.prototype.framebufferRenderbuffer",
+     "WebGLRenderingContext.prototype.framebufferTexture2D",
+     "WebGLRenderingContext.prototype.frontFace",
+     "WebGLRenderingContext.prototype.generateMipmap",
+     "WebGLRenderingContext.prototype.getActiveAttrib",
+     "WebGLRenderingContext.prototype.getActiveUniform",
+     "WebGLRenderingContext.prototype.getAttachedShaders",
+     "WebGLRenderingContext.prototype.getAttribLocation",
+     "WebGLRenderingContext.prototype.getBufferParameter",
+     "WebGLRenderingContext.prototype.getContextAttributes",
+     "WebGLRenderingContext.prototype.getError",
+     "WebGLRenderingContext.prototype.getExtension",
+     "WebGLRenderingContext.prototype.getFramebufferAttachmentParameter",
+     "WebGLRenderingContext.prototype.getParameter",
+     "WebGLRenderingContext.prototype.getProgramInfoLog",
+     "WebGLRenderingContext.prototype.getProgramParameter",
+     "WebGLRenderingContext.prototype.getRenderbufferParameter",
+     "WebGLRenderingContext.prototype.getShaderInfoLog",
+     "WebGLRenderingContext.prototype.getShaderParameter",
+     "WebGLRenderingContext.prototype.getShaderPrecisionFormat",
+     "WebGLRenderingContext.prototype.getShaderSource",
+     "WebGLRenderingContext.prototype.getSupportedExtensions",
+     "WebGLRenderingContext.prototype.getTexParameter",
+     "WebGLRenderingContext.prototype.getUniform",
+     "WebGLRenderingContext.prototype.getUniformLocation",
+     "WebGLRenderingContext.prototype.getVertexAttrib",
+     "WebGLRenderingContext.prototype.getVertexAttribOffset",
+     "WebGLRenderingContext.prototype.hint",
+     "WebGLRenderingContext.prototype.isBuffer",
+     "WebGLRenderingContext.prototype.isContextLost",
+     "WebGLRenderingContext.prototype.isEnabled",
+     "WebGLRenderingContext.prototype.isFramebuffer",
+     "WebGLRenderingContext.prototype.isProgram",
+     "WebGLRenderingContext.prototype.isRenderbuffer",
+     "WebGLRenderingContext.prototype.isShader",
+     "WebGLRenderingContext.prototype.isTexture",
+     "WebGLRenderingContext.prototype.lineWidth",
+     "WebGLRenderingContext.prototype.linkProgram",
+     "WebGLRenderingContext.prototype.makeXRCompatible",
+     "WebGLRenderingContext.prototype.pixelStorei",
+     "WebGLRenderingContext.prototype.polygonOffset",
+     "WebGLRenderingContext.prototype.readPixels",
+     "WebGLRenderingContext.prototype.renderbufferStorage",
+     "WebGLRenderingContext.prototype.sampleCoverage",
+     "WebGLRenderingContext.prototype.scissor",
+     "WebGLRenderingContext.prototype.shaderSource",
+     "WebGLRenderingContext.prototype.stencilFunc",
+     "WebGLRenderingContext.prototype.stencilFuncSeparate",
+     "WebGLRenderingContext.prototype.stencilMask",
+     "WebGLRenderingContext.prototype.stencilMaskSeparate",
+     "WebGLRenderingContext.prototype.stencilOp",
+     "WebGLRenderingContext.prototype.stencilOpSeparate",
+     "WebGLRenderingContext.prototype.texImage2D",
+     "WebGLRenderingContext.prototype.texParameterf",
+     "WebGLRenderingContext.prototype.texParameteri",
+     "WebGLRenderingContext.prototype.texSubImage2D",
+     "WebGLRenderingContext.prototype.uniform1f",
+     "WebGLRenderingContext.prototype.uniform1fv",
+     "WebGLRenderingContext.prototype.uniform1i",
+     "WebGLRenderingContext.prototype.uniform1iv",
+     "WebGLRenderingContext.prototype.uniform2f",
+     "WebGLRenderingContext.prototype.uniform2fv",
+     "WebGLRenderingContext.prototype.uniform2i",
+     "WebGLRenderingContext.prototype.uniform2iv",
+     "WebGLRenderingContext.prototype.uniform3f",
+     "WebGLRenderingContext.prototype.uniform3fv",
+     "WebGLRenderingContext.prototype.uniform3i",
+     "WebGLRenderingContext.prototype.uniform3iv",
+     "WebGLRenderingContext.prototype.uniform4f",
+     "WebGLRenderingContext.prototype.uniform4fv",
+     "WebGLRenderingContext.prototype.uniform4i",
+     "WebGLRenderingContext.prototype.uniform4iv",
+     "WebGLRenderingContext.prototype.uniformMatrix2fv",
+     "WebGLRenderingContext.prototype.uniformMatrix3fv",
+     "WebGLRenderingContext.prototype.uniformMatrix4fv",
+     "WebGLRenderingContext.prototype.unpackColorSpace",
+     "WebGLRenderingContext.prototype.useProgram",
+     "WebGLRenderingContext.prototype.validateProgram",
+     "WebGLRenderingContext.prototype.vertexAttrib1f",
+     "WebGLRenderingContext.prototype.vertexAttrib1fv",
+     "WebGLRenderingContext.prototype.vertexAttrib2f",
+     "WebGLRenderingContext.prototype.vertexAttrib2fv",
+     "WebGLRenderingContext.prototype.vertexAttrib3f",
+     "WebGLRenderingContext.prototype.vertexAttrib3fv",
+     "WebGLRenderingContext.prototype.vertexAttrib4f",
+     "WebGLRenderingContext.prototype.vertexAttrib4fv",
+     "WebGLRenderingContext.prototype.vertexAttribPointer",
+     "WebGLRenderingContext.prototype.viewport"
+    ]
+   },
+   "otel": {
+    "counts": {
+     "dormant": 4,
+     "features-on": 0,
+     "lazy-chunks": 0,
+     "native-absent": 4,
+     "base": 0,
+     "anyVariant": 4,
+     "none": 0
+    },
+    "confirmed": [
+     {
+      "target": "Node.prototype.addEventListener",
+      "reach": "guarded-native-absence",
+      "reachedBy": [
+       "native-absent"
+      ]
+     },
+     {
+      "target": "Node.prototype.removeEventListener",
+      "reach": "guarded-native-absence",
+      "reachedBy": [
+       "native-absent"
+      ]
+     },
+     {
+      "target": "Window.prototype.addEventListener",
+      "reach": "guarded-native-absence",
+      "reachedBy": [
+       "native-absent"
+      ]
+     },
+     {
+      "target": "Window.prototype.removeEventListener",
+      "reach": "guarded-native-absence",
+      "reachedBy": [
+       "native-absent"
+      ]
+     }
+    ],
+    "unreached": []
+   },
+   "sentry-10": {
+    "counts": {
+     "dormant": 10,
+     "features-on": 1,
+     "lazy-chunks": 0,
+     "native-absent": 9,
+     "base": 0,
+     "anyVariant": 10,
+     "none": 0
+    },
+    "confirmed": [
+     {
+      "target": "CSSConditionRule.prototype.deleteRule",
+      "reach": "guarded-native-absence",
+      "reachedBy": [
+       "native-absent"
+      ]
+     },
+     {
+      "target": "CSSConditionRule.prototype.insertRule",
+      "reach": "guarded-native-absence",
+      "reachedBy": [
+       "native-absent"
+      ]
+     },
+     {
+      "target": "CSSMediaRule.prototype.deleteRule",
+      "reach": "guarded-native-absence",
+      "reachedBy": [
+       "native-absent"
+      ]
+     },
+     {
+      "target": "CSSMediaRule.prototype.insertRule",
+      "reach": "guarded-native-absence",
+      "reachedBy": [
+       "native-absent"
+      ]
+     },
+     {
+      "target": "CSSSupportsRule.prototype.deleteRule",
+      "reach": "guarded-native-absence",
+      "reachedBy": [
+       "native-absent"
+      ]
+     },
+     {
+      "target": "CSSSupportsRule.prototype.insertRule",
+      "reach": "guarded-native-absence",
+      "reachedBy": [
+       "native-absent"
+      ]
+     },
+     {
+      "target": "DOMTokenList.prototype.forEach",
+      "reach": "guarded-native-absence",
+      "reachedBy": [
+       "native-absent"
+      ]
+     },
+     {
+      "target": "Node.prototype.contains",
+      "reach": "guarded-native-absence",
+      "reachedBy": [
+       "native-absent"
+      ]
+     },
+     {
+      "target": "NodeList.prototype.forEach",
+      "reach": "guarded-native-absence",
+      "reachedBy": [
+       "native-absent"
+      ]
+     },
+     {
+      "target": "Window.Request",
+      "reach": "conditional",
+      "reachedBy": [
+       "features-on"
+      ]
+     }
+    ],
+    "unreached": []
+   },
+   "sentry-11": {
+    "counts": {
+     "dormant": 10,
+     "features-on": 1,
+     "lazy-chunks": 0,
+     "native-absent": 9,
+     "base": 0,
+     "anyVariant": 10,
+     "none": 0
+    },
+    "confirmed": [
+     {
+      "target": "CSSConditionRule.prototype.deleteRule",
+      "reach": "guarded-native-absence",
+      "reachedBy": [
+       "native-absent"
+      ]
+     },
+     {
+      "target": "CSSConditionRule.prototype.insertRule",
+      "reach": "guarded-native-absence",
+      "reachedBy": [
+       "native-absent"
+      ]
+     },
+     {
+      "target": "CSSMediaRule.prototype.deleteRule",
+      "reach": "guarded-native-absence",
+      "reachedBy": [
+       "native-absent"
+      ]
+     },
+     {
+      "target": "CSSMediaRule.prototype.insertRule",
+      "reach": "guarded-native-absence",
+      "reachedBy": [
+       "native-absent"
+      ]
+     },
+     {
+      "target": "CSSSupportsRule.prototype.deleteRule",
+      "reach": "guarded-native-absence",
+      "reachedBy": [
+       "native-absent"
+      ]
+     },
+     {
+      "target": "CSSSupportsRule.prototype.insertRule",
+      "reach": "guarded-native-absence",
+      "reachedBy": [
+       "native-absent"
+      ]
+     },
+     {
+      "target": "DOMTokenList.prototype.forEach",
+      "reach": "guarded-native-absence",
+      "reachedBy": [
+       "native-absent"
+      ]
+     },
+     {
+      "target": "Node.prototype.contains",
+      "reach": "guarded-native-absence",
+      "reachedBy": [
+       "native-absent"
+      ]
+     },
+     {
+      "target": "NodeList.prototype.forEach",
+      "reach": "guarded-native-absence",
+      "reachedBy": [
+       "native-absent"
+      ]
+     },
+     {
+      "target": "Window.Request",
+      "reach": "conditional",
+      "reachedBy": [
+       "features-on"
+      ]
+     }
+    ],
+    "unreached": []
+   },
+   "sentry-7": {
+    "counts": {
+     "dormant": 9,
+     "features-on": 0,
+     "lazy-chunks": 0,
+     "native-absent": 9,
+     "base": 0,
+     "anyVariant": 9,
+     "none": 0
+    },
+    "confirmed": [
+     {
+      "target": "CSSConditionRule.prototype.deleteRule",
+      "reach": "guarded-native-absence",
+      "reachedBy": [
+       "native-absent"
+      ]
+     },
+     {
+      "target": "CSSConditionRule.prototype.insertRule",
+      "reach": "guarded-native-absence",
+      "reachedBy": [
+       "native-absent"
+      ]
+     },
+     {
+      "target": "CSSMediaRule.prototype.deleteRule",
+      "reach": "guarded-native-absence",
+      "reachedBy": [
+       "native-absent"
+      ]
+     },
+     {
+      "target": "CSSMediaRule.prototype.insertRule",
+      "reach": "guarded-native-absence",
+      "reachedBy": [
+       "native-absent"
+      ]
+     },
+     {
+      "target": "CSSSupportsRule.prototype.deleteRule",
+      "reach": "guarded-native-absence",
+      "reachedBy": [
+       "native-absent"
+      ]
+     },
+     {
+      "target": "CSSSupportsRule.prototype.insertRule",
+      "reach": "guarded-native-absence",
+      "reachedBy": [
+       "native-absent"
+      ]
+     },
+     {
+      "target": "DOMTokenList.prototype.forEach",
+      "reach": "guarded-native-absence",
+      "reachedBy": [
+       "native-absent"
+      ]
+     },
+     {
+      "target": "Node.prototype.contains",
+      "reach": "guarded-native-absence",
+      "reachedBy": [
+       "native-absent"
+      ]
+     },
+     {
+      "target": "NodeList.prototype.forEach",
+      "reach": "guarded-native-absence",
+      "reachedBy": [
+       "native-absent"
+      ]
+     }
+    ],
+    "unreached": []
+   },
+   "zonejs": {
+    "counts": {
+     "dormant": 2,
+     "features-on": 0,
+     "lazy-chunks": 0,
+     "native-absent": 0,
+     "base": 0,
+     "anyVariant": 0,
+     "none": 2
+    },
+    "confirmed": [],
+    "unreached": [
+     "EventTarget.prototype.prependListener",
+     "Promise.__zone_symbol__uncaughtPromiseErrors"
+    ]
+   }
+  },
+  "totals": {
+   "dormant": 635,
+   "features-on": 23,
+   "lazy-chunks": 17,
+   "native-absent": 66,
+   "anyVariant": 69,
+   "none": 566,
+   "base": 0
+  }
+ }
+}

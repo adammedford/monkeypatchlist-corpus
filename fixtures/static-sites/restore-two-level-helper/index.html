@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>fixture: restore-two-level-helper</title></head>
+<body>
+<h1>restore-two-level-helper</h1>
+<button id="corpus-button" type="button">click</button>
+<script>
+function repl(t, m, orig, inst) { t[m] = inst; return { stop: function () { if (t[m] === inst) { /*R{*/t[m] = orig;/*}R*/ } } }; }
+function instrument(t, m) { var orig = t[m]; return repl(t, m, orig, function () { return orig.apply(this, arguments); }); }
+window.__corpusTeardown = instrument(History.prototype, 'pushState').stop;
+</script>
+<script>window.__corpusReady = true;</script>
+</body>
+</html>

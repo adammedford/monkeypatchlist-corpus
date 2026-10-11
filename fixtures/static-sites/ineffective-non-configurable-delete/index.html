@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>fixture: ineffective-non-configurable-delete</title></head>
+<body>
+<h1>ineffective-non-configurable-delete</h1>
+<button id="corpus-button" type="button">click</button>
+<script>
+delete Math.PI;
+delete Node.ELEMENT_NODE;
+delete Array.prototype;
+delete window.document;
+</script>
+<script>
+'use strict';
+try { delete Math.PI; } catch (e) {}
+</script>
+<script>window.__corpusReady = true;</script>
+</body>
+</html>

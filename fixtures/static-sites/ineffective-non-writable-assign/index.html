@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>fixture: ineffective-non-writable-assign</title></head>
+<body>
+<h1>ineffective-non-writable-assign</h1>
+<button id="corpus-button" type="button">click</button>
+<script>
+Math.PI = 3;
+Node.ELEMENT_NODE = 9;
+Array.prototype = {};
+</script>
+<script>
+'use strict';
+try { Math.PI = 3; } catch (e) {}
+</script>
+<script>window.__corpusReady = true;</script>
+</body>
+</html>

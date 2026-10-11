@@ -1,0 +1,24 @@
+{
+ "site": "static/ineffective-non-configurable-declare",
+ "url": "https://app.corpus.test/index.html",
+ "browser": "chromium 153.0.8010.12",
+ "settleMs": 300,
+ "snapshot": {
+  "holders": 1962,
+  "descriptors": 15442
+ },
+ "mutations": [],
+ "expandos": [],
+ "newGlobals": [
+  "__corpusReady"
+ ],
+ "workers": [],
+ "blockedOrigins": [],
+ "pageErrors": [
+  "Identifier 'top' has already been declared",
+  "Identifier 'document' has already been declared",
+  "Identifier 'location' has already been declared",
+  "Identifier 'window' has already been declared",
+  "Identifier 'NaN' has already been declared"
+ ]
+}

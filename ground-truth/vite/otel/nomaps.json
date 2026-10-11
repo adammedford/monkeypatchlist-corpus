@@ -1,0 +1,315 @@
+{
+ "site": "vite/otel/nomaps",
+ "url": "https://app.corpus.test/index.html",
+ "browser": "chromium 153.0.8010.12",
+ "settleMs": 3000,
+ "snapshot": {
+  "holders": 1962,
+  "descriptors": 15442
+ },
+ "mutations": [
+  {
+   "target": "EventTarget.prototype.addEventListener",
+   "holder": "EventTarget.prototype",
+   "holderKind": "prototype",
+   "interface": "EventTarget",
+   "key": "addEventListener",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "own:__original",
+   "definedAt": {
+    "url": "https://app.corpus.test/assets/index-C9toOccF.js",
+    "line": 1,
+    "column": 62239
+   }
+  },
+  {
+   "target": "EventTarget.prototype.removeEventListener",
+   "holder": "EventTarget.prototype",
+   "holderKind": "prototype",
+   "interface": "EventTarget",
+   "key": "removeEventListener",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "own:__original",
+   "definedAt": {
+    "url": "https://app.corpus.test/assets/index-C9toOccF.js",
+    "line": 1,
+    "column": 62741
+   }
+  },
+  {
+   "target": "history.back",
+   "holder": "history",
+   "holderKind": "singleton",
+   "interface": "History",
+   "key": "back",
+   "change": "shadow",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "shadows": "History.prototype.back",
+   "effect": "wrap",
+   "wrapEvidence": "own:__original",
+   "definedAt": {
+    "url": "https://app.corpus.test/assets/index-C9toOccF.js",
+    "line": 1,
+    "column": 63322
+   }
+  },
+  {
+   "target": "history.forward",
+   "holder": "history",
+   "holderKind": "singleton",
+   "interface": "History",
+   "key": "forward",
+   "change": "shadow",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "shadows": "History.prototype.forward",
+   "effect": "wrap",
+   "wrapEvidence": "own:__original",
+   "definedAt": {
+    "url": "https://app.corpus.test/assets/index-C9toOccF.js",
+    "line": 1,
+    "column": 63322
+   }
+  },
+  {
+   "target": "history.go",
+   "holder": "history",
+   "holderKind": "singleton",
+   "interface": "History",
+   "key": "go",
+   "change": "shadow",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "shadows": "History.prototype.go",
+   "effect": "wrap",
+   "wrapEvidence": "own:__original",
+   "definedAt": {
+    "url": "https://app.corpus.test/assets/index-C9toOccF.js",
+    "line": 1,
+    "column": 63322
+   }
+  },
+  {
+   "target": "history.pushState",
+   "holder": "history",
+   "holderKind": "singleton",
+   "interface": "History",
+   "key": "pushState",
+   "change": "shadow",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "shadows": "History.prototype.pushState",
+   "effect": "wrap",
+   "wrapEvidence": "own:__original",
+   "definedAt": {
+    "url": "https://app.corpus.test/assets/index-C9toOccF.js",
+    "line": 1,
+    "column": 63322
+   }
+  },
+  {
+   "target": "history.replaceState",
+   "holder": "history",
+   "holderKind": "singleton",
+   "interface": "History",
+   "key": "replaceState",
+   "change": "shadow",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "shadows": "History.prototype.replaceState",
+   "effect": "wrap",
+   "wrapEvidence": "own:__original",
+   "definedAt": {
+    "url": "https://app.corpus.test/assets/index-C9toOccF.js",
+    "line": 1,
+    "column": 63322
+   }
+  },
+  {
+   "target": "Window.fetch",
+   "holder": "Window",
+   "holderKind": "global",
+   "interface": "Window",
+   "key": "fetch",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "own:__original",
+   "definedAt": {
+    "url": "https://app.corpus.test/assets/index-C9toOccF.js",
+    "line": 1,
+    "column": 50866
+   }
+  },
+  {
+   "target": "XMLHttpRequest.prototype.open",
+   "holder": "XMLHttpRequest.prototype",
+   "holderKind": "prototype",
+   "interface": "XMLHttpRequest",
+   "key": "open",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "own:__original",
+   "definedAt": {
+    "url": "https://app.corpus.test/assets/index-C9toOccF.js",
+    "line": 1,
+    "column": 57241
+   }
+  },
+  {
+   "target": "XMLHttpRequest.prototype.send",
+   "holder": "XMLHttpRequest.prototype",
+   "holderKind": "prototype",
+   "interface": "XMLHttpRequest",
+   "key": "send",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "own:__original",
+   "definedAt": {
+    "url": "https://app.corpus.test/assets/index-C9toOccF.js",
+    "line": 1,
+    "column": 58464
+   }
+  }
+ ],
+ "expandos": [],
+ "newGlobals": [
+  "[opentelemetry.js.api.1]",
+  "__corpusReady"
+ ],
+ "workers": [],
+ "blockedOrigins": [],
+ "pageErrors": []
+}

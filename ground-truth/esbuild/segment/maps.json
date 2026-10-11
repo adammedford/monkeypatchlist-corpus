@@ -1,0 +1,21 @@
+{
+ "site": "esbuild/segment/maps",
+ "url": "https://app.corpus.test/index.html",
+ "browser": "chromium 153.0.8010.12",
+ "settleMs": 3000,
+ "snapshot": {
+  "holders": 1962,
+  "descriptors": 15442
+ },
+ "mutations": [],
+ "expandos": [],
+ "newGlobals": [
+  "__SEGMENT_INSPECTOR__",
+  "__corpusReady"
+ ],
+ "workers": [],
+ "blockedOrigins": [
+  "https://cdn.segment.com"
+ ],
+ "pageErrors": []
+}

@@ -1,0 +1,68 @@
+{
+ "webpack/1mb/maps": {
+  "mutations": 1025,
+  "byEffect": {
+   "wrap": 71,
+   "descriptor-change": 536,
+   "add": 416,
+   "replace": 2
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "webpack/1mb/nomaps": {
+  "mutations": 1025,
+  "byEffect": {
+   "wrap": 71,
+   "descriptor-change": 536,
+   "add": 416,
+   "replace": 2
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "webpack/2.5mb/maps": {
+  "mutations": 1032,
+  "byEffect": {
+   "wrap": 70,
+   "replace": 10,
+   "descriptor-change": 536,
+   "add": 416
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "webpack/2.5mb/nomaps": {
+  "mutations": 1032,
+  "byEffect": {
+   "wrap": 70,
+   "replace": 10,
+   "descriptor-change": 536,
+   "add": 416
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "webpack/5mb/maps": {
+  "mutations": 1032,
+  "byEffect": {
+   "wrap": 70,
+   "replace": 10,
+   "descriptor-change": 536,
+   "add": 416
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "webpack/5mb/nomaps": {
+  "mutations": 1032,
+  "byEffect": {
+   "wrap": 70,
+   "replace": 10,
+   "descriptor-change": 536,
+   "add": 416
+  },
+  "workers": 1,
+  "pageErrors": 0
+ }
+}

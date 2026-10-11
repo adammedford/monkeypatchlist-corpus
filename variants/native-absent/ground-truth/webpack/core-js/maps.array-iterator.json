@@ -1,0 +1,239 @@
+{
+ "site": "webpack/core-js/maps",
+ "url": "https://app.corpus.test/index.html",
+ "browser": "chromium 153.0.8010.12",
+ "settleMs": 3000,
+ "snapshot": {
+  "holders": 1962,
+  "descriptors": 15442
+ },
+ "mutations": [
+  {
+   "target": "Array.prototype.[Symbol.unscopables]",
+   "holder": "Array.prototype",
+   "holderKind": "prototype",
+   "interface": "Array",
+   "key": "[Symbol.unscopables]",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "object",
+    "writable": false,
+    "enumerable": false,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "object",
+    "writable": false,
+    "enumerable": false,
+    "configurable": true
+   },
+   "absentAtLoad": true,
+   "effect": "replace",
+   "wrapEvidence": null,
+   "definedAt": null
+  },
+  {
+   "target": "Array.prototype.entries",
+   "holder": "Array.prototype",
+   "holderKind": "prototype",
+   "interface": "Array",
+   "key": "entries",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "absentAtLoad": true,
+   "effect": "replace",
+   "wrapEvidence": null,
+   "definedAt": {
+    "url": "https://app.corpus.test/main.5e304035.js",
+    "line": 1,
+    "column": 19583
+   }
+  },
+  {
+   "target": "Array.prototype.values",
+   "holder": "Array.prototype",
+   "holderKind": "prototype",
+   "interface": "Array",
+   "key": "values",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "absentAtLoad": true,
+   "sameAsNative": true,
+   "effect": "replace",
+   "wrapEvidence": null,
+   "definedAt": null
+  },
+  {
+   "target": "DOMTokenList.prototype.entries",
+   "holder": "DOMTokenList.prototype",
+   "holderKind": "prototype",
+   "interface": "DOMTokenList",
+   "key": "entries",
+   "change": "descriptor",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "effect": "replace",
+   "wrapEvidence": null,
+   "definedAt": {
+    "url": "https://app.corpus.test/main.5e304035.js",
+    "line": 1,
+    "column": 19583
+   }
+  },
+  {
+   "target": "Function.prototype.toString",
+   "holder": "Function.prototype",
+   "holderKind": "prototype",
+   "interface": "Function",
+   "key": "toString",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "effect": "replace",
+   "wrapEvidence": null,
+   "definedAt": {
+    "url": "https://app.corpus.test/main.5e304035.js",
+    "line": 1,
+    "column": 21668
+   }
+  },
+  {
+   "target": "NodeList.prototype.entries",
+   "holder": "NodeList.prototype",
+   "holderKind": "prototype",
+   "interface": "NodeList",
+   "key": "entries",
+   "change": "descriptor",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "effect": "replace",
+   "wrapEvidence": null,
+   "definedAt": {
+    "url": "https://app.corpus.test/main.5e304035.js",
+    "line": 1,
+    "column": 19583
+   }
+  },
+  {
+   "target": "Window.structuredClone",
+   "holder": "Window",
+   "holderKind": "global",
+   "interface": "Window",
+   "key": "structuredClone",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "closure:r",
+   "definedAt": {
+    "url": "https://app.corpus.test/main.5e304035.js",
+    "line": 1,
+    "column": 50791
+   }
+  }
+ ],
+ "expandos": [],
+ "newGlobals": [
+  "__core-js_shared__",
+  "__corpusReady"
+ ],
+ "workers": [],
+ "blockedOrigins": [],
+ "pageErrors": [],
+ "absent": {
+  "run": "array-iterator",
+  "members": [
+   {
+    "target": "Array.prototype.values",
+    "deleted": true,
+    "snapshotted": true
+   },
+   {
+    "target": "Array.prototype.entries",
+    "deleted": true,
+    "snapshotted": true
+   },
+   {
+    "target": "Array.prototype.[Symbol.unscopables]",
+    "deleted": true,
+    "snapshotted": true
+   }
+  ]
+ }
+}

@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>fixture: restore-identity-guarded</title></head>
+<body>
+<h1>restore-identity-guarded</h1>
+<button id="corpus-button" type="button">click</button>
+<script>
+var orig = window.open;
+var mine = function () { return orig.apply(this, arguments); };
+window.open = mine;
+function teardown() { if (window.open === mine) { /*R{*/window.open = orig;/*}R*/ } }
+window.__corpusTeardown = teardown;
+</script>
+<script>window.__corpusReady = true;</script>
+</body>
+</html>

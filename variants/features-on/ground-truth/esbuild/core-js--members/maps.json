@@ -1,0 +1,484 @@
+{
+ "site": "esbuild/core-js--members/maps",
+ "url": "https://app.corpus.test/index.html",
+ "browser": "chromium 153.0.8010.12",
+ "settleMs": 3000,
+ "snapshot": {
+  "holders": 1962,
+  "descriptors": 15442
+ },
+ "mutations": [
+  {
+   "target": "Array.prototype.at",
+   "holder": "Array.prototype",
+   "holderKind": "prototype",
+   "interface": "Array",
+   "key": "at",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "effect": "replace",
+   "wrapEvidence": null,
+   "definedAt": {
+    "url": "https://app.corpus.test/main-JTAZ3HKT.js",
+    "line": 1,
+    "column": 18367
+   }
+  },
+  {
+   "target": "Array.prototype.flat",
+   "holder": "Array.prototype",
+   "holderKind": "prototype",
+   "interface": "Array",
+   "key": "flat",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "effect": "replace",
+   "wrapEvidence": null,
+   "definedAt": {
+    "url": "https://app.corpus.test/main-JTAZ3HKT.js",
+    "line": 1,
+    "column": 16693
+   }
+  },
+  {
+   "target": "Function.prototype.toString",
+   "holder": "Function.prototype",
+   "holderKind": "prototype",
+   "interface": "Function",
+   "key": "toString",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "effect": "replace",
+   "wrapEvidence": null,
+   "definedAt": {
+    "url": "https://app.corpus.test/main-JTAZ3HKT.js",
+    "line": 1,
+    "column": 11559
+   }
+  },
+  {
+   "target": "Iterator.prototype.map",
+   "holder": "Iterator.prototype",
+   "holderKind": "prototype",
+   "interface": "Iterator",
+   "key": "map",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "effect": "replace",
+   "wrapEvidence": null,
+   "definedAt": {
+    "url": "https://app.corpus.test/main-JTAZ3HKT.js",
+    "line": 1,
+    "column": 38378
+   }
+  },
+  {
+   "target": "Promise.all",
+   "holder": "Promise",
+   "holderKind": "constructor",
+   "interface": "Promise",
+   "key": "all",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "effect": "replace",
+   "wrapEvidence": null,
+   "definedAt": {
+    "url": "https://app.corpus.test/main-JTAZ3HKT.js",
+    "line": 1,
+    "column": 30357
+   }
+  },
+  {
+   "target": "Promise.prototype.catch",
+   "holder": "Promise.prototype",
+   "holderKind": "prototype",
+   "interface": "Promise",
+   "key": "catch",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "effect": "replace",
+   "wrapEvidence": null,
+   "definedAt": {
+    "url": "https://app.corpus.test/main-JTAZ3HKT.js",
+    "line": 1,
+    "column": 30782
+   }
+  },
+  {
+   "target": "Promise.prototype.finally",
+   "holder": "Promise.prototype",
+   "holderKind": "prototype",
+   "interface": "Promise",
+   "key": "finally",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "effect": "replace",
+   "wrapEvidence": null,
+   "definedAt": {
+    "url": "https://app.corpus.test/main-JTAZ3HKT.js",
+    "line": 1,
+    "column": 32115
+   }
+  },
+  {
+   "target": "Promise.race",
+   "holder": "Promise",
+   "holderKind": "constructor",
+   "interface": "Promise",
+   "key": "race",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "effect": "replace",
+   "wrapEvidence": null,
+   "definedAt": {
+    "url": "https://app.corpus.test/main-JTAZ3HKT.js",
+    "line": 1,
+    "column": 31056
+   }
+  },
+  {
+   "target": "Promise.reject",
+   "holder": "Promise",
+   "holderKind": "constructor",
+   "interface": "Promise",
+   "key": "reject",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "effect": "replace",
+   "wrapEvidence": null,
+   "definedAt": {
+    "url": "https://app.corpus.test/main-JTAZ3HKT.js",
+    "line": 1,
+    "column": 31341
+   }
+  },
+  {
+   "target": "Promise.resolve",
+   "holder": "Promise",
+   "holderKind": "constructor",
+   "interface": "Promise",
+   "key": "resolve",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "effect": "replace",
+   "wrapEvidence": null,
+   "definedAt": {
+    "url": "https://app.corpus.test/main-JTAZ3HKT.js",
+    "line": 1,
+    "column": 31754
+   }
+  },
+  {
+   "target": "Set.prototype.union",
+   "holder": "Set.prototype",
+   "holderKind": "prototype",
+   "interface": "Set",
+   "key": "union",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "effect": "replace",
+   "wrapEvidence": null,
+   "definedAt": {
+    "url": "https://app.corpus.test/main-JTAZ3HKT.js",
+    "line": 1,
+    "column": 33828
+   }
+  },
+  {
+   "target": "String.fromCodePoint",
+   "holder": "String",
+   "holderKind": "constructor",
+   "interface": "String",
+   "key": "fromCodePoint",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "effect": "replace",
+   "wrapEvidence": null,
+   "definedAt": {
+    "url": "https://app.corpus.test/main-JTAZ3HKT.js",
+    "line": 1,
+    "column": 53698
+   }
+  },
+  {
+   "target": "Window.queueMicrotask",
+   "holder": "Window",
+   "holderKind": "global",
+   "interface": "Window",
+   "key": "queueMicrotask",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "closure:yO",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-JTAZ3HKT.js",
+    "line": 1,
+    "column": 38749
+   }
+  },
+  {
+   "target": "Window.structuredClone",
+   "holder": "Window",
+   "holderKind": "global",
+   "interface": "Window",
+   "key": "structuredClone",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "closure:Sr",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-JTAZ3HKT.js",
+    "line": 1,
+    "column": 47068
+   }
+  },
+  {
+   "target": "Window.URL",
+   "holder": "Window",
+   "holderKind": "global",
+   "interface": "Window",
+   "key": "URL",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "effect": "replace",
+   "wrapEvidence": null,
+   "definedAt": {
+    "url": "https://app.corpus.test/main-JTAZ3HKT.js",
+    "line": 1,
+    "column": 73922
+   }
+  },
+  {
+   "target": "Window.URLSearchParams",
+   "holder": "Window",
+   "holderKind": "global",
+   "interface": "Window",
+   "key": "URLSearchParams",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "effect": "replace",
+   "wrapEvidence": null,
+   "definedAt": {
+    "url": "https://app.corpus.test/main-JTAZ3HKT.js",
+    "line": 1,
+    "column": 58440
+   }
+  }
+ ],
+ "expandos": [],
+ "newGlobals": [
+  "__core-js_shared__",
+  "__corpusReady"
+ ],
+ "workers": [],
+ "blockedOrigins": [],
+ "pageErrors": []
+}

@@ -1,0 +1,538 @@
+{
+ "esbuild/appinsights/maps": {
+  "mutations": 7,
+  "byEffect": {
+   "wrap": 7
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "esbuild/appinsights/nomaps": {
+  "mutations": 7,
+  "byEffect": {
+   "wrap": 7
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "esbuild/core-js--members/maps": {
+  "mutations": 16,
+  "byEffect": {
+   "replace": 14,
+   "wrap": 2
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "esbuild/core-js--members/nomaps": {
+  "mutations": 16,
+  "byEffect": {
+   "replace": 14,
+   "wrap": 2
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "esbuild/core-js/maps": {
+  "mutations": 16,
+  "byEffect": {
+   "replace": 10,
+   "prototype-change": 1,
+   "delete": 1,
+   "wrap": 4
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "esbuild/core-js/nomaps": {
+  "mutations": 16,
+  "byEffect": {
+   "replace": 10,
+   "prototype-change": 1,
+   "delete": 1,
+   "wrap": 4
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "esbuild/datadog/maps": {
+  "mutations": 35,
+  "byEffect": {
+   "wrap": 30,
+   "descriptor-change": 5
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "esbuild/datadog/nomaps": {
+  "mutations": 35,
+  "byEffect": {
+   "wrap": 30,
+   "descriptor-change": 5
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "esbuild/newrelic/maps": {
+  "mutations": 47,
+  "byEffect": {
+   "wrap": 37,
+   "replace": 3,
+   "descriptor-change": 7
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "esbuild/newrelic/nomaps": {
+  "mutations": 47,
+  "byEffect": {
+   "wrap": 37,
+   "replace": 3,
+   "descriptor-change": 7
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "esbuild/sentry-10/maps": {
+  "mutations": 40,
+  "byEffect": {
+   "wrap": 32,
+   "descriptor-change": 7,
+   "replace": 1
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "esbuild/sentry-10/nomaps": {
+  "mutations": 40,
+  "byEffect": {
+   "wrap": 32,
+   "descriptor-change": 7,
+   "replace": 1
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "esbuild/sentry-11/maps": {
+  "mutations": 40,
+  "byEffect": {
+   "wrap": 32,
+   "descriptor-change": 7,
+   "replace": 1
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "esbuild/sentry-11/nomaps": {
+  "mutations": 40,
+  "byEffect": {
+   "wrap": 32,
+   "descriptor-change": 7,
+   "replace": 1
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "rollup/appinsights/maps": {
+  "mutations": 7,
+  "byEffect": {
+   "wrap": 7
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "rollup/appinsights/nomaps": {
+  "mutations": 7,
+  "byEffect": {
+   "wrap": 7
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "rollup/core-js--members/maps": {
+  "mutations": 16,
+  "byEffect": {
+   "replace": 14,
+   "wrap": 2
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "rollup/core-js--members/nomaps": {
+  "mutations": 16,
+  "byEffect": {
+   "replace": 14,
+   "wrap": 2
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "rollup/core-js/maps": {
+  "mutations": 16,
+  "byEffect": {
+   "replace": 10,
+   "prototype-change": 1,
+   "delete": 1,
+   "wrap": 4
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "rollup/core-js/nomaps": {
+  "mutations": 16,
+  "byEffect": {
+   "replace": 10,
+   "prototype-change": 1,
+   "delete": 1,
+   "wrap": 4
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "rollup/datadog/maps": {
+  "mutations": 35,
+  "byEffect": {
+   "wrap": 30,
+   "descriptor-change": 5
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "rollup/datadog/nomaps": {
+  "mutations": 35,
+  "byEffect": {
+   "wrap": 30,
+   "descriptor-change": 5
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "rollup/newrelic/maps": {
+  "mutations": 47,
+  "byEffect": {
+   "wrap": 37,
+   "replace": 3,
+   "descriptor-change": 7
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "rollup/newrelic/nomaps": {
+  "mutations": 47,
+  "byEffect": {
+   "wrap": 37,
+   "replace": 3,
+   "descriptor-change": 7
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "rollup/sentry-10/maps": {
+  "mutations": 40,
+  "byEffect": {
+   "wrap": 32,
+   "descriptor-change": 7,
+   "replace": 1
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "rollup/sentry-10/nomaps": {
+  "mutations": 40,
+  "byEffect": {
+   "wrap": 32,
+   "descriptor-change": 7,
+   "replace": 1
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "rollup/sentry-11/maps": {
+  "mutations": 40,
+  "byEffect": {
+   "wrap": 32,
+   "descriptor-change": 7,
+   "replace": 1
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "rollup/sentry-11/nomaps": {
+  "mutations": 40,
+  "byEffect": {
+   "wrap": 32,
+   "descriptor-change": 7,
+   "replace": 1
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "vite/appinsights/maps": {
+  "mutations": 7,
+  "byEffect": {
+   "wrap": 7
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "vite/appinsights/nomaps": {
+  "mutations": 7,
+  "byEffect": {
+   "wrap": 7
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "vite/core-js--members/maps": {
+  "mutations": 16,
+  "byEffect": {
+   "replace": 14,
+   "wrap": 2
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "vite/core-js--members/nomaps": {
+  "mutations": 16,
+  "byEffect": {
+   "replace": 14,
+   "wrap": 2
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "vite/core-js/maps": {
+  "mutations": 16,
+  "byEffect": {
+   "replace": 10,
+   "prototype-change": 1,
+   "delete": 1,
+   "wrap": 4
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "vite/core-js/nomaps": {
+  "mutations": 16,
+  "byEffect": {
+   "replace": 10,
+   "prototype-change": 1,
+   "delete": 1,
+   "wrap": 4
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "vite/datadog/maps": {
+  "mutations": 35,
+  "byEffect": {
+   "wrap": 30,
+   "descriptor-change": 5
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "vite/datadog/nomaps": {
+  "mutations": 35,
+  "byEffect": {
+   "wrap": 30,
+   "descriptor-change": 5
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "vite/newrelic/maps": {
+  "mutations": 47,
+  "byEffect": {
+   "wrap": 37,
+   "replace": 3,
+   "descriptor-change": 7
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "vite/newrelic/nomaps": {
+  "mutations": 47,
+  "byEffect": {
+   "wrap": 37,
+   "replace": 3,
+   "descriptor-change": 7
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "vite/sentry-10/maps": {
+  "mutations": 40,
+  "byEffect": {
+   "wrap": 32,
+   "descriptor-change": 7,
+   "replace": 1
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "vite/sentry-10/nomaps": {
+  "mutations": 40,
+  "byEffect": {
+   "wrap": 32,
+   "descriptor-change": 7,
+   "replace": 1
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "vite/sentry-11/maps": {
+  "mutations": 40,
+  "byEffect": {
+   "wrap": 32,
+   "descriptor-change": 7,
+   "replace": 1
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "vite/sentry-11/nomaps": {
+  "mutations": 40,
+  "byEffect": {
+   "wrap": 32,
+   "descriptor-change": 7,
+   "replace": 1
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "webpack/appinsights/maps": {
+  "mutations": 7,
+  "byEffect": {
+   "wrap": 7
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "webpack/appinsights/nomaps": {
+  "mutations": 7,
+  "byEffect": {
+   "wrap": 7
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "webpack/core-js--members/maps": {
+  "mutations": 16,
+  "byEffect": {
+   "replace": 14,
+   "wrap": 2
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "webpack/core-js--members/nomaps": {
+  "mutations": 16,
+  "byEffect": {
+   "replace": 14,
+   "wrap": 2
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "webpack/core-js/maps": {
+  "mutations": 16,
+  "byEffect": {
+   "replace": 10,
+   "prototype-change": 1,
+   "delete": 1,
+   "wrap": 4
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "webpack/core-js/nomaps": {
+  "mutations": 16,
+  "byEffect": {
+   "replace": 10,
+   "prototype-change": 1,
+   "delete": 1,
+   "wrap": 4
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "webpack/datadog/maps": {
+  "mutations": 35,
+  "byEffect": {
+   "wrap": 30,
+   "descriptor-change": 5
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "webpack/datadog/nomaps": {
+  "mutations": 35,
+  "byEffect": {
+   "wrap": 30,
+   "descriptor-change": 5
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "webpack/newrelic/maps": {
+  "mutations": 47,
+  "byEffect": {
+   "wrap": 37,
+   "replace": 3,
+   "descriptor-change": 7
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "webpack/newrelic/nomaps": {
+  "mutations": 47,
+  "byEffect": {
+   "wrap": 37,
+   "replace": 3,
+   "descriptor-change": 7
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "webpack/sentry-10/maps": {
+  "mutations": 40,
+  "byEffect": {
+   "wrap": 32,
+   "descriptor-change": 7,
+   "replace": 1
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "webpack/sentry-10/nomaps": {
+  "mutations": 40,
+  "byEffect": {
+   "wrap": 32,
+   "descriptor-change": 7,
+   "replace": 1
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "webpack/sentry-11/maps": {
+  "mutations": 40,
+  "byEffect": {
+   "wrap": 32,
+   "descriptor-change": 7,
+   "replace": 1
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "webpack/sentry-11/nomaps": {
+  "mutations": 40,
+  "byEffect": {
+   "wrap": 32,
+   "descriptor-change": 7,
+   "replace": 1
+  },
+  "workers": 1,
+  "pageErrors": 0
+ }
+}

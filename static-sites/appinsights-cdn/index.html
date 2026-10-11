@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>corpus: appinsights-cdn</title>
+<script src="https://js.monitor.azure.com/scripts/b/ai.3.gbl.min.js" crossorigin="anonymous"></script>
+<script>
+var ai = new Microsoft.ApplicationInsights.ApplicationInsights({ config: {
+  connectionString: "InstrumentationKey=00000000-0000-0000-0000-000000000000;IngestionEndpoint=https://ai.example.invalid/",
+  enableAutoRouteTracking: true, enableCorsCorrelation: true, enableRequestHeaderTracking: true, enableResponseHeaderTracking: true,
+} });
+ai.loadAppInsights();
+ai.trackPageView();
+</script>
+</head>
+<body>
+<h1>appinsights-cdn</h1>
+<button id="corpus-button" type="button">click</button>
+</body>
+</html>

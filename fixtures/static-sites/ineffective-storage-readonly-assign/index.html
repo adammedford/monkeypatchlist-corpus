@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>fixture: ineffective-storage-readonly-assign</title></head>
+<body>
+<h1>ineffective-storage-readonly-assign</h1>
+<button id="corpus-button" type="button">click</button>
+<script>
+localStorage.length = 5;
+</script>
+<script>
+'use strict';
+try { localStorage.length = 5; } catch (e) {}
+</script>
+<script>window.__corpusReady = true;</script>
+</body>
+</html>

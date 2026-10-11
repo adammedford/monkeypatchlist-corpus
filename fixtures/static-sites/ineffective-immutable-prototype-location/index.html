@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>fixture: ineffective-immutable-prototype-location</title></head>
+<body>
+<h1>ineffective-immutable-prototype-location</h1>
+<button id="corpus-button" type="button">click</button>
+<script>
+try { Object.setPrototypeOf(location, Object.create(null)); } catch (e) {}
+</script>
+<script>window.__corpusReady = true;</script>
+</body>
+</html>

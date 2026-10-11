@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>corpus: datadog-cdn</title>
+<script src="https://www.datadoghq-browser-agent.com/us1/v7/datadog-rum.js" crossorigin="anonymous"></script>
+<script src="https://www.datadoghq-browser-agent.com/us1/v7/datadog-logs.js" crossorigin="anonymous"></script>
+<script>
+window.DD_RUM.init({
+  applicationId: "00000000-0000-0000-0000-000000000000", clientToken: "pub00000000000000000000000000000000",
+  site: "datadoghq.com", service: "corpus", sessionSampleRate: 100, sessionReplaySampleRate: 100,
+  trackUserInteractions: true, trackResources: true, trackLongTasks: true, defaultPrivacyLevel: "allow",
+});
+window.DD_LOGS.init({
+  clientToken: "pub00000000000000000000000000000000", site: "datadoghq.com",
+  forwardErrorsToLogs: true, forwardConsoleLogs: "all", forwardReports: "all", sessionSampleRate: 100,
+});
+</script>
+</head>
+<body>
+<h1>datadog-cdn</h1>
+<button id="corpus-button" type="button">click</button>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>fixture: ineffective-lenient-setter-assign</title></head>
+<body>
+<h1>ineffective-lenient-setter-assign</h1>
+<button id="corpus-button" type="button">click</button>
+<script>
+document.fullscreen = true;
+document.fullscreenEnabled = false;
+</script>
+<script>
+'use strict';
+document.fullscreen = true;
+</script>
+<script>window.__corpusReady = true;</script>
+</body>
+</html>

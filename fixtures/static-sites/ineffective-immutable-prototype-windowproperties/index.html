@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>fixture: ineffective-immutable-prototype-windowproperties</title></head>
+<body>
+<h1>ineffective-immutable-prototype-windowproperties</h1>
+<button id="corpus-button" type="button">click</button>
+<script>
+var WP = Object.getPrototypeOf(Window.prototype);
+try { Object.setPrototypeOf(WP, Object.create(null)); } catch (e) {}
+window.__corpusProbe = function () { return { protoUnchanged: Object.getPrototypeOf(WP) === EventTarget.prototype }; };
+</script>
+<script>window.__corpusReady = true;</script>
+</body>
+</html>

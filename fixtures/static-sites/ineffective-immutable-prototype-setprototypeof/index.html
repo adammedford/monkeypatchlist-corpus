@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>fixture: ineffective-immutable-prototype-setprototypeof</title></head>
+<body>
+<h1>ineffective-immutable-prototype-setprototypeof</h1>
+<button id="corpus-button" type="button">click</button>
+<script>
+try { Object.setPrototypeOf(Object.prototype, Object.create(null)); } catch (e) {}
+try { Object.setPrototypeOf(window, Object.create(null)); } catch (e) {}
+try { Object.setPrototypeOf(Window.prototype, Object.create(null)); } catch (e) {}
+try { Object.setPrototypeOf(EventTarget.prototype, Object.create(null)); } catch (e) {}
+</script>
+<script>window.__corpusReady = true;</script>
+</body>
+</html>

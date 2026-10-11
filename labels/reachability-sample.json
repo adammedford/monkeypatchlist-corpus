@@ -1,0 +1,282 @@
+{
+ "$schema": "Reachability hand sample (spec §20 Reachability labels): about 5 observed true positives per library, each hand-labeled unconditional or conditional by the §7 rules, judged from the install entry along the chain, with a code citation. It settles what the base run's observation leaves open (not guarded-native-absence). Libraries whose protected positives the base run never observes (es6-promise, promise-polyfill, whatwg-fetch) have none. Most SDK writes sit behind an init configuration test, so the sample is mostly conditional; core-js and single-spa install at load with no guard that matters.",
+ "appinsights": [
+  {
+   "target": "XMLHttpRequest.prototype.open",
+   "reachability": "conditional",
+   "citation": "@microsoft/applicationinsights-dependencies-js@3.4.4 dist-es5/ajax.js L666-675 (_instrumentXhr): the hooks are installed only when !_disableAjaxTracking, a config flag read in an onConfigChange callback (spec §7: config and option flags give conditional); _hookProto(XMLHttpRequest, 'open') at L675."
+  },
+  {
+   "target": "XMLHttpRequest.prototype.send",
+   "reachability": "conditional",
+   "citation": "@microsoft/applicationinsights-dependencies-js@3.4.4 dist-es5/ajax.js L666-675 (_instrumentXhr): the hooks are installed only when !_disableAjaxTracking, a config flag read in an onConfigChange callback (spec §7: config and option flags give conditional); _hookProto(XMLHttpRequest, 'send') at L694."
+  },
+  {
+   "target": "XMLHttpRequest.prototype.abort",
+   "reachability": "conditional",
+   "citation": "@microsoft/applicationinsights-dependencies-js@3.4.4 dist-es5/ajax.js L666-675 (_instrumentXhr): the hooks are installed only when !_disableAjaxTracking, a config flag read in an onConfigChange callback (spec §7: config and option flags give conditional); _hookProto(XMLHttpRequest, 'abort') at L711."
+  },
+  {
+   "target": "XMLHttpRequest.prototype.setRequestHeader",
+   "reachability": "conditional",
+   "citation": "@microsoft/applicationinsights-dependencies-js@3.4.4 dist-es5/ajax.js L666-675 (_instrumentXhr): the hooks are installed only when !_disableAjaxTracking, a config flag read in an onConfigChange callback (spec §7: config and option flags give conditional); _hookProto(XMLHttpRequest, 'setRequestHeader') at L726."
+  }
+ ],
+ "clarity": [
+  {
+   "target": "history.pushState",
+   "reachability": "conditional",
+   "citation": "clarity-js@0.8.71 build/clarity.module.js L6251-6256 (start: if (check(config)) … start$5()), L5892-5903 (check: presence tests of Promise, MutationObserver, createTreeWalker, Date.now, performance.now and WeakMap, and the globalPrivacyControl test; spec §7: presence tests on a different target give conditional), L5873-5879, L5815-5820, L5822-5826 (history[method] = …; the original === null test is a once-flag)."
+  },
+  {
+   "target": "history.replaceState",
+   "reachability": "conditional",
+   "citation": "clarity-js@0.8.71 build/clarity.module.js L6251-6256 (start: if (check(config)) … start$5()), L5892-5903 (check: presence tests of Promise, MutationObserver, createTreeWalker, Date.now, performance.now and WeakMap, and the globalPrivacyControl test; spec §7: presence tests on a different target give conditional), L5873-5879, L5815-5820, L5822-5826 (history[method] = …; the original === null test is a once-flag)."
+  }
+ ],
+ "core-js": [
+  {
+   "target": "Function.prototype.toString",
+   "reachability": "unconditional",
+   "citation": "core-js@3.50.0 internals/make-built-in.js L51-55: Function.prototype.toString = makeBuiltIn(…) at the module's top level, which every imported core-js module requires; no guard (spec §7: unconditional)."
+  }
+ ],
+ "datadog": [
+  {
+   "target": "XMLHttpRequest.prototype.open",
+   "reachability": "conditional",
+   "citation": "@datadog/browser-rum-core@7.14.0 esm/boot/preStartRum.mjs L56-57: if (!configuration || !isAllowedTrackingOrigins(configuration, …)) return, an undecidable test of the validated init configuration before RUM starts (spec §7: conditional); then @datadog/browser-core@7.14.0 esm/browser/xhrObservable.mjs L13-16 (an Observable subscriber, judged from its creation site)."
+  },
+  {
+   "target": "XMLHttpRequest.prototype.send",
+   "reachability": "conditional",
+   "citation": "@datadog/browser-rum-core@7.14.0 esm/boot/preStartRum.mjs L56-57: if (!configuration || !isAllowedTrackingOrigins(configuration, …)) return, an undecidable test of the validated init configuration before RUM starts (spec §7: conditional); then @datadog/browser-core@7.14.0 esm/browser/xhrObservable.mjs L13-19."
+  },
+  {
+   "target": "XMLHttpRequest.prototype.abort",
+   "reachability": "conditional",
+   "citation": "@datadog/browser-rum-core@7.14.0 esm/boot/preStartRum.mjs L56-57: if (!configuration || !isAllowedTrackingOrigins(configuration, …)) return, an undecidable test of the validated init configuration before RUM starts (spec §7: conditional); then @datadog/browser-core@7.14.0 esm/browser/xhrObservable.mjs L13-20."
+  },
+  {
+   "target": "Window.fetch",
+   "reachability": "conditional",
+   "citation": "@datadog/browser-rum-core@7.14.0 esm/boot/preStartRum.mjs L56-57: if (!configuration || !isAllowedTrackingOrigins(configuration, …)) return, an undecidable test of the validated init configuration before RUM starts (spec §7: conditional); then @datadog/browser-core@7.14.0 esm/browser/fetchObservable.mjs L25-28."
+  },
+  {
+   "target": "History.prototype.pushState",
+   "reachability": "conditional",
+   "citation": "@datadog/browser-rum-core@7.14.0 esm/boot/preStartRum.mjs L56-57: if (!configuration || !isAllowedTrackingOrigins(configuration, …)) return, an undecidable test of the validated init configuration before RUM starts (spec §7: conditional); then @datadog/browser-rum-core@7.14.0 esm/browser/locationChangeObservable.mjs L28."
+  }
+ ],
+ "newrelic": [
+  {
+   "target": "XMLHttpRequest.prototype.open",
+   "reachability": "conditional",
+   "citation": "@newrelic/browser-agent@1.322.0 dist/esm/loaders/agent.js L87-92: a feature's instrument class runs only if getEnabledFeatures(this.init)[featureName], i.e. !!init[feature].enabled (loaders/features/enabled-features.js L7-13), a config flag (spec §7: conditional); features/ajax/instrument/index.js L69, wrap-xhr.js L67."
+  },
+  {
+   "target": "XMLHttpRequest.prototype.send",
+   "reachability": "conditional",
+   "citation": "@newrelic/browser-agent@1.322.0 dist/esm/loaders/agent.js L87-92: a feature's instrument class runs only if getEnabledFeatures(this.init)[featureName], i.e. !!init[feature].enabled (loaders/features/enabled-features.js L7-13), a config flag (spec §7: conditional); features/ajax/instrument/index.js L69, wrap-xhr.js L67."
+  },
+  {
+   "target": "Window.fetch",
+   "reachability": "conditional",
+   "citation": "@newrelic/browser-agent@1.322.0 dist/esm/loaders/agent.js L87-92: a feature's instrument class runs only if getEnabledFeatures(this.init)[featureName], i.e. !!init[feature].enabled (loaders/features/enabled-features.js L7-13), a config flag (spec §7: conditional); features/ajax/instrument/index.js L68 (wrapFetch)."
+  },
+  {
+   "target": "console.log",
+   "reachability": "conditional",
+   "citation": "@newrelic/browser-agent@1.322.0 dist/esm/loaders/agent.js L87-92: a feature's instrument class runs only if getEnabledFeatures(this.init)[featureName], i.e. !!init[feature].enabled (loaders/features/enabled-features.js L7-13), a config flag (spec §7: conditional); features/logging/instrument/index.js L22-28."
+  },
+  {
+   "target": "history.pushState",
+   "reachability": "conditional",
+   "citation": "@newrelic/browser-agent@1.322.0 dist/esm/loaders/agent.js L87-92: a feature's instrument class runs only if getEnabledFeatures(this.init)[featureName], i.e. !!init[feature].enabled (loaders/features/enabled-features.js L7-13), a config flag (spec §7: conditional); features/soft_navigations/instrument/index.js L30-32 (also returns unless a MutationObserver original exists), wrap-history.js L38."
+  }
+ ],
+ "otel": [
+  {
+   "target": "Window.fetch",
+   "reachability": "conditional",
+   "citation": "@opentelemetry/instrumentation@0.222.0 build/esm/platform/browser/instrumentation.js L12-14: if (this._config.enabled) this.enable(), an option flag (spec §7: conditional); @opentelemetry/instrumentation-fetch@0.222.0 build/esm/fetch.js L378-389 (once-flags and try/catch are transparent)."
+  },
+  {
+   "target": "XMLHttpRequest.prototype.open",
+   "reachability": "conditional",
+   "citation": "@opentelemetry/instrumentation@0.222.0 build/esm/platform/browser/instrumentation.js L12-14: if (this._config.enabled) this.enable(), an option flag (spec §7: conditional); @opentelemetry/instrumentation-xml-http-request@0.222.0 build/esm/xhr.js L382-389."
+  },
+  {
+   "target": "XMLHttpRequest.prototype.send",
+   "reachability": "conditional",
+   "citation": "@opentelemetry/instrumentation@0.222.0 build/esm/platform/browser/instrumentation.js L12-14: if (this._config.enabled) this.enable(), an option flag (spec §7: conditional); @opentelemetry/instrumentation-xml-http-request@0.222.0 build/esm/xhr.js L382-390."
+  },
+  {
+   "target": "history.pushState",
+   "reachability": "conditional",
+   "citation": "@opentelemetry/instrumentation@0.222.0 build/esm/platform/browser/instrumentation.js L12-14: if (this._config.enabled) this.enable(), an option flag (spec §7: conditional); @opentelemetry/instrumentation-user-interaction@0.66.0 build/esm/instrumentation.js L307."
+  },
+  {
+   "target": "history.back",
+   "reachability": "conditional",
+   "citation": "@opentelemetry/instrumentation@0.222.0 build/esm/platform/browser/instrumentation.js L12-14: if (this._config.enabled) this.enable(), an option flag (spec §7: conditional); @opentelemetry/instrumentation-user-interaction@0.66.0 build/esm/instrumentation.js L308."
+  }
+ ],
+ "sentry-10": [
+  {
+   "target": "Window.fetch",
+   "reachability": "conditional",
+   "citation": "@sentry/core@10.75.3 build/esm/client.js L287: integrations are set up only if this._isEnabled() || …, an undecidable test of the client options (spec §7: conditional); the fetch instrumentation also returns unless supportsNativeFetch(), an isNativeFunction check (spec §7: conditional)."
+  },
+  {
+   "target": "XMLHttpRequest.prototype.open",
+   "reachability": "conditional",
+   "citation": "@sentry/core@10.75.3 build/esm/client.js L287: integrations are set up only if this._isEnabled() || …, an undecidable test of the client options (spec §7: conditional); the XHR instrumentation of the breadcrumbs and tracing integrations."
+  },
+  {
+   "target": "history.pushState",
+   "reachability": "conditional",
+   "citation": "@sentry/core@10.75.3 build/esm/client.js L287: integrations are set up only if this._isEnabled() || …, an undecidable test of the client options (spec §7: conditional); the history instrumentation of the breadcrumbs and browser-tracing integrations."
+  },
+  {
+   "target": "console.log",
+   "reachability": "conditional",
+   "citation": "@sentry/core@10.75.3 build/esm/client.js L287: integrations are set up only if this._isEnabled() || …, an undecidable test of the client options (spec §7: conditional); the console instrumentation of the breadcrumbs integration, behind its console option."
+  },
+  {
+   "target": "Function.prototype.toString",
+   "reachability": "conditional",
+   "citation": "@sentry/core@10.75.3 build/esm/client.js L287: integrations are set up only if this._isEnabled() || …, an undecidable test of the client options (spec §7: conditional); the FunctionToString integration's setupOnce."
+  }
+ ],
+ "sentry-11": [
+  {
+   "target": "Window.fetch",
+   "reachability": "conditional",
+   "citation": "@sentry/core@11.0.0 build/esm/client.js L295: integrations are set up only if this._isEnabled() || …, an undecidable test of the client options (spec §7: conditional); the fetch instrumentation also returns unless supportsNativeFetch(), an isNativeFunction check (spec §7: conditional)."
+  },
+  {
+   "target": "XMLHttpRequest.prototype.open",
+   "reachability": "conditional",
+   "citation": "@sentry/core@11.0.0 build/esm/client.js L295: integrations are set up only if this._isEnabled() || …, an undecidable test of the client options (spec §7: conditional); the XHR instrumentation of the breadcrumbs and tracing integrations."
+  },
+  {
+   "target": "history.pushState",
+   "reachability": "conditional",
+   "citation": "@sentry/core@11.0.0 build/esm/client.js L295: integrations are set up only if this._isEnabled() || …, an undecidable test of the client options (spec §7: conditional); the history instrumentation of the breadcrumbs and browser-tracing integrations."
+  },
+  {
+   "target": "console.log",
+   "reachability": "conditional",
+   "citation": "@sentry/core@11.0.0 build/esm/client.js L295: integrations are set up only if this._isEnabled() || …, an undecidable test of the client options (spec §7: conditional); the console instrumentation of the breadcrumbs integration, behind its console option."
+  },
+  {
+   "target": "Function.prototype.toString",
+   "reachability": "conditional",
+   "citation": "@sentry/core@11.0.0 build/esm/client.js L295: integrations are set up only if this._isEnabled() || …, an undecidable test of the client options (spec §7: conditional); the FunctionToString integration's setupOnce."
+  }
+ ],
+ "sentry-11-no-replay": [
+  {
+   "target": "Window.fetch",
+   "reachability": "conditional",
+   "citation": "@sentry/core@11.0.0 build/esm/client.js L295: integrations are set up only if this._isEnabled() || …, an undecidable test of the client options (spec §7: conditional); the fetch instrumentation also returns unless supportsNativeFetch(), an isNativeFunction check (spec §7: conditional)."
+  },
+  {
+   "target": "XMLHttpRequest.prototype.open",
+   "reachability": "conditional",
+   "citation": "@sentry/core@11.0.0 build/esm/client.js L295: integrations are set up only if this._isEnabled() || …, an undecidable test of the client options (spec §7: conditional); the XHR instrumentation of the breadcrumbs and tracing integrations."
+  },
+  {
+   "target": "history.pushState",
+   "reachability": "conditional",
+   "citation": "@sentry/core@11.0.0 build/esm/client.js L295: integrations are set up only if this._isEnabled() || …, an undecidable test of the client options (spec §7: conditional); the history instrumentation of the breadcrumbs and browser-tracing integrations."
+  },
+  {
+   "target": "console.log",
+   "reachability": "conditional",
+   "citation": "@sentry/core@11.0.0 build/esm/client.js L295: integrations are set up only if this._isEnabled() || …, an undecidable test of the client options (spec §7: conditional); the console instrumentation of the breadcrumbs integration, behind its console option."
+  },
+  {
+   "target": "Function.prototype.toString",
+   "reachability": "conditional",
+   "citation": "@sentry/core@11.0.0 build/esm/client.js L295: integrations are set up only if this._isEnabled() || …, an undecidable test of the client options (spec §7: conditional); the FunctionToString integration's setupOnce."
+  }
+ ],
+ "sentry-7": [
+  {
+   "target": "Window.fetch",
+   "reachability": "conditional",
+   "citation": "@sentry/core@7.120.4 esm/baseclient.js L263: integrations are set up only if (forceInitialize && …) || (this._isEnabled() && …), an undecidable test of the client options (spec §7: conditional); the fetch instrumentation also returns unless supportsNativeFetch(), an isNativeFunction check (spec §7: conditional)."
+  },
+  {
+   "target": "XMLHttpRequest.prototype.open",
+   "reachability": "conditional",
+   "citation": "@sentry/core@7.120.4 esm/baseclient.js L263: integrations are set up only if (forceInitialize && …) || (this._isEnabled() && …), an undecidable test of the client options (spec §7: conditional); the XHR instrumentation of the breadcrumbs and tracing integrations."
+  },
+  {
+   "target": "history.pushState",
+   "reachability": "conditional",
+   "citation": "@sentry/core@7.120.4 esm/baseclient.js L263: integrations are set up only if (forceInitialize && …) || (this._isEnabled() && …), an undecidable test of the client options (spec §7: conditional); the history instrumentation of the breadcrumbs and browser-tracing integrations."
+  },
+  {
+   "target": "console.log",
+   "reachability": "conditional",
+   "citation": "@sentry/core@7.120.4 esm/baseclient.js L263: integrations are set up only if (forceInitialize && …) || (this._isEnabled() && …), an undecidable test of the client options (spec §7: conditional); the console instrumentation of the breadcrumbs integration, behind its console option."
+  },
+  {
+   "target": "Function.prototype.toString",
+   "reachability": "conditional",
+   "citation": "@sentry/core@7.120.4 esm/baseclient.js L263: integrations are set up only if (forceInitialize && …) || (this._isEnabled() && …), an undecidable test of the client options (spec §7: conditional); the FunctionToString integration's setupOnce."
+  }
+ ],
+ "single-spa": [
+  {
+   "target": "Window.addEventListener",
+   "reachability": "unconditional",
+   "citation": "single-spa@6.0.3 src/navigation/navigation-events.js L134-150, L161 (from its source map): patchHistoryApi, called by start() (src/start.js L7-10) from the app's top level; historyApiIsPatched is a once-flag and isInBrowser (typeof window !== 'undefined') is statically true in a window, so no guard matters (spec §7: unconditional)."
+  },
+  {
+   "target": "Window.removeEventListener",
+   "reachability": "unconditional",
+   "citation": "single-spa@6.0.3 src/navigation/navigation-events.js L134-150, L175 (from its source map): patchHistoryApi, called by start() (src/start.js L7-10) from the app's top level; historyApiIsPatched is a once-flag and isInBrowser (typeof window !== 'undefined') is statically true in a window, so no guard matters (spec §7: unconditional)."
+  },
+  {
+   "target": "history.pushState",
+   "reachability": "unconditional",
+   "citation": "single-spa@6.0.3 src/navigation/navigation-events.js L134-150, L187 (from its source map): patchHistoryApi, called by start() (src/start.js L7-10) from the app's top level; historyApiIsPatched is a once-flag and isInBrowser (typeof window !== 'undefined') is statically true in a window, so no guard matters (spec §7: unconditional)."
+  },
+  {
+   "target": "history.replaceState",
+   "reachability": "unconditional",
+   "citation": "single-spa@6.0.3 src/navigation/navigation-events.js L134-150, L191 (from its source map): patchHistoryApi, called by start() (src/start.js L7-10) from the app's top level; historyApiIsPatched is a once-flag and isInBrowser (typeof window !== 'undefined') is statically true in a window, so no guard matters (spec §7: unconditional)."
+  }
+ ],
+ "zonejs": [
+  {
+   "target": "XMLHttpRequest.prototype.open",
+   "reachability": "conditional",
+   "citation": "zone.js@0.16.3 fesm2015/zone.js L73-84 (Zone.__load_patch: else if (!global['__Zone_disable_' + name]) fn(…)), a page config flag on the global (spec §7: config flags give conditional); the \"XHR\" patch at L1727."
+  },
+  {
+   "target": "XMLHttpRequest.prototype.send",
+   "reachability": "conditional",
+   "citation": "zone.js@0.16.3 fesm2015/zone.js L73-84 (Zone.__load_patch: else if (!global['__Zone_disable_' + name]) fn(…)), a page config flag on the global (spec §7: config flags give conditional); the \"XHR\" patch at L1727."
+  },
+  {
+   "target": "EventTarget.prototype.addEventListener",
+   "reachability": "conditional",
+   "citation": "zone.js@0.16.3 fesm2015/zone.js L73-84 (Zone.__load_patch: else if (!global['__Zone_disable_' + name]) fn(…)), a page config flag on the global (spec §7: config flags give conditional); the \"EventTarget\" patch at L1703-1705."
+  },
+  {
+   "target": "Window.Promise",
+   "reachability": "conditional",
+   "citation": "zone.js@0.16.3 fesm2015/zone.js L73-84 (Zone.__load_patch: else if (!global['__Zone_disable_' + name]) fn(…)), a page config flag on the global (spec §7: config flags give conditional); the \"ZoneAwarePromise\" patch at L1885."
+  },
+  {
+   "target": "Window.queueMicrotask",
+   "reachability": "conditional",
+   "citation": "zone.js@0.16.3 fesm2015/zone.js L73-84 (Zone.__load_patch: else if (!global['__Zone_disable_' + name]) fn(…)), a page config flag on the global (spec §7: config flags give conditional); the \"queueMicrotask\" patch at L1878."
+  }
+ ]
+}

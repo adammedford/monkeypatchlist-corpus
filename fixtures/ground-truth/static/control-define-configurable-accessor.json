@@ -1,0 +1,49 @@
+{
+ "site": "static/control-define-configurable-accessor",
+ "url": "https://app.corpus.test/index.html",
+ "browser": "chromium 153.0.8010.12",
+ "settleMs": 300,
+ "snapshot": {
+  "holders": 1962,
+  "descriptors": 15442
+ },
+ "mutations": [
+  {
+   "target": "navigator.userAgent",
+   "holder": "navigator",
+   "holderKind": "singleton",
+   "interface": "Navigator",
+   "key": "userAgent",
+   "change": "shadow",
+   "before": {
+    "kind": "accessor",
+    "get": true,
+    "set": false,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "accessor",
+    "get": true,
+    "set": false,
+    "enumerable": false,
+    "configurable": false
+   },
+   "shadows": "Navigator.prototype.userAgent",
+   "effect": "descriptor-change",
+   "wrapEvidence": null,
+   "definedAt": {
+    "url": "https://app.corpus.test/index.html",
+    "line": 8,
+    "column": 62
+   }
+  }
+ ],
+ "expandos": [],
+ "newGlobals": [
+  "__corpusReady"
+ ],
+ "workers": [],
+ "blockedOrigins": [],
+ "pageErrors": []
+}

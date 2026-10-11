@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>fixture: control-named-setter-define</title></head>
+<body>
+<h1>control-named-setter-define</h1>
+<button id="corpus-button" type="button">click</button>
+<script>
+try { Object.defineProperty(localStorage, 'setItem', { value: function () {} }); } catch (e) {}
+</script>
+<script>window.__corpusReady = true;</script>
+</body>
+</html>

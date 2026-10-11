@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>fixture: control-named-properties-object-define</title></head>
+<body>
+<h1>control-named-properties-object-define</h1>
+<button id="corpus-button" type="button">click</button>
+<script>
+var WP = Object.getPrototypeOf(Window.prototype);
+try { Object.defineProperty(WP, 'addEventListener', { value: function () {} }); } catch (e) {}
+</script>
+<script>window.__corpusReady = true;</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>corpus: sentry-cdn</title>
+<script src="https://browser.sentry-cdn.com/11.0.0/bundle.tracing.replay.min.js" crossorigin="anonymous"></script>
+<script>
+Sentry.init({
+  dsn: "https://public@o0.ingest.example.invalid/1",
+  integrations: [Sentry.browserTracingIntegration(), Sentry.replayIntegration()],
+  tracesSampleRate: 1.0, replaysSessionSampleRate: 1.0, replaysOnErrorSampleRate: 1.0,
+});
+</script>
+</head>
+<body>
+<h1>sentry-cdn</h1>
+<button id="corpus-button" type="button">click</button>
+</body>
+</html>

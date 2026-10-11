@@ -1,0 +1,146 @@
+{
+ "site": "esbuild/whatwg-fetch/nomaps",
+ "url": "https://app.corpus.test/index.html",
+ "browser": "chromium 153.0.8010.12",
+ "settleMs": 3000,
+ "snapshot": {
+  "holders": 1962,
+  "descriptors": 15442
+ },
+ "mutations": [
+  {
+   "target": "Window.fetch",
+   "holder": "Window",
+   "holderKind": "global",
+   "interface": "Window",
+   "key": "fetch",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "absentAtLoad": true,
+   "effect": "replace",
+   "wrapEvidence": null,
+   "definedAt": {
+    "url": "https://app.corpus.test/main-3YTSG3RC.js",
+    "line": 2,
+    "column": 1392
+   }
+  },
+  {
+   "target": "Window.Headers",
+   "holder": "Window",
+   "holderKind": "global",
+   "interface": "Window",
+   "key": "Headers",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "effect": "replace",
+   "wrapEvidence": null,
+   "definedAt": {
+    "url": "https://app.corpus.test/main-3YTSG3RC.js",
+    "line": 1,
+    "column": 1125
+   }
+  },
+  {
+   "target": "Window.Request",
+   "holder": "Window",
+   "holderKind": "global",
+   "interface": "Window",
+   "key": "Request",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "effect": "replace",
+   "wrapEvidence": null,
+   "definedAt": {
+    "url": "https://app.corpus.test/main-3YTSG3RC.js",
+    "line": 1,
+    "column": 5230
+   }
+  },
+  {
+   "target": "Window.Response",
+   "holder": "Window",
+   "holderKind": "global",
+   "interface": "Window",
+   "key": "Response",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "effect": "replace",
+   "wrapEvidence": null,
+   "definedAt": {
+    "url": "https://app.corpus.test/main-3YTSG3RC.js",
+    "line": 2,
+    "column": 220
+   }
+  }
+ ],
+ "expandos": [],
+ "newGlobals": [
+  "__corpusReady"
+ ],
+ "workers": [],
+ "blockedOrigins": [],
+ "pageErrors": [],
+ "absent": {
+  "run": "fetch",
+  "members": [
+   {
+    "target": "Window.fetch",
+    "deleted": true,
+    "snapshotted": true
+   }
+  ]
+ }
+}

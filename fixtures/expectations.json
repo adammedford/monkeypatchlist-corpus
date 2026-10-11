@@ -1,0 +1,550 @@
+[
+ {
+  "name": "restore-local-capture",
+  "kind": "restore",
+  "idiom": "local capture",
+  "runtime": {
+   "install": [
+    "XMLHttpRequest.prototype.open|wrap"
+   ],
+   "afterTeardown": []
+  },
+  "resolver": {
+   "findings": [
+    "XMLHttpRequest.prototype.open|wrap"
+   ],
+   "restores": [
+    "XMLHttpRequest.prototype.open"
+   ]
+  }
+ },
+ {
+  "name": "restore-closure-capture",
+  "kind": "restore",
+  "idiom": "closure capture (rrweb patch)",
+  "runtime": {
+   "install": [
+    "Window.fetch|wrap"
+   ],
+   "afterTeardown": []
+  },
+  "resolver": {
+   "findings": [
+    "Window.fetch|wrap"
+   ],
+   "restores": [
+    "Window.fetch"
+   ]
+  }
+ },
+ {
+  "name": "restore-two-level-helper",
+  "kind": "restore",
+  "idiom": "parameter through a two-level helper (Datadog instrumentMethod)",
+  "runtime": {
+   "install": [
+    "History.prototype.pushState|wrap"
+   ],
+   "afterTeardown": []
+  },
+  "resolver": {
+   "findings": [
+    "History.prototype.pushState|wrap"
+   ],
+   "restores": [
+    "History.prototype.pushState"
+   ]
+  }
+ },
+ {
+  "name": "restore-descriptor-dead-fallback",
+  "kind": "restore",
+  "idiom": "descriptor restore with a dead catalog fallback (rrweb hookSetter)",
+  "runtime": {
+   "install": [
+    "HTMLInputElement.prototype.value|descriptor-change"
+   ],
+   "afterTeardown": []
+  },
+  "resolver": {
+   "findings": [
+    "HTMLInputElement.prototype.value|descriptor-change"
+   ],
+   "restores": [
+    "HTMLInputElement.prototype.value"
+   ]
+  }
+ },
+ {
+  "name": "restore-identity-guarded",
+  "kind": "restore",
+  "idiom": "identity-guarded restore (Datadog, OpenTelemetry)",
+  "runtime": {
+   "install": [
+    "Window.open|wrap"
+   ],
+   "afterTeardown": []
+  },
+  "resolver": {
+   "findings": [
+    "Window.open|wrap"
+   ],
+   "restores": [
+    "Window.open"
+   ]
+  }
+ },
+ {
+  "name": "restore-shadow-residue",
+  "kind": "restore",
+  "idiom": "shadowing residue (rrweb/PostHog patch(history, …))",
+  "runtime": {
+   "install": [
+    "history.pushState|wrap"
+   ],
+   "afterTeardown": [
+    "history.pushState|shadow"
+   ]
+  },
+  "resolver": {
+   "findings": [
+    "history.pushState|wrap"
+   ],
+   "restores": [
+    "history.pushState"
+   ]
+  }
+ },
+ {
+  "name": "restore-heap-carried",
+  "kind": "restore",
+  "idiom": "heap-carried original (a proven restore)",
+  "runtime": {
+   "install": [
+    "console.log|wrap"
+   ],
+   "afterTeardown": []
+  },
+  "resolver": {
+   "findings": [
+    "console.log|wrap"
+   ],
+   "restores": [
+    "console.log"
+   ]
+  }
+ },
+ {
+  "name": "ineffective-readonly-assign",
+  "kind": "ineffective",
+  "cell": "readonly × assign",
+  "runtime": {
+   "install": []
+  },
+  "resolver": {
+   "findings": [],
+   "ineffective": [
+    "navigator.userAgent|readonly|strict-only",
+    "Window.top|readonly|strict-only"
+   ]
+  }
+ },
+ {
+  "name": "ineffective-readonly-declare",
+  "kind": "ineffective",
+  "cell": "readonly × declare (var with initializer)",
+  "runtime": {
+   "install": []
+  },
+  "resolver": {
+   "findings": [],
+   "ineffective": [
+    "Window.closed|readonly|strict-only"
+   ]
+  }
+ },
+ {
+  "name": "ineffective-readonly-declare-unforgeable",
+  "kind": "ineffective",
+  "cell": "readonly × declare, [LegacyUnforgeable] (var top = 1)",
+  "runtime": {
+   "install": []
+  },
+  "resolver": {
+   "findings": [],
+   "ineffective": [
+    "Window.top|readonly|strict-only"
+   ]
+  }
+ },
+ {
+  "name": "ineffective-lenient-setter-assign",
+  "kind": "ineffective",
+  "cell": "lenient-setter × assign",
+  "runtime": {
+   "install": []
+  },
+  "resolver": {
+   "findings": [],
+   "ineffective": [
+    "document.fullscreen|lenient-setter|never",
+    "document.fullscreenEnabled|lenient-setter|never"
+   ]
+  }
+ },
+ {
+  "name": "ineffective-non-writable-assign",
+  "kind": "ineffective",
+  "cell": "non-writable × assign",
+  "runtime": {
+   "install": []
+  },
+  "resolver": {
+   "findings": [],
+   "ineffective": [
+    "Math.PI|non-writable|strict-only",
+    "Node.ELEMENT_NODE|non-writable|strict-only",
+    "Array.prototype|non-writable|strict-only"
+   ]
+  }
+ },
+ {
+  "name": "ineffective-non-writable-declare",
+  "kind": "ineffective",
+  "cell": "non-writable × declare (var with initializer)",
+  "runtime": {
+   "install": []
+  },
+  "resolver": {
+   "findings": [],
+   "ineffective": [
+    "Window.NaN|non-writable|strict-only",
+    "Window.undefined|non-writable|strict-only",
+    "Window.Infinity|non-writable|strict-only"
+   ]
+  }
+ },
+ {
+  "name": "ineffective-non-configurable-define",
+  "kind": "ineffective",
+  "cell": "non-configurable × define",
+  "runtime": {
+   "install": []
+  },
+  "resolver": {
+   "findings": [],
+   "ineffective": [
+    "Math.PI|non-configurable|always",
+    "Node.ELEMENT_NODE|non-configurable|always",
+    "Window.document|non-configurable|always",
+    "Window.top|non-configurable|always"
+   ]
+  }
+ },
+ {
+  "name": "ineffective-non-configurable-delete",
+  "kind": "ineffective",
+  "cell": "non-configurable × delete",
+  "runtime": {
+   "install": []
+  },
+  "resolver": {
+   "findings": [],
+   "ineffective": [
+    "Math.PI|non-configurable|strict-only",
+    "Node.ELEMENT_NODE|non-configurable|strict-only",
+    "Array.prototype|non-configurable|strict-only",
+    "Window.document|non-configurable|strict-only"
+   ]
+  }
+ },
+ {
+  "name": "ineffective-non-configurable-declare",
+  "kind": "ineffective",
+  "cell": "non-configurable × declare (function/let/const/class)",
+  "runtime": {
+   "install": [],
+   "pageErrors": 5
+  },
+  "resolver": {
+   "findings": [],
+   "ineffective": [
+    "Window.top|non-configurable|always",
+    "Window.document|non-configurable|always",
+    "Window.location|non-configurable|always",
+    "Window.window|non-configurable|always",
+    "Window.NaN|non-configurable|always"
+   ]
+  }
+ },
+ {
+  "name": "ineffective-immutable-prototype-setprototypeof",
+  "kind": "ineffective",
+  "cell": "immutable-prototype × setPrototypeOf",
+  "runtime": {
+   "install": []
+  },
+  "resolver": {
+   "findings": [],
+   "ineffective": [
+    "Object.prototype.[[Prototype]]|immutable-prototype|always",
+    "Window.[[Prototype]]|immutable-prototype|always",
+    "Window.prototype.[[Prototype]]|immutable-prototype|always",
+    "EventTarget.prototype.[[Prototype]]|immutable-prototype|always"
+   ]
+  }
+ },
+ {
+  "name": "ineffective-immutable-prototype-proto-assign",
+  "kind": "ineffective",
+  "cell": "immutable-prototype × assign to __proto__ (setPrototypeOf through the Object.prototype.__proto__ setter)",
+  "runtime": {
+   "install": []
+  },
+  "resolver": {
+   "findings": [],
+   "ineffective": [
+    "Window.[[Prototype]]|immutable-prototype|always",
+    "Object.prototype.[[Prototype]]|immutable-prototype|always"
+   ]
+  }
+ },
+ {
+  "name": "ineffective-immutable-prototype-location",
+  "kind": "ineffective",
+  "cell": "immutable-prototype × setPrototypeOf on Location (HTML [[SetPrototypeOf]])",
+  "runtime": {
+   "install": []
+  },
+  "resolver": {
+   "findings": [],
+   "ineffective": [
+    "location.[[Prototype]]|immutable-prototype|always"
+   ]
+  }
+ },
+ {
+  "name": "ineffective-immutable-prototype-windowproperties",
+  "kind": "ineffective",
+  "cell": "immutable-prototype × setPrototypeOf on WindowProperties",
+  "runtime": {
+   "install": [],
+   "probe": {
+    "protoUnchanged": true
+   }
+  },
+  "resolver": {
+   "findings": [],
+   "ineffective": [
+    "WindowProperties.[[Prototype]]|immutable-prototype|always"
+   ]
+  }
+ },
+ {
+  "name": "ineffective-storage-readonly-assign",
+  "kind": "ineffective",
+  "cell": "readonly × assign on a Storage singleton (named-setter object)",
+  "runtime": {
+   "install": []
+  },
+  "resolver": {
+   "findings": [],
+   "ineffective": [
+    "localStorage.length|readonly|strict-only"
+   ]
+  }
+ },
+ {
+  "name": "control-define-configurable-accessor",
+  "kind": "control",
+  "cell": "readonly attribute × define (configurable, so effective)",
+  "runtime": {
+   "install": [
+    "navigator.userAgent|descriptor-change"
+   ]
+  },
+  "resolver": {
+   "findings": [
+    "navigator.userAgent|descriptor-change"
+   ],
+   "ineffective": []
+  }
+ },
+ {
+  "name": "control-idl-setter",
+  "kind": "control",
+  "cell": "IDL setter × assign (API use)",
+  "runtime": {
+   "install": []
+  },
+  "resolver": {
+   "findings": [],
+   "ineffective": []
+  }
+ },
+ {
+  "name": "control-replaceable-assign",
+  "kind": "control",
+  "cell": "[Replaceable] × assign (mutation)",
+  "runtime": {
+   "install": [
+    "Window.length|replace"
+   ]
+  },
+  "resolver": {
+   "findings": [
+    "Window.length|replace"
+   ],
+   "ineffective": []
+  }
+ },
+ {
+  "name": "control-declare-configurable-global",
+  "kind": "control",
+  "cell": "declare over a configurable global (replace)",
+  "runtime": {
+   "install": [
+    "Window.fetch|replace"
+   ]
+  },
+  "resolver": {
+   "findings": [
+    "Window.fetch|replace"
+   ],
+   "ineffective": []
+  }
+ },
+ {
+  "name": "control-named-setter-setprototypeof",
+  "kind": "control",
+  "cell": "named-setter object × setPrototypeOf (prototype-change)",
+  "runtime": {
+   "install": [
+    "localStorage.[[Prototype]]|prototype-change"
+   ]
+  },
+  "resolver": {
+   "findings": [
+    "localStorage.[[Prototype]]|prototype-change"
+   ],
+   "ineffective": []
+  }
+ },
+ {
+  "name": "control-named-setter-assign",
+  "kind": "control",
+  "cell": "named-setter object × assign of a name on its chain (shadowing write)",
+  "runtime": {
+   "install": [
+    "localStorage.setItem|replace",
+    "sessionStorage.getItem|replace"
+   ]
+  },
+  "resolver": {
+   "findings": [
+    "localStorage.setItem|replace",
+    "sessionStorage.getItem|replace"
+   ],
+   "ineffective": []
+  }
+ },
+ {
+  "name": "control-named-setter-define",
+  "kind": "control",
+  "cell": "named-setter object × define of a name on its chain (shadowing write)",
+  "runtime": {
+   "install": [
+    "localStorage.setItem|replace"
+   ]
+  },
+  "resolver": {
+   "findings": [
+    "localStorage.setItem|replace"
+   ],
+   "ineffective": []
+  }
+ },
+ {
+  "name": "control-named-setter-delete",
+  "kind": "control",
+  "cell": "named-setter object × delete of an inherited name (changes no native)",
+  "runtime": {
+   "install": []
+  },
+  "resolver": {
+   "findings": [],
+   "ineffective": []
+  }
+ },
+ {
+  "name": "control-named-properties-object-assign",
+  "kind": "control",
+  "cell": "WindowProperties × assign of a name on its chain (shadowing write)",
+  "runtime": {
+   "install": [
+    "WindowProperties.addEventListener|replace"
+   ]
+  },
+  "resolver": {
+   "findings": [
+    "WindowProperties.addEventListener|replace"
+   ],
+   "ineffective": []
+  }
+ },
+ {
+  "name": "control-named-properties-object-define",
+  "kind": "control",
+  "cell": "WindowProperties × define of a name on its chain (shadowing write)",
+  "runtime": {
+   "install": [
+    "WindowProperties.addEventListener|replace"
+   ]
+  },
+  "resolver": {
+   "findings": [
+    "WindowProperties.addEventListener|replace"
+   ],
+   "ineffective": []
+  }
+ },
+ {
+  "name": "control-named-properties-object-delete",
+  "kind": "control",
+  "cell": "WindowProperties × delete of a named element (not a target)",
+  "runtime": {
+   "install": [],
+   "probe": {
+    "namedStillVisible": true
+   }
+  },
+  "resolver": {
+   "findings": [],
+   "ineffective": []
+  }
+ },
+ {
+  "name": "control-declare-var-setter",
+  "kind": "control",
+  "cell": "declare × a setter (var name = 'x' calls the setter: API use)",
+  "runtime": {
+   "install": []
+  },
+  "resolver": {
+   "findings": [],
+   "ineffective": []
+  }
+ },
+ {
+  "name": "control-new-global",
+  "kind": "control",
+  "cell": "new non-native globals (not findings)",
+  "runtime": {
+   "install": []
+  },
+  "resolver": {
+   "findings": [],
+   "ineffective": []
+  }
+ }
+]

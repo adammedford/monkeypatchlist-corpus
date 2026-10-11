@@ -1,0 +1,574 @@
+{
+ "site": "vite/sentry-11-no-replay/maps",
+ "url": "https://app.corpus.test/index.html",
+ "browser": "chromium 153.0.8010.12",
+ "settleMs": 3000,
+ "snapshot": {
+  "holders": 1962,
+  "descriptors": 15442
+ },
+ "mutations": [
+  {
+   "target": "console.assert",
+   "holder": "console",
+   "holderKind": "namespace",
+   "interface": "console",
+   "key": "assert",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "own:__sentry_original__",
+   "definedAt": {
+    "url": "https://app.corpus.test/assets/index-juyOhu6-.js",
+    "line": 17,
+    "column": 2217
+   }
+  },
+  {
+   "target": "console.debug",
+   "holder": "console",
+   "holderKind": "namespace",
+   "interface": "console",
+   "key": "debug",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "own:__sentry_original__",
+   "definedAt": {
+    "url": "https://app.corpus.test/assets/index-juyOhu6-.js",
+    "line": 17,
+    "column": 2217
+   }
+  },
+  {
+   "target": "console.error",
+   "holder": "console",
+   "holderKind": "namespace",
+   "interface": "console",
+   "key": "error",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "own:__sentry_original__",
+   "definedAt": {
+    "url": "https://app.corpus.test/assets/index-juyOhu6-.js",
+    "line": 17,
+    "column": 2217
+   }
+  },
+  {
+   "target": "console.info",
+   "holder": "console",
+   "holderKind": "namespace",
+   "interface": "console",
+   "key": "info",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "own:__sentry_original__",
+   "definedAt": {
+    "url": "https://app.corpus.test/assets/index-juyOhu6-.js",
+    "line": 17,
+    "column": 2217
+   }
+  },
+  {
+   "target": "console.log",
+   "holder": "console",
+   "holderKind": "namespace",
+   "interface": "console",
+   "key": "log",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "own:__sentry_original__",
+   "definedAt": {
+    "url": "https://app.corpus.test/assets/index-juyOhu6-.js",
+    "line": 17,
+    "column": 2217
+   }
+  },
+  {
+   "target": "console.trace",
+   "holder": "console",
+   "holderKind": "namespace",
+   "interface": "console",
+   "key": "trace",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "own:__sentry_original__",
+   "definedAt": {
+    "url": "https://app.corpus.test/assets/index-juyOhu6-.js",
+    "line": 17,
+    "column": 2217
+   }
+  },
+  {
+   "target": "console.warn",
+   "holder": "console",
+   "holderKind": "namespace",
+   "interface": "console",
+   "key": "warn",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "own:__sentry_original__",
+   "definedAt": {
+    "url": "https://app.corpus.test/assets/index-juyOhu6-.js",
+    "line": 17,
+    "column": 2217
+   }
+  },
+  {
+   "target": "Error.stackTraceLimit",
+   "holder": "Error",
+   "holderKind": "constructor",
+   "interface": "Error",
+   "key": "stackTraceLimit",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "number",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "number",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "replace",
+   "wrapEvidence": null,
+   "definedAt": null,
+   "boundaryNote": "V8 extension, not Web IDL or ECMA-262; a writable data property, so arguably API use"
+  },
+  {
+   "target": "EventTarget.prototype.addEventListener",
+   "holder": "EventTarget.prototype",
+   "holderKind": "prototype",
+   "interface": "EventTarget",
+   "key": "addEventListener",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "own:__sentry_original__->own:__sentry_original__",
+   "definedAt": {
+    "url": "https://app.corpus.test/assets/index-juyOhu6-.js",
+    "line": 20,
+    "column": 20251
+   }
+  },
+  {
+   "target": "EventTarget.prototype.removeEventListener",
+   "holder": "EventTarget.prototype",
+   "holderKind": "prototype",
+   "interface": "EventTarget",
+   "key": "removeEventListener",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "own:__sentry_original__->own:__sentry_original__",
+   "definedAt": {
+    "url": "https://app.corpus.test/assets/index-juyOhu6-.js",
+    "line": 20,
+    "column": 20571
+   }
+  },
+  {
+   "target": "Function.prototype.toString",
+   "holder": "Function.prototype",
+   "holderKind": "prototype",
+   "interface": "Function",
+   "key": "toString",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "closure:e",
+   "definedAt": {
+    "url": "https://app.corpus.test/assets/index-juyOhu6-.js",
+    "line": 10,
+    "column": 6746
+   }
+  },
+  {
+   "target": "history.pushState",
+   "holder": "history",
+   "holderKind": "singleton",
+   "interface": "History",
+   "key": "pushState",
+   "change": "shadow",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "shadows": "History.prototype.pushState",
+   "effect": "wrap",
+   "wrapEvidence": "own:__sentry_original__",
+   "definedAt": {
+    "url": "https://app.corpus.test/assets/index-juyOhu6-.js",
+    "line": 20,
+    "column": 21761
+   }
+  },
+  {
+   "target": "history.replaceState",
+   "holder": "history",
+   "holderKind": "singleton",
+   "interface": "History",
+   "key": "replaceState",
+   "change": "shadow",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "shadows": "History.prototype.replaceState",
+   "effect": "wrap",
+   "wrapEvidence": "own:__sentry_original__",
+   "definedAt": {
+    "url": "https://app.corpus.test/assets/index-juyOhu6-.js",
+    "line": 20,
+    "column": 21761
+   }
+  },
+  {
+   "target": "Window.fetch",
+   "holder": "Window",
+   "holderKind": "global",
+   "interface": "Window",
+   "key": "fetch",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "proxy-target",
+   "definedAt": {
+    "url": "https://app.corpus.test/assets/index-juyOhu6-.js",
+    "line": 17,
+    "column": 7930
+   }
+  },
+  {
+   "target": "Window.requestAnimationFrame",
+   "holder": "Window",
+   "holderKind": "global",
+   "interface": "Window",
+   "key": "requestAnimationFrame",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "own:__sentry_original__",
+   "definedAt": {
+    "url": "https://app.corpus.test/assets/index-juyOhu6-.js",
+    "line": 21,
+    "column": 10552
+   }
+  },
+  {
+   "target": "Window.setInterval",
+   "holder": "Window",
+   "holderKind": "global",
+   "interface": "Window",
+   "key": "setInterval",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "own:__sentry_original__",
+   "definedAt": {
+    "url": "https://app.corpus.test/assets/index-juyOhu6-.js",
+    "line": 21,
+    "column": 10399
+   }
+  },
+  {
+   "target": "Window.setTimeout",
+   "holder": "Window",
+   "holderKind": "global",
+   "interface": "Window",
+   "key": "setTimeout",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "own:__sentry_original__",
+   "definedAt": {
+    "url": "https://app.corpus.test/assets/index-juyOhu6-.js",
+    "line": 21,
+    "column": 10399
+   }
+  },
+  {
+   "target": "XMLHttpRequest.prototype.open",
+   "holder": "XMLHttpRequest.prototype",
+   "holderKind": "prototype",
+   "interface": "XMLHttpRequest",
+   "key": "open",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "proxy-target",
+   "definedAt": {
+    "url": "https://app.corpus.test/assets/index-juyOhu6-.js",
+    "line": 20,
+    "column": 22661
+   }
+  },
+  {
+   "target": "XMLHttpRequest.prototype.send",
+   "holder": "XMLHttpRequest.prototype",
+   "holderKind": "prototype",
+   "interface": "XMLHttpRequest",
+   "key": "send",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "proxy-target->own:__sentry_original__",
+   "definedAt": {
+    "url": "https://app.corpus.test/assets/index-juyOhu6-.js",
+    "line": 20,
+    "column": 23493
+   }
+  }
+ ],
+ "expandos": [],
+ "newGlobals": [
+  "__SENTRY__",
+  "__corpusReady",
+  "__sentry_instrumentation_handlers__",
+  "_sentryWrappedDepth"
+ ],
+ "workers": [],
+ "blockedOrigins": [
+  "https://o0.ingest.example.invalid"
+ ],
+ "pageErrors": []
+}

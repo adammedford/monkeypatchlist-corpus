@@ -1,0 +1,49 @@
+{
+  "name": "patchline-validation-corpus",
+  "private": true,
+  "type": "module",
+  "description": "Throwaway validation corpus and runtime ground truth for Patchline R0. Not production code.",
+  "scripts": {
+    "vendor": "node scripts/vendor.mjs",
+    "build": "node scripts/build.mjs",
+    "verify": "node scripts/build.mjs --verify",
+    "truth": "node scripts/ground-truth.mjs"
+  },
+  "dependencies": {
+    "@datadog/browser-logs": "7.14.0",
+    "@datadog/browser-rum": "7.14.0",
+    "@microsoft/applicationinsights-web": "3.4.4",
+    "@newrelic/browser-agent": "1.322.0",
+    "@opentelemetry/api": "1.9.1",
+    "@opentelemetry/instrumentation": "0.222.0",
+    "@opentelemetry/instrumentation-document-load": "0.67.0",
+    "@opentelemetry/instrumentation-fetch": "0.222.0",
+    "@opentelemetry/instrumentation-user-interaction": "0.66.0",
+    "@opentelemetry/instrumentation-xml-http-request": "0.222.0",
+    "@opentelemetry/sdk-trace-web": "2.11.0",
+    "@segment/analytics-next": "1.84.3",
+    "@sentry/browser": "11.0.0",
+    "sentry-browser-10": "npm:@sentry/browser@10.75.3",
+    "sentry-browser-7": "npm:@sentry/browser@7.120.4",
+    "clarity-js": "0.8.71",
+    "core-js": "3.50.0",
+    "es6-promise": "4.2.8",
+    "promise-polyfill": "8.3.0",
+    "single-spa": "6.0.3",
+    "whatwg-fetch": "3.6.20",
+    "zone.js": "0.16.3"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "29.0.3",
+    "@rollup/plugin-json": "6.1.0",
+    "@rollup/plugin-node-resolve": "16.0.3",
+    "@rollup/plugin-replace": "6.0.3",
+    "@rollup/plugin-terser": "1.0.0",
+    "esbuild": "0.28.2",
+    "html-webpack-plugin": "5.6.8",
+    "playwright": "1.63.0",
+    "rollup": "4.63.5",
+    "vite": "8.3.1",
+    "webpack": "5.111.1"
+  }
+}

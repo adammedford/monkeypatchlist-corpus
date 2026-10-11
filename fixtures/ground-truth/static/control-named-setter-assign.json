@@ -1,0 +1,79 @@
+{
+ "site": "static/control-named-setter-assign",
+ "url": "https://app.corpus.test/index.html",
+ "browser": "chromium 153.0.8010.12",
+ "settleMs": 300,
+ "snapshot": {
+  "holders": 1962,
+  "descriptors": 15442
+ },
+ "mutations": [
+  {
+   "target": "localStorage.setItem",
+   "holder": "localStorage",
+   "holderKind": "singleton",
+   "interface": "Storage",
+   "key": "setItem",
+   "change": "shadow",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "shadows": "Storage.prototype.setItem",
+   "effect": "replace",
+   "wrapEvidence": null,
+   "definedAt": {
+    "url": "https://app.corpus.test/index.html",
+    "line": 8,
+    "column": 32
+   }
+  },
+  {
+   "target": "sessionStorage.getItem",
+   "holder": "sessionStorage",
+   "holderKind": "singleton",
+   "interface": "Storage",
+   "key": "getItem",
+   "change": "shadow",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "shadows": "Storage.prototype.getItem",
+   "effect": "replace",
+   "wrapEvidence": null,
+   "definedAt": {
+    "url": "https://app.corpus.test/index.html",
+    "line": 9,
+    "column": 34
+   }
+  }
+ ],
+ "expandos": [],
+ "newGlobals": [
+  "__corpusReady"
+ ],
+ "workers": [],
+ "blockedOrigins": [],
+ "pageErrors": []
+}

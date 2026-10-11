@@ -1,0 +1,13 @@
+import { ApplicationInsights } from '@microsoft/applicationinsights-web';
+const ai = new ApplicationInsights({
+  config: {
+    connectionString: 'InstrumentationKey=00000000-0000-0000-0000-000000000000;IngestionEndpoint=https://ai.example.invalid/',
+    enableAutoRouteTracking: true,
+    enableCorsCorrelation: true,
+    enableRequestHeaderTracking: true,
+    enableResponseHeaderTracking: true,
+  },
+});
+ai.loadAppInsights();
+ai.trackPageView();
+window.__corpusReady = true;

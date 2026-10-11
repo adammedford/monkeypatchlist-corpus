@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>fixture: control-named-properties-object-delete</title></head>
+<body>
+<h1>control-named-properties-object-delete</h1>
+<button id="corpus-button" type="button">click</button>
+<div id="corpusNamed"></div>
+<script>
+var WP = Object.getPrototypeOf(Window.prototype);
+delete WP.corpusNamed;
+window.__corpusProbe = function () { return { namedStillVisible: window.corpusNamed === document.getElementById('corpusNamed') }; };
+</script>
+<script>window.__corpusReady = true;</script>
+</body>
+</html>

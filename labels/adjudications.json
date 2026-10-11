@@ -1,0 +1,99 @@
+{
+ "$schema": "Triage of every disagreement on the protected surface between the production resolver and the positive set (spec §20 Triage), written against analyzer js-73 and rechecked against js-94: the resolver-defect entries whose resolver fixes removed the disagreement were dropped, and every remaining entry keeps its class. One entry per library, target and disagreement; `class` is one of resolver-defect, ground-truth-error, unobserved-real, beyond-model, boundary; `citation` is the code (package@version path Lline) and the reason. A false positive classed unobserved-real or ground-truth-error is a counted relabel. Resolver defects name their follow-up ticket.",
+ "appinsights": [
+  {
+   "target": "History.prototype.pushState",
+   "disagreement": "false-negative",
+   "class": "beyond-model",
+   "citation": "@microsoft/applicationinsights-analytics-js@3.4.4 dist-es5/JavaScriptSDK/AnalyticsPlugin.js L575-577, L635: InstrumentEvent(history, 'pushState', …), with history = getHistory(), the ts-utils accessor. Spec §21 Detection, 'Unknown holder, known member' (accessor helpers, Application Insights ts-utils)."
+  },
+  {
+   "target": "History.prototype.replaceState",
+   "disagreement": "false-negative",
+   "class": "beyond-model",
+   "citation": "@microsoft/applicationinsights-analytics-js@3.4.4 dist-es5/JavaScriptSDK/AnalyticsPlugin.js L575-577, L644: InstrumentEvent(history, 'replaceState', …), with history = getHistory(), the ts-utils accessor. Spec §21 Detection, 'Unknown holder, known member' (accessor helpers, Application Insights ts-utils)."
+  },
+  {
+   "target": "Window.fetch",
+   "disagreement": "false-negative",
+   "class": "beyond-model",
+   "citation": "@microsoft/applicationinsights-dependencies-js@3.4.4 dist-es5/ajax.js L29-37, L577, L583: InstrumentFunc(getGlobal(), 'fetch', …), the holder read through the ts-utils accessor getGlobal(). Spec §21 Detection, 'Unknown holder, known member' (accessor helpers, Application Insights ts-utils)."
+  }
+ ],
+ "core-js": [
+  {
+   "target": "Array.prototype.keys",
+   "disagreement": "false-positive",
+   "class": "unobserved-real",
+   "citation": "core-js@3.50.0 modules/es.array.iterator.js L26 → internals/iterator-define.js L82-92 ($({ target: 'Array', proto: true, forced: BUGGY_SAFARI_ITERATORS || INCORRECT_VALUES_NAME }, { values, keys, entries })) → internals/export.js L45-53 (defineBuiltIn(target, key, …) when Array.prototype.keys is missing or the Safari iterator bug forces it). No variant deletes keys or forces it; entries and values are observed in the native-absent run."
+  },
+  {
+   "target": "Array.prototype.name",
+   "disagreement": "false-positive",
+   "class": "unobserved-real",
+   "citation": "core-js@3.50.0 internals/iterator-define.js L71-74: if (PROPER_FUNCTION_NAME && DEFAULT === VALUES && nativeIterator && nativeIterator.name !== VALUES) createNonEnumerableProperty(IterablePrototype, 'name', VALUES), with IterablePrototype = Array.prototype (es.array.iterator.js L26). It fixes old V8 and Firefox, where Array.prototype.values.name isn't 'values'; Chromium 153's is, so no variant reaches it."
+  },
+  {
+   "target": "Array.prototype.@@iterator",
+   "disagreement": "false-negative",
+   "class": "beyond-model",
+   "citation": "core-js@3.50.0 internals/iterator-define.js L21, L96-97 (defineBuiltIn(IterablePrototype, ITERATOR, …)): the key is wellKnownSymbol(…), core-js's own symbol store. Spec §21 Catalog, 'core-js's well-known-symbol store isn't resolved' (human, live, 2026-10-05)."
+  },
+  {
+   "target": "Array.prototype.@@unscopables",
+   "disagreement": "false-negative",
+   "class": "beyond-model",
+   "citation": "core-js@3.50.0 internals/add-to-unscopables.js L6-12 (defineProperty(ArrayPrototype, UNSCOPABLES, …)): the key is wellKnownSymbol(…), core-js's own symbol store. Spec §21 Catalog, 'core-js's well-known-symbol store isn't resolved' (human, live, 2026-10-05)."
+  },
+  {
+   "target": "Object.prototype.*",
+   "disagreement": "false-positive",
+   "class": "beyond-model",
+   "citation": "core-js@3.50.0 internals/iterator-define.js L56-62: if (CurrentIteratorPrototype !== Object.prototype && CurrentIteratorPrototype.next) { … setPrototypeOf / defineBuiltIn(CurrentIteratorPrototype, ITERATOR, …) }: the !== Object.prototype test excludes the Object.prototype alternative that getPrototypeOf's shim returns, and a guard comparing two resolved values is never decided. Spec §21 'Guards that compare two resolved values don't narrow alternatives' (human, live, 2026-10-07, X120)."
+  },
+  {
+   "target": "Promise.sham",
+   "disagreement": "false-positive",
+   "class": "beyond-model",
+   "citation": "core-js@3.50.0 internals/export.js L45-51: the sham line (createNonEnumerableProperty(sourceProperty, 'sham', true)) runs only when targetProperty is missing or forced and sourceProperty isn't the native; the comparison of two resolved values is never decided. Spec §21 'Guards that compare two resolved values don't narrow alternatives' (human, live, 2026-10-07, X120)."
+  }
+ ],
+ "datadog": [
+  {
+   "target": "Array.prototype.toJSON",
+   "disagreement": "false-positive",
+   "class": "unobserved-real",
+   "citation": "@datadog/browser-core@7.14.0 esm/tools/serialisation/jsonStringify.mjs L13-14, L28-36: detachToJsonMethod(Object.prototype / Array.prototype) deletes an existing toJSON and its restore closure writes it back (object.toJSON = objectToJson). It runs only on a page that has added toJSON (if (objectToJson)), which no variant does. A write after a delete follows the ordinary rules (spec §3 Restores, human, live, 2026-10-01): a named add on a whole entry (§12)."
+  },
+  {
+   "target": "Object.prototype.toJSON",
+   "disagreement": "false-positive",
+   "class": "unobserved-real",
+   "citation": "@datadog/browser-core@7.14.0 esm/tools/serialisation/jsonStringify.mjs L13-14, L28-36: detachToJsonMethod(Object.prototype / Array.prototype) deletes an existing toJSON and its restore closure writes it back (object.toJSON = objectToJson). It runs only on a page that has added toJSON (if (objectToJson)), which no variant does. A write after a delete follows the ordinary rules (spec §3 Restores, human, live, 2026-10-01): a named add on a whole entry (§12)."
+  }
+ ],
+ "newrelic": [
+  {
+   "target": "Array.from",
+   "disagreement": "false-positive",
+   "class": "unobserved-real",
+   "citation": "@newrelic/rrweb@1.1.2 dist/rrweb.js L14177-14180: if (Array.from([1], (x) => x * 2)[0] !== 2) Array.from = cleanFrame.contentWindow.Array.from || Array.from. A broken-native check (spec §7 conditional); it runs only on a page whose Array.from is replaced, which no variant does."
+  }
+ ],
+ "sentry-10": [
+  {
+   "target": "Array.from",
+   "disagreement": "false-positive",
+   "class": "unobserved-real",
+   "citation": "@sentry/replay@10.75.3 build/npm/esm/index.js L4026-4029: if (Array.from([1], (x) => x * 2)[0] !== 2) Array.from = cleanFrame.contentWindow?.Array.from || Array.from. A broken-native check (spec §7 conditional); it runs only on a page whose Array.from is replaced, which no variant does."
+  }
+ ],
+ "sentry-11": [
+  {
+   "target": "Array.from",
+   "disagreement": "false-positive",
+   "class": "unobserved-real",
+   "citation": "@sentry/replay@11.0.0 build/npm/esm/index.js L4028-4031: if (Array.from([1], (x) => x * 2)[0] !== 2) Array.from = cleanFrame.contentWindow?.Array.from || Array.from. A broken-native check (spec §7 conditional); it runs only on a page whose Array.from is replaced, which no variant does."
+  }
+ ]
+}

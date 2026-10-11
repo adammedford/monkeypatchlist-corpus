@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>fixture: restore-heap-carried</title></head>
+<body>
+<h1>restore-heap-carried</h1>
+<button id="corpus-button" type="button">click</button>
+<script>
+var saved = {};
+saved.log = console.log;
+console.log = function () { return saved.log.apply(console, arguments); };
+window.__corpusTeardown = function () { /*R{*/console.log = saved.log;/*}R*/ };
+</script>
+<script>window.__corpusReady = true;</script>
+</body>
+</html>

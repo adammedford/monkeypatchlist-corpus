@@ -1,0 +1,13 @@
+// A few modules, chosen to mix ones Chromium already satisfies (guard skips)
+// with ones core-js may force-replace, and to cover $(), defineBuiltIn and web.* helpers.
+import 'core-js/modules/es.array.flat.js';
+import 'core-js/modules/es.array.at.js';
+import 'core-js/modules/es.promise.js';
+import 'core-js/modules/es.promise.finally.js';
+import 'core-js/modules/es.set.union.v2.js';
+import 'core-js/modules/es.iterator.map.js';
+import 'core-js/modules/web.queue-microtask.js';
+import 'core-js/modules/web.structured-clone.js';
+import 'core-js/modules/web.url.js';
+import 'core-js/modules/web.dom-collections.iterator';
+window.__corpusReady = true;

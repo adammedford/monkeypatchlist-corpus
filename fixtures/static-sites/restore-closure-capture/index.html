@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>fixture: restore-closure-capture</title></head>
+<body>
+<h1>restore-closure-capture</h1>
+<button id="corpus-button" type="button">click</button>
+<script>
+function patch(s, n, f) { var orig = s[n]; s[n] = f(orig); return function () { /*R{*/s[n] = orig;/*}R*/ }; }
+window.__corpusTeardown = patch(window, 'fetch', function (o) { return function () { return o.apply(this, arguments); }; });
+</script>
+<script>window.__corpusReady = true;</script>
+</body>
+</html>

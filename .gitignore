@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.cache/
+.verify/
+holdout/
+.seal-check.*/
+# Third-party copies are fetched by `npm run vendor` (scripts/vendor.mjs); only sources.json is committed.
+vendor/*
+!vendor/sources.json

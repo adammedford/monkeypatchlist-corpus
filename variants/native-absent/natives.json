@@ -1,0 +1,387 @@
+{
+ "$schema": "Hand-curated natives each library feature-tests, deleted before load in the native-absent variant. Curated by reading each library's guard code, not from resolver output. apps.<app>.runs.<run> is one Chromium run per build directory of <app>; a library is split into several runs where its guards interlock. apps.<app>.root, when present, is the corpus root whose builds are run (default: the main corpus). Each entry cites the guard that reads the native: package@version path Lline. `writes` names what the guarded branch writes, for the reader; it is not used by the harness.",
+ "apps": {
+  "whatwg-fetch": {
+   "runs": {
+    "fetch": [
+     {
+      "target": "Window.fetch",
+      "guard": "if (!g.fetch) { g.fetch = fetch; g.Headers = Headers; g.Request = Request; g.Response = Response }",
+      "source": "whatwg-fetch@3.6.20 fetch.js L637 (the `module` entry the bundlers use; dist/fetch.umd.js L643 is the same guard)",
+      "writes": [
+       "Window.fetch",
+       "Window.Headers",
+       "Window.Request",
+       "Window.Response"
+      ]
+     }
+    ]
+   }
+  },
+  "promise-polyfill": {
+   "runs": {
+    "constructor": [
+     {
+      "target": "Window.Promise",
+      "guard": "if (typeof globalNS['Promise'] !== 'function') globalNS['Promise'] = Promise",
+      "source": "promise-polyfill@8.3.0 lib/polyfill.js L389",
+      "writes": [
+       "Window.Promise"
+      ]
+     }
+    ],
+    "members": [
+     {
+      "target": "Promise.prototype.finally",
+      "guard": "else { if (!globalNS.Promise.prototype['finally']) …",
+      "source": "promise-polyfill@8.3.0 lib/polyfill.js L392",
+      "writes": [
+       "Promise.prototype.finally"
+      ]
+     },
+     {
+      "target": "Promise.allSettled",
+      "guard": "if (!globalNS.Promise.allSettled)",
+      "source": "promise-polyfill@8.3.0 lib/polyfill.js L395",
+      "writes": [
+       "Promise.allSettled"
+      ]
+     },
+     {
+      "target": "Promise.any",
+      "guard": "if (!globalNS.Promise.any)",
+      "source": "promise-polyfill@8.3.0 lib/polyfill.js L398",
+      "writes": [
+       "Promise.any"
+      ]
+     }
+    ]
+   },
+   "split": "The member guards sit in the else branch of the Promise guard (L389-400): with Window.Promise deleted they never run, so the members need a run of their own with the native constructor present."
+  },
+  "es6-promise": {
+   "runs": {
+    "constructor": [
+     {
+      "target": "Window.Promise",
+      "guard": "var P = local.Promise; if (P) { …brand check… return } local.Promise = Promise$1",
+      "source": "es6-promise@4.2.8 dist/es6-promise.js L1146-1161 (auto.js calls polyfill())",
+      "writes": [
+       "Window.Promise"
+      ]
+     }
+    ]
+   }
+  },
+  "core-js": {
+   "runs": {
+    "promise": [
+     {
+      "target": "Window.PromiseRejectionEvent",
+      "guard": "NATIVE_PROMISE_REJECTION_EVENT = isCallable(globalThis.PromiseRejectionEvent); FORCED_PROMISE_CONSTRUCTOR returns true in a browser without it",
+      "source": "core-js@3.50.0 internals/promise-constructor-detection.js L15, L40",
+      "writes": [
+       "Window.Promise",
+       "Promise.prototype.then",
+       "Promise.prototype.catch",
+       "Promise.prototype.finally",
+       "Promise.prototype.constructor (delete)",
+       "Promise.prototype.[[Prototype]]"
+      ]
+     }
+    ],
+    "members": [
+     {
+      "target": "Array.prototype.at",
+      "guard": "$({ target: 'Array', proto: true }) writes only when the member is missing (export.js L45)",
+      "source": "core-js@3.50.0 modules/es.array.at.js L10; internals/export.js L45",
+      "writes": [
+       "Array.prototype.at"
+      ]
+     },
+     {
+      "target": "Array.prototype.flat",
+      "guard": "$({ target: 'Array', proto: true }) writes only when the member is missing (export.js L45)",
+      "source": "core-js@3.50.0 modules/es.array.flat.js L11; internals/export.js L45",
+      "writes": [
+       "Array.prototype.flat"
+      ]
+     },
+     {
+      "target": "Set.prototype.union",
+      "guard": "FORCED = !setMethodAcceptSetLike('union') || …; the export also writes when the member is missing",
+      "source": "core-js@3.50.0 modules/es.set.union.v2.js L7, L11; internals/export.js L45",
+      "writes": [
+       "Set.prototype.union"
+      ]
+     },
+     {
+      "target": "Iterator.prototype.map",
+      "guard": "$({ target: 'Iterator', proto: true, forced: FORCED }) writes when the member is missing",
+      "source": "core-js@3.50.0 modules/es.iterator.map.js L29; internals/export.js L45",
+      "writes": [
+       "Iterator.prototype.map"
+      ]
+     },
+     {
+      "target": "Promise.prototype.finally",
+      "guard": "NON_GENERIC = !!NativePromiseConstructor && fails(() => NativePromisePrototype['finally'].call(…)) is true when finally is missing",
+      "source": "core-js@3.50.0 modules/es.promise.finally.js L15-18, L22",
+      "writes": [
+       "Promise.prototype.finally"
+      ]
+     },
+     {
+      "target": "String.fromCodePoint",
+      "guard": "$({ target: 'String', stat: true, forced: INCORRECT_LENGTH }) writes when the member is missing",
+      "source": "core-js@3.50.0 modules/es.string.from-code-point.js L13, L17; internals/export.js L45",
+      "writes": [
+       "String.fromCodePoint"
+      ]
+     },
+     {
+      "target": "Window.queueMicrotask",
+      "guard": "WRONG_ARITY = fails(() => getOwnPropertyDescriptor(globalThis, 'queueMicrotask').value.length !== 1) is true when it is missing",
+      "source": "core-js@3.50.0 modules/web.queue-microtask.js L12-16, L20",
+      "writes": [
+       "Window.queueMicrotask"
+      ]
+     },
+     {
+      "target": "URLSearchParams.prototype.sort",
+      "guard": "USE_NATIVE_URL = !fails(() => … || !params.sort || …); !USE_NATIVE_URL forces URL/URLSearchParams and wraps fetch and Request",
+      "source": "core-js@3.50.0 internals/url-constructor-detection.js L26; modules/web.url-search-params.constructor.js L342, L347-389",
+      "writes": [
+       "Window.URL",
+       "Window.URLSearchParams",
+       "Window.fetch",
+       "Window.Request",
+       "Request.prototype.constructor"
+      ]
+     }
+    ],
+    "array-iterator": [
+     {
+      "target": "Array.prototype.values",
+      "guard": "nativeIterator = IterablePrototype[ITERATOR] || … || IterablePrototype[DEFAULT]; getIterationMethod makes a new method when KIND is not in the prototype; the export writes missing members",
+      "source": "core-js@3.50.0 internals/iterator-define.js L31, L47-49, L92",
+      "writes": [
+       "Array.prototype.values"
+      ]
+     },
+     {
+      "target": "Array.prototype.entries",
+      "guard": "same export of the iteration methods (writes missing members)",
+      "source": "core-js@3.50.0 internals/iterator-define.js L31, L92",
+      "writes": [
+       "Array.prototype.entries"
+      ]
+     },
+     {
+      "target": "Array.prototype.[Symbol.unscopables]",
+      "guard": "if (ArrayPrototype[UNSCOPABLES] === undefined) defineProperty(ArrayPrototype, UNSCOPABLES, …)",
+      "source": "core-js@3.50.0 internals/add-to-unscopables.js L11-12",
+      "writes": [
+       "Array.prototype.[Symbol.unscopables]"
+      ]
+     }
+    ],
+    "array-symbol-iterator": [
+     {
+      "target": "Array.prototype.[Symbol.iterator]",
+      "guard": "nativeIterator = IterablePrototype[ITERATOR] || IterablePrototype['@@iterator'] || IterablePrototype[DEFAULT] falls back to the native values; if (IterablePrototype[ITERATOR] !== defaultIterator) defineBuiltIn(IterablePrototype, ITERATOR, …)",
+      "source": "core-js@3.50.0 internals/iterator-define.js L47-49, L96",
+      "writes": [
+       "Array.prototype.[Symbol.iterator]"
+      ]
+     }
+    ]
+   },
+   "split": "promise: with PromiseRejectionEvent gone core-js replaces the Promise constructor, and every Promise static and prototype export then lands on core-js's own constructor, so the native-member deletions (Promise.prototype.finally) run in `members` with the native constructor kept. array-iterator: the Array iteration guards read each other (values feeds nativeIterator, which decides the @@iterator write) and core-js's other iterators go through them, so they run apart from `members`. array-symbol-iterator: Array.prototype[Symbol.iterator] runs alone, because any bundler code that destructures an array before core-js loads breaks without it (the esbuild build does, so that run fails there) and it must not take values/entries down with it. Array.prototype.keys is not deleted: iterators-core.js L18-25 finds %IteratorPrototype% through [].keys, and without it core-js builds its own and replaces Iterator as well."
+  },
+  "sentry-7": {
+   "runs": {
+    "rrweb": [
+     {
+      "target": "NodeList.prototype.forEach",
+      "guard": "if ('NodeList' in win && !win.NodeList.prototype.forEach)",
+      "source": "@sentry/replay@7.120.4 esm/index.js L1462",
+      "writes": [
+       "NodeList.prototype.forEach"
+      ]
+     },
+     {
+      "target": "DOMTokenList.prototype.forEach",
+      "guard": "if ('DOMTokenList' in win && !win.DOMTokenList.prototype.forEach)",
+      "source": "@sentry/replay@7.120.4 esm/index.js L1466",
+      "writes": [
+       "DOMTokenList.prototype.forEach"
+      ]
+     },
+     {
+      "target": "Node.prototype.contains",
+      "guard": "if (!Node.prototype.contains)",
+      "source": "@sentry/replay@7.120.4 esm/index.js L1470",
+      "writes": [
+       "Node.prototype.contains"
+      ]
+     },
+     {
+      "target": "Window.CSSGroupingRule",
+      "guard": "if (canMonkeyPatchNestedCSSRule('CSSGroupingRule')) … else { CSSMediaRule, CSSConditionRule, CSSSupportsRule }",
+      "source": "@sentry/replay@7.120.4 esm/index.js L2704",
+      "writes": [
+       "CSSMediaRule.prototype.insertRule/deleteRule",
+       "CSSConditionRule.prototype.insertRule/deleteRule",
+       "CSSSupportsRule.prototype.insertRule/deleteRule"
+      ]
+     }
+    ]
+   }
+  },
+  "sentry-10": {
+   "runs": {
+    "rrweb": [
+     {
+      "target": "NodeList.prototype.forEach",
+      "guard": "if (\"NodeList\" in win && !win.NodeList.prototype.forEach)",
+      "source": "@sentry/replay@10.75.3 build/npm/esm/index.js L1651",
+      "writes": [
+       "NodeList.prototype.forEach"
+      ]
+     },
+     {
+      "target": "DOMTokenList.prototype.forEach",
+      "guard": "if (\"DOMTokenList\" in win && !win.DOMTokenList.prototype.forEach)",
+      "source": "@sentry/replay@10.75.3 build/npm/esm/index.js L1654",
+      "writes": [
+       "DOMTokenList.prototype.forEach"
+      ]
+     },
+     {
+      "target": "Node.prototype.contains",
+      "guard": "if (!Node.prototype.contains)",
+      "source": "@sentry/replay@10.75.3 build/npm/esm/index.js L1657",
+      "writes": [
+       "Node.prototype.contains"
+      ]
+     },
+     {
+      "target": "Window.CSSGroupingRule",
+      "guard": "if (canMonkeyPatchNestedCSSRule(\"CSSGroupingRule\")) … else { CSSMediaRule, CSSConditionRule, CSSSupportsRule }",
+      "source": "@sentry/replay@10.75.3 build/npm/esm/index.js L3094",
+      "writes": [
+       "CSSMediaRule.prototype.insertRule/deleteRule",
+       "CSSConditionRule.prototype.insertRule/deleteRule",
+       "CSSSupportsRule.prototype.insertRule/deleteRule"
+      ]
+     }
+    ]
+   }
+  },
+  "sentry-11": {
+   "runs": {
+    "rrweb": [
+     {
+      "target": "NodeList.prototype.forEach",
+      "guard": "if (\"NodeList\" in win && !win.NodeList.prototype.forEach)",
+      "source": "@sentry/replay@11.0.0 build/npm/esm/index.js L1653",
+      "writes": [
+       "NodeList.prototype.forEach"
+      ]
+     },
+     {
+      "target": "DOMTokenList.prototype.forEach",
+      "guard": "if (\"DOMTokenList\" in win && !win.DOMTokenList.prototype.forEach)",
+      "source": "@sentry/replay@11.0.0 build/npm/esm/index.js L1656",
+      "writes": [
+       "DOMTokenList.prototype.forEach"
+      ]
+     },
+     {
+      "target": "Node.prototype.contains",
+      "guard": "if (!Node.prototype.contains)",
+      "source": "@sentry/replay@11.0.0 build/npm/esm/index.js L1659",
+      "writes": [
+       "Node.prototype.contains"
+      ]
+     },
+     {
+      "target": "Window.CSSGroupingRule",
+      "guard": "if (canMonkeyPatchNestedCSSRule(\"CSSGroupingRule\")) … else { CSSMediaRule, CSSConditionRule, CSSSupportsRule }",
+      "source": "@sentry/replay@11.0.0 build/npm/esm/index.js L3096",
+      "writes": [
+       "CSSMediaRule.prototype.insertRule/deleteRule",
+       "CSSConditionRule.prototype.insertRule/deleteRule",
+       "CSSSupportsRule.prototype.insertRule/deleteRule"
+      ]
+     }
+    ]
+   }
+  },
+  "datadog": {
+   "runs": {
+    "css-grouping-rule": [
+     {
+      "target": "Window.CSSGroupingRule",
+      "guard": "if (typeof CSSGroupingRule !== \"undefined\") instrumentGroupingCSSRuleClass(CSSGroupingRule); else { CSSMediaRule; CSSSupportsRule }",
+      "source": "@datadog/browser-rum@7.14.0 esm/domain/record/trackers/trackStyleSheet.mjs L26-30",
+      "writes": [
+       "CSSMediaRule.prototype.insertRule/deleteRule",
+       "CSSSupportsRule.prototype.insertRule/deleteRule"
+      ]
+     }
+    ]
+   }
+  },
+  "newrelic": {
+   "root": "variants/lazy-chunks",
+   "runs": {
+    "rrweb": [
+     {
+      "target": "NodeList.prototype.forEach",
+      "guard": "if (\"NodeList\" in win && !win.NodeList.prototype.forEach)",
+      "source": "@newrelic/rrweb@1.1.2 dist/rrweb.js L11167",
+      "writes": [
+       "NodeList.prototype.forEach"
+      ]
+     },
+     {
+      "target": "DOMTokenList.prototype.forEach",
+      "guard": "if (\"DOMTokenList\" in win && !win.DOMTokenList.prototype.forEach)",
+      "source": "@newrelic/rrweb@1.1.2 dist/rrweb.js L11170",
+      "writes": [
+       "DOMTokenList.prototype.forEach"
+      ]
+     },
+     {
+      "target": "Window.CSSGroupingRule",
+      "guard": "if (canMonkeyPatchNestedCSSRule(\"CSSGroupingRule\")) … else { CSSMediaRule, CSSConditionRule, CSSSupportsRule }",
+      "source": "@newrelic/rrweb@1.1.2 dist/rrweb.js L12616",
+      "writes": [
+       "CSSMediaRule.prototype.insertRule/deleteRule",
+       "CSSConditionRule.prototype.insertRule/deleteRule",
+       "CSSSupportsRule.prototype.insertRule/deleteRule"
+      ]
+     }
+    ]
+   },
+   "rootWhy": "The guards live in the rrweb recorder chunk, which the base config never loads; the run uses the lazy-chunks builds, which load it."
+  },
+  "otel": {
+   "runs": {
+    "event-target": [
+     {
+      "target": "Window.EventTarget",
+      "guard": "_getPatchableEventTargets() { return window.EventTarget ? [EventTarget.prototype] : [Node.prototype, Window.prototype] }",
+      "source": "@opentelemetry/instrumentation-user-interaction@0.66.0 build/esm/instrumentation.js L295-298",
+      "writes": [
+       "Node.prototype.addEventListener/removeEventListener",
+       "Window.prototype.addEventListener/removeEventListener"
+      ]
+     }
+    ]
+   }
+  }
+ }
+}

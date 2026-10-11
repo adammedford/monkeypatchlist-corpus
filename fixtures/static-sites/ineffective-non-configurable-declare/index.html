@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>fixture: ineffective-non-configurable-declare</title></head>
+<body>
+<h1>ineffective-non-configurable-declare</h1>
+<button id="corpus-button" type="button">click</button>
+<script>
+function top() {}
+</script>
+<script>
+let document = 1;
+</script>
+<script>
+const location = 1;
+</script>
+<script>
+class window {}
+</script>
+<script>
+function NaN() {}
+</script>
+<script>window.__corpusReady = true;</script>
+</body>
+</html>

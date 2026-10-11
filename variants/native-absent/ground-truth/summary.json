@@ -1,0 +1,1006 @@
+{
+ "esbuild/core-js/maps.array-iterator": {
+  "mutations": 5,
+  "byEffect": {
+   "replace": 4,
+   "wrap": 1
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "esbuild/core-js/maps.array-symbol-iterator": {
+  "error": "page.evaluate: TypeError: Spread syntax requires ...iterable[Symbol.iterator] to be a function"
+ },
+ "esbuild/core-js/maps.members": {
+  "mutations": 14,
+  "byEffect": {
+   "replace": 10,
+   "wrap": 4
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "esbuild/core-js/maps.promise": {
+  "mutations": 8,
+  "byEffect": {
+   "replace": 3,
+   "prototype-change": 1,
+   "delete": 1,
+   "wrap": 3
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "esbuild/core-js/nomaps.array-iterator": {
+  "mutations": 5,
+  "byEffect": {
+   "replace": 4,
+   "wrap": 1
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "esbuild/core-js/nomaps.array-symbol-iterator": {
+  "error": "page.evaluate: TypeError: Spread syntax requires ...iterable[Symbol.iterator] to be a function"
+ },
+ "esbuild/core-js/nomaps.members": {
+  "mutations": 14,
+  "byEffect": {
+   "replace": 10,
+   "wrap": 4
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "esbuild/core-js/nomaps.promise": {
+  "mutations": 8,
+  "byEffect": {
+   "replace": 3,
+   "prototype-change": 1,
+   "delete": 1,
+   "wrap": 3
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "esbuild/datadog/maps.css-grouping-rule": {
+  "mutations": 23,
+  "byEffect": {
+   "wrap": 18,
+   "descriptor-change": 5
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "esbuild/datadog/nomaps.css-grouping-rule": {
+  "mutations": 23,
+  "byEffect": {
+   "wrap": 18,
+   "descriptor-change": 5
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "esbuild/es6-promise/maps.constructor": {
+  "mutations": 1,
+  "byEffect": {
+   "replace": 1
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "esbuild/es6-promise/nomaps.constructor": {
+  "mutations": 1,
+  "byEffect": {
+   "replace": 1
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "esbuild/newrelic/maps.rrweb": {
+  "mutations": 50,
+  "byEffect": {
+   "wrap": 39,
+   "replace": 4,
+   "descriptor-change": 7
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "esbuild/newrelic/nomaps.rrweb": {
+  "mutations": 50,
+  "byEffect": {
+   "wrap": 39,
+   "replace": 4,
+   "descriptor-change": 7
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "esbuild/otel/maps.event-target": {
+  "mutations": 12,
+  "byEffect": {
+   "wrap": 12
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "esbuild/otel/nomaps.event-target": {
+  "mutations": 12,
+  "byEffect": {
+   "wrap": 12
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "esbuild/promise-polyfill/maps.constructor": {
+  "mutations": 1,
+  "byEffect": {
+   "replace": 1
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "esbuild/promise-polyfill/maps.members": {
+  "mutations": 3,
+  "byEffect": {
+   "replace": 3
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "esbuild/promise-polyfill/nomaps.constructor": {
+  "mutations": 1,
+  "byEffect": {
+   "replace": 1
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "esbuild/promise-polyfill/nomaps.members": {
+  "mutations": 3,
+  "byEffect": {
+   "replace": 3
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "esbuild/sentry-10/maps.rrweb": {
+  "mutations": 46,
+  "byEffect": {
+   "wrap": 35,
+   "descriptor-change": 7,
+   "replace": 4
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "esbuild/sentry-10/nomaps.rrweb": {
+  "mutations": 46,
+  "byEffect": {
+   "wrap": 35,
+   "descriptor-change": 7,
+   "replace": 4
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "esbuild/sentry-11/maps.rrweb": {
+  "mutations": 46,
+  "byEffect": {
+   "wrap": 35,
+   "descriptor-change": 7,
+   "replace": 4
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "esbuild/sentry-11/nomaps.rrweb": {
+  "mutations": 46,
+  "byEffect": {
+   "wrap": 35,
+   "descriptor-change": 7,
+   "replace": 4
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "esbuild/sentry-7/maps.rrweb": {
+  "mutations": 46,
+  "byEffect": {
+   "wrap": 35,
+   "descriptor-change": 7,
+   "replace": 4
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "esbuild/sentry-7/nomaps.rrweb": {
+  "mutations": 46,
+  "byEffect": {
+   "wrap": 35,
+   "descriptor-change": 7,
+   "replace": 4
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "esbuild/whatwg-fetch/maps.fetch": {
+  "mutations": 4,
+  "byEffect": {
+   "replace": 4
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "esbuild/whatwg-fetch/nomaps.fetch": {
+  "mutations": 4,
+  "byEffect": {
+   "replace": 4
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "rollup/core-js/maps.array-iterator": {
+  "mutations": 5,
+  "byEffect": {
+   "replace": 4,
+   "wrap": 1
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "rollup/core-js/maps.array-symbol-iterator": {
+  "mutations": 3,
+  "byEffect": {
+   "replace": 2,
+   "wrap": 1
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "rollup/core-js/maps.members": {
+  "mutations": 14,
+  "byEffect": {
+   "replace": 10,
+   "wrap": 4
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "rollup/core-js/maps.promise": {
+  "mutations": 8,
+  "byEffect": {
+   "replace": 3,
+   "prototype-change": 1,
+   "delete": 1,
+   "wrap": 3
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "rollup/core-js/nomaps.array-iterator": {
+  "mutations": 5,
+  "byEffect": {
+   "replace": 4,
+   "wrap": 1
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "rollup/core-js/nomaps.array-symbol-iterator": {
+  "mutations": 3,
+  "byEffect": {
+   "replace": 2,
+   "wrap": 1
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "rollup/core-js/nomaps.members": {
+  "mutations": 14,
+  "byEffect": {
+   "replace": 10,
+   "wrap": 4
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "rollup/core-js/nomaps.promise": {
+  "mutations": 8,
+  "byEffect": {
+   "replace": 3,
+   "prototype-change": 1,
+   "delete": 1,
+   "wrap": 3
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "rollup/datadog/maps.css-grouping-rule": {
+  "mutations": 23,
+  "byEffect": {
+   "wrap": 18,
+   "descriptor-change": 5
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "rollup/datadog/nomaps.css-grouping-rule": {
+  "mutations": 23,
+  "byEffect": {
+   "wrap": 18,
+   "descriptor-change": 5
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "rollup/es6-promise/maps.constructor": {
+  "mutations": 1,
+  "byEffect": {
+   "replace": 1
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "rollup/es6-promise/nomaps.constructor": {
+  "mutations": 1,
+  "byEffect": {
+   "replace": 1
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "rollup/newrelic/maps.rrweb": {
+  "mutations": 50,
+  "byEffect": {
+   "wrap": 39,
+   "replace": 4,
+   "descriptor-change": 7
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "rollup/newrelic/nomaps.rrweb": {
+  "mutations": 50,
+  "byEffect": {
+   "wrap": 39,
+   "replace": 4,
+   "descriptor-change": 7
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "rollup/otel/maps.event-target": {
+  "mutations": 12,
+  "byEffect": {
+   "wrap": 12
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "rollup/otel/nomaps.event-target": {
+  "mutations": 12,
+  "byEffect": {
+   "wrap": 12
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "rollup/promise-polyfill/maps.constructor": {
+  "mutations": 1,
+  "byEffect": {
+   "replace": 1
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "rollup/promise-polyfill/maps.members": {
+  "mutations": 3,
+  "byEffect": {
+   "replace": 3
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "rollup/promise-polyfill/nomaps.constructor": {
+  "mutations": 1,
+  "byEffect": {
+   "replace": 1
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "rollup/promise-polyfill/nomaps.members": {
+  "mutations": 3,
+  "byEffect": {
+   "replace": 3
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "rollup/sentry-10/maps.rrweb": {
+  "mutations": 46,
+  "byEffect": {
+   "wrap": 35,
+   "descriptor-change": 7,
+   "replace": 4
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "rollup/sentry-10/nomaps.rrweb": {
+  "mutations": 46,
+  "byEffect": {
+   "wrap": 35,
+   "descriptor-change": 7,
+   "replace": 4
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "rollup/sentry-11/maps.rrweb": {
+  "mutations": 46,
+  "byEffect": {
+   "wrap": 35,
+   "descriptor-change": 7,
+   "replace": 4
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "rollup/sentry-11/nomaps.rrweb": {
+  "mutations": 46,
+  "byEffect": {
+   "wrap": 35,
+   "descriptor-change": 7,
+   "replace": 4
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "rollup/sentry-7/maps.rrweb": {
+  "mutations": 46,
+  "byEffect": {
+   "wrap": 35,
+   "descriptor-change": 7,
+   "replace": 4
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "rollup/sentry-7/nomaps.rrweb": {
+  "mutations": 46,
+  "byEffect": {
+   "wrap": 35,
+   "descriptor-change": 7,
+   "replace": 4
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "rollup/whatwg-fetch/maps.fetch": {
+  "mutations": 4,
+  "byEffect": {
+   "replace": 4
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "rollup/whatwg-fetch/nomaps.fetch": {
+  "mutations": 4,
+  "byEffect": {
+   "replace": 4
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "vite/core-js/maps.array-iterator": {
+  "mutations": 5,
+  "byEffect": {
+   "replace": 4,
+   "wrap": 1
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "vite/core-js/maps.array-symbol-iterator": {
+  "mutations": 3,
+  "byEffect": {
+   "replace": 2,
+   "wrap": 1
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "vite/core-js/maps.members": {
+  "mutations": 14,
+  "byEffect": {
+   "replace": 10,
+   "wrap": 4
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "vite/core-js/maps.promise": {
+  "mutations": 8,
+  "byEffect": {
+   "replace": 3,
+   "prototype-change": 1,
+   "delete": 1,
+   "wrap": 3
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "vite/core-js/nomaps.array-iterator": {
+  "mutations": 5,
+  "byEffect": {
+   "replace": 4,
+   "wrap": 1
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "vite/core-js/nomaps.array-symbol-iterator": {
+  "mutations": 3,
+  "byEffect": {
+   "replace": 2,
+   "wrap": 1
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "vite/core-js/nomaps.members": {
+  "mutations": 14,
+  "byEffect": {
+   "replace": 10,
+   "wrap": 4
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "vite/core-js/nomaps.promise": {
+  "mutations": 8,
+  "byEffect": {
+   "replace": 3,
+   "prototype-change": 1,
+   "delete": 1,
+   "wrap": 3
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "vite/datadog/maps.css-grouping-rule": {
+  "mutations": 23,
+  "byEffect": {
+   "wrap": 18,
+   "descriptor-change": 5
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "vite/datadog/nomaps.css-grouping-rule": {
+  "mutations": 23,
+  "byEffect": {
+   "wrap": 18,
+   "descriptor-change": 5
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "vite/es6-promise/maps.constructor": {
+  "mutations": 1,
+  "byEffect": {
+   "replace": 1
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "vite/es6-promise/nomaps.constructor": {
+  "mutations": 1,
+  "byEffect": {
+   "replace": 1
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "vite/newrelic/maps.rrweb": {
+  "mutations": 50,
+  "byEffect": {
+   "wrap": 39,
+   "replace": 4,
+   "descriptor-change": 7
+  },
+  "workers": 0,
+  "pageErrors": 1
+ },
+ "vite/newrelic/nomaps.rrweb": {
+  "mutations": 50,
+  "byEffect": {
+   "wrap": 39,
+   "replace": 4,
+   "descriptor-change": 7
+  },
+  "workers": 0,
+  "pageErrors": 1
+ },
+ "vite/otel/maps.event-target": {
+  "mutations": 12,
+  "byEffect": {
+   "wrap": 12
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "vite/otel/nomaps.event-target": {
+  "mutations": 12,
+  "byEffect": {
+   "wrap": 12
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "vite/promise-polyfill/maps.constructor": {
+  "mutations": 1,
+  "byEffect": {
+   "replace": 1
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "vite/promise-polyfill/maps.members": {
+  "mutations": 3,
+  "byEffect": {
+   "replace": 3
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "vite/promise-polyfill/nomaps.constructor": {
+  "mutations": 1,
+  "byEffect": {
+   "replace": 1
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "vite/promise-polyfill/nomaps.members": {
+  "mutations": 3,
+  "byEffect": {
+   "replace": 3
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "vite/sentry-10/maps.rrweb": {
+  "mutations": 46,
+  "byEffect": {
+   "wrap": 35,
+   "descriptor-change": 7,
+   "replace": 4
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "vite/sentry-10/nomaps.rrweb": {
+  "mutations": 46,
+  "byEffect": {
+   "wrap": 35,
+   "descriptor-change": 7,
+   "replace": 4
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "vite/sentry-11/maps.rrweb": {
+  "mutations": 46,
+  "byEffect": {
+   "wrap": 35,
+   "descriptor-change": 7,
+   "replace": 4
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "vite/sentry-11/nomaps.rrweb": {
+  "mutations": 46,
+  "byEffect": {
+   "wrap": 35,
+   "descriptor-change": 7,
+   "replace": 4
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "vite/sentry-7/maps.rrweb": {
+  "mutations": 46,
+  "byEffect": {
+   "wrap": 35,
+   "descriptor-change": 7,
+   "replace": 4
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "vite/sentry-7/nomaps.rrweb": {
+  "mutations": 46,
+  "byEffect": {
+   "wrap": 35,
+   "descriptor-change": 7,
+   "replace": 4
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "vite/whatwg-fetch/maps.fetch": {
+  "mutations": 4,
+  "byEffect": {
+   "replace": 4
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "vite/whatwg-fetch/nomaps.fetch": {
+  "mutations": 4,
+  "byEffect": {
+   "replace": 4
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "webpack/core-js/maps.array-iterator": {
+  "mutations": 5,
+  "byEffect": {
+   "replace": 4,
+   "wrap": 1
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "webpack/core-js/maps.array-symbol-iterator": {
+  "mutations": 3,
+  "byEffect": {
+   "replace": 2,
+   "wrap": 1
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "webpack/core-js/maps.members": {
+  "mutations": 14,
+  "byEffect": {
+   "replace": 10,
+   "wrap": 4
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "webpack/core-js/maps.promise": {
+  "mutations": 8,
+  "byEffect": {
+   "replace": 3,
+   "prototype-change": 1,
+   "delete": 1,
+   "wrap": 3
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "webpack/core-js/nomaps.array-iterator": {
+  "mutations": 5,
+  "byEffect": {
+   "replace": 4,
+   "wrap": 1
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "webpack/core-js/nomaps.array-symbol-iterator": {
+  "mutations": 3,
+  "byEffect": {
+   "replace": 2,
+   "wrap": 1
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "webpack/core-js/nomaps.members": {
+  "mutations": 14,
+  "byEffect": {
+   "replace": 10,
+   "wrap": 4
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "webpack/core-js/nomaps.promise": {
+  "mutations": 8,
+  "byEffect": {
+   "replace": 3,
+   "prototype-change": 1,
+   "delete": 1,
+   "wrap": 3
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "webpack/datadog/maps.css-grouping-rule": {
+  "mutations": 23,
+  "byEffect": {
+   "wrap": 18,
+   "descriptor-change": 5
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "webpack/datadog/nomaps.css-grouping-rule": {
+  "mutations": 23,
+  "byEffect": {
+   "wrap": 18,
+   "descriptor-change": 5
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "webpack/es6-promise/maps.constructor": {
+  "mutations": 1,
+  "byEffect": {
+   "replace": 1
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "webpack/es6-promise/nomaps.constructor": {
+  "mutations": 1,
+  "byEffect": {
+   "replace": 1
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "webpack/newrelic/maps.rrweb": {
+  "mutations": 50,
+  "byEffect": {
+   "wrap": 39,
+   "replace": 4,
+   "descriptor-change": 7
+  },
+  "workers": 0,
+  "pageErrors": 1
+ },
+ "webpack/newrelic/nomaps.rrweb": {
+  "mutations": 50,
+  "byEffect": {
+   "wrap": 39,
+   "replace": 4,
+   "descriptor-change": 7
+  },
+  "workers": 0,
+  "pageErrors": 1
+ },
+ "webpack/otel/maps.event-target": {
+  "mutations": 12,
+  "byEffect": {
+   "wrap": 12
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "webpack/otel/nomaps.event-target": {
+  "mutations": 12,
+  "byEffect": {
+   "wrap": 12
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "webpack/promise-polyfill/maps.constructor": {
+  "mutations": 1,
+  "byEffect": {
+   "replace": 1
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "webpack/promise-polyfill/maps.members": {
+  "mutations": 3,
+  "byEffect": {
+   "replace": 3
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "webpack/promise-polyfill/nomaps.constructor": {
+  "mutations": 1,
+  "byEffect": {
+   "replace": 1
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "webpack/promise-polyfill/nomaps.members": {
+  "mutations": 3,
+  "byEffect": {
+   "replace": 3
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "webpack/sentry-10/maps.rrweb": {
+  "mutations": 46,
+  "byEffect": {
+   "wrap": 35,
+   "descriptor-change": 7,
+   "replace": 4
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "webpack/sentry-10/nomaps.rrweb": {
+  "mutations": 46,
+  "byEffect": {
+   "wrap": 35,
+   "descriptor-change": 7,
+   "replace": 4
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "webpack/sentry-11/maps.rrweb": {
+  "mutations": 46,
+  "byEffect": {
+   "wrap": 35,
+   "descriptor-change": 7,
+   "replace": 4
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "webpack/sentry-11/nomaps.rrweb": {
+  "mutations": 46,
+  "byEffect": {
+   "wrap": 35,
+   "descriptor-change": 7,
+   "replace": 4
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "webpack/sentry-7/maps.rrweb": {
+  "mutations": 46,
+  "byEffect": {
+   "wrap": 35,
+   "descriptor-change": 7,
+   "replace": 4
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "webpack/sentry-7/nomaps.rrweb": {
+  "mutations": 46,
+  "byEffect": {
+   "wrap": 35,
+   "descriptor-change": 7,
+   "replace": 4
+  },
+  "workers": 1,
+  "pageErrors": 0
+ },
+ "webpack/whatwg-fetch/maps.fetch": {
+  "mutations": 4,
+  "byEffect": {
+   "replace": 4
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "webpack/whatwg-fetch/nomaps.fetch": {
+  "mutations": 4,
+  "byEffect": {
+   "replace": 4
+  },
+  "workers": 0,
+  "pageErrors": 0
+ }
+}

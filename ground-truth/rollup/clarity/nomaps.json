@@ -1,0 +1,492 @@
+{
+ "site": "rollup/clarity/nomaps",
+ "url": "https://app.corpus.test/index.html",
+ "browser": "chromium 153.0.8010.12",
+ "settleMs": 3000,
+ "snapshot": {
+  "holders": 1962,
+  "descriptors": 15442
+ },
+ "mutations": [
+  {
+   "target": "Animation.prototype.cancel",
+   "holder": "Animation.prototype",
+   "holderKind": "prototype",
+   "interface": "Animation",
+   "key": "cancel",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "closure:e",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-Lhnxx0R7.js",
+    "line": 1,
+    "column": 27812
+   }
+  },
+  {
+   "target": "Animation.prototype.commitStyles",
+   "holder": "Animation.prototype",
+   "holderKind": "prototype",
+   "interface": "Animation",
+   "key": "commitStyles",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "closure:e",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-Lhnxx0R7.js",
+    "line": 1,
+    "column": 27812
+   }
+  },
+  {
+   "target": "Animation.prototype.finish",
+   "holder": "Animation.prototype",
+   "holderKind": "prototype",
+   "interface": "Animation",
+   "key": "finish",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "closure:e",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-Lhnxx0R7.js",
+    "line": 1,
+    "column": 27812
+   }
+  },
+  {
+   "target": "Animation.prototype.pause",
+   "holder": "Animation.prototype",
+   "holderKind": "prototype",
+   "interface": "Animation",
+   "key": "pause",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "closure:e",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-Lhnxx0R7.js",
+    "line": 1,
+    "column": 27812
+   }
+  },
+  {
+   "target": "Animation.prototype.play",
+   "holder": "Animation.prototype",
+   "holderKind": "prototype",
+   "interface": "Animation",
+   "key": "play",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "closure:e",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-Lhnxx0R7.js",
+    "line": 1,
+    "column": 27812
+   }
+  },
+  {
+   "target": "CSSMediaRule.prototype.deleteRule",
+   "holder": "CSSMediaRule.prototype",
+   "holderKind": "prototype",
+   "interface": "CSSMediaRule",
+   "key": "deleteRule",
+   "change": "shadow",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "shadows": "CSSGroupingRule.prototype.deleteRule",
+   "effect": "wrap",
+   "wrapEvidence": "holder:Window.__clr.MediaDeleteRule",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-Lhnxx0R7.js",
+    "line": 1,
+    "column": 35957
+   }
+  },
+  {
+   "target": "CSSMediaRule.prototype.insertRule",
+   "holder": "CSSMediaRule.prototype",
+   "holderKind": "prototype",
+   "interface": "CSSMediaRule",
+   "key": "insertRule",
+   "change": "shadow",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "shadows": "CSSGroupingRule.prototype.insertRule",
+   "effect": "wrap",
+   "wrapEvidence": "holder:Window.__clr.MediaInsertRule",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-Lhnxx0R7.js",
+    "line": 1,
+    "column": 35957
+   }
+  },
+  {
+   "target": "CSSStyleSheet.prototype.deleteRule",
+   "holder": "CSSStyleSheet.prototype",
+   "holderKind": "prototype",
+   "interface": "CSSStyleSheet",
+   "key": "deleteRule",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "holder:Window.__clr.DeleteRule",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-Lhnxx0R7.js",
+    "line": 1,
+    "column": 35957
+   }
+  },
+  {
+   "target": "CSSStyleSheet.prototype.insertRule",
+   "holder": "CSSStyleSheet.prototype",
+   "holderKind": "prototype",
+   "interface": "CSSStyleSheet",
+   "key": "insertRule",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "holder:Window.__clr.InsertRule",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-Lhnxx0R7.js",
+    "line": 1,
+    "column": 35957
+   }
+  },
+  {
+   "target": "CSSStyleSheet.prototype.replace",
+   "holder": "CSSStyleSheet.prototype",
+   "holderKind": "prototype",
+   "interface": "CSSStyleSheet",
+   "key": "replace",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "holder:Window.__clr.replace",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-Lhnxx0R7.js",
+    "line": 1,
+    "column": 26701
+   }
+  },
+  {
+   "target": "CSSStyleSheet.prototype.replaceSync",
+   "holder": "CSSStyleSheet.prototype",
+   "holderKind": "prototype",
+   "interface": "CSSStyleSheet",
+   "key": "replaceSync",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "holder:Window.__clr.replaceSync",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-Lhnxx0R7.js",
+    "line": 1,
+    "column": 26701
+   }
+  },
+  {
+   "target": "customElements.define",
+   "holder": "customElements",
+   "holderKind": "singleton",
+   "interface": "CustomElementRegistry",
+   "key": "define",
+   "change": "shadow",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "shadows": "CustomElementRegistry.prototype.define",
+   "effect": "wrap",
+   "wrapEvidence": "holder:Window.__clr.define",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-Lhnxx0R7.js",
+    "line": 1,
+    "column": 72214
+   }
+  },
+  {
+   "target": "Element.prototype.animate",
+   "holder": "Element.prototype",
+   "holderKind": "prototype",
+   "interface": "Element",
+   "key": "animate",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "closure:lr->closure:lr->closure:bn",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-Lhnxx0R7.js",
+    "line": 1,
+    "column": 72675
+   }
+  },
+  {
+   "target": "Element.prototype.attachShadow",
+   "holder": "Element.prototype",
+   "holderKind": "prototype",
+   "interface": "Element",
+   "key": "attachShadow",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "holder:Window.__clr.AttachShadow",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-Lhnxx0R7.js",
+    "line": 1,
+    "column": 35684
+   }
+  },
+  {
+   "target": "history.pushState",
+   "holder": "history",
+   "holderKind": "singleton",
+   "interface": "History",
+   "key": "pushState",
+   "change": "shadow",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "shadows": "History.prototype.pushState",
+   "effect": "wrap",
+   "wrapEvidence": "closure:t",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-Lhnxx0R7.js",
+    "line": 1,
+    "column": 68039
+   }
+  },
+  {
+   "target": "history.replaceState",
+   "holder": "history",
+   "holderKind": "singleton",
+   "interface": "History",
+   "key": "replaceState",
+   "change": "shadow",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "shadows": "History.prototype.replaceState",
+   "effect": "wrap",
+   "wrapEvidence": "closure:t",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-Lhnxx0R7.js",
+    "line": 1,
+    "column": 68039
+   }
+  }
+ ],
+ "expandos": [],
+ "newGlobals": [
+  "__clr",
+  "__corpusReady",
+  "clarity"
+ ],
+ "workers": [],
+ "blockedOrigins": [
+  "https://clarity.example.invalid"
+ ],
+ "pageErrors": []
+}

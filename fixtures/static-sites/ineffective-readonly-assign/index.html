@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>fixture: ineffective-readonly-assign</title></head>
+<body>
+<h1>ineffective-readonly-assign</h1>
+<button id="corpus-button" type="button">click</button>
+<script>
+navigator.userAgent = 'fixture';
+window.top = 1;
+</script>
+<script>
+'use strict';
+try { navigator.userAgent = 'fixture'; } catch (e) {}
+</script>
+<script>window.__corpusReady = true;</script>
+</body>
+</html>

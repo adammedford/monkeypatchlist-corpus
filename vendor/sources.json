@@ -1,0 +1,73 @@
+{
+ "https://browser.sentry-cdn.com/11.0.0/bundle.tracing.replay.min.js": {
+  "file": "bundle.tracing.replay.min.js",
+  "note": "@sentry/browser 11.0.0 CDN bundle",
+  "sha256": "4365fc782fe562ec50a146b5d7bc34bee959b9f9cff2d9fab70025893a62f2d6",
+  "fetched": "2026-09-24"
+ },
+ "https://www.datadoghq-browser-agent.com/us1/v7/datadog-rum.js": {
+  "file": "datadog-rum.js",
+  "note": "Datadog RUM 7.14.0 (floating v7 URL; pinned by hash)",
+  "npm": "@datadog/browser-rum/bundle/datadog-rum.js",
+  "sha256": "e192d0448d28181be67a03d94d6ca44270f2030dee29ef004d0f7b1b82ff6f83",
+  "fetched": "2026-09-24"
+ },
+ "https://www.datadoghq-browser-agent.com/us1/v7/datadog-logs.js": {
+  "file": "datadog-logs.js",
+  "note": "Datadog logs 7.14.0 (floating v7 URL; pinned by hash)",
+  "npm": "@datadog/browser-logs/bundle/datadog-logs.js",
+  "sha256": "78d16aefda70ba49223d5460b394ec62fed598ed3e8ce8713f947dda78ecb045",
+  "fetched": "2026-09-24"
+ },
+ "https://js-agent.newrelic.com/nr-loader-spa-1.322.0.min.js": {
+  "file": "nr-loader-spa-1.322.0.min.js",
+  "note": "New Relic SPA loader 1.322.0",
+  "sha256": "bac5819534267643d8ad0f8c2bc5c865f11e358de211210f8d40e25b354d8119",
+  "fetched": "2026-09-24"
+ },
+ "https://js.monitor.azure.com/scripts/b/ai.3.gbl.min.js": {
+  "file": "ai.3.gbl.min.js",
+  "note": "Application Insights 3.4.4 (floating v3 URL; pinned by hash)",
+  "npm": "@microsoft/applicationinsights-web/browser/es5/ai.3.4.4.gbl.min.js",
+  "sha256": "064956873db21545f97b1833a36b2a6728e5af7a1ddf6cd703eb6a59d55db7b0",
+  "fetched": "2026-09-24"
+ },
+ "https://www.datadoghq-browser-agent.com/us1/v7/chunks/datadogRecorder-95b3116c17acc4609842-datadog-rum.js": {
+  "file": "chunks-datadogRecorder-95b3116c17acc4609842-datadog-rum.js",
+  "note": "Datadog RUM 7.14.0 lazy chunk, loaded by datadog-rum.js",
+  "npm": "@datadog/browser-rum/bundle/chunks/datadogRecorder-95b3116c17acc4609842-datadog-rum.js",
+  "sha256": "3fd912f4dc2a60279d327bda157afb3b473e73f251a4d0354eedc5d0e83777c8",
+  "fetched": "2026-09-24"
+ },
+ "https://www.datadoghq-browser-agent.com/us1/v7/chunks/datadogProfiler-155594a8950db9a4b941-datadog-rum.js": {
+  "file": "chunks-datadogProfiler-155594a8950db9a4b941-datadog-rum.js",
+  "note": "Datadog RUM 7.14.0 lazy chunk, loaded by datadog-rum.js",
+  "npm": "@datadog/browser-rum/bundle/chunks/datadogProfiler-155594a8950db9a4b941-datadog-rum.js",
+  "sha256": "f8ace11639e1843525aeae39dfb3467bf62ad3ca3396532dd2a597e5d406ac8a",
+  "fetched": "2026-09-24"
+ },
+ "https://js-agent.newrelic.com/nr-spa-1.322.0.min.js": {
+  "file": "nr-spa-1.322.0.min.js",
+  "note": "New Relic 1.322.0 lazy chunk, loaded by nr-loader-spa-1.322.0.min.js: aggregate chunk 478; every feature imports its aggregator from it. sha256 checked; also matches the loader SRI sha512",
+  "sha256": "e6aee149d06e108caa9655b5dea1723ccd0150164636f3fe99ad9bfd4dce6650",
+  "fetched": "2026-09-26"
+ },
+ "https://js-agent.newrelic.com/nr-spa-recorder-1.322.0.min.js": {
+  "file": "nr-spa-recorder-1.322.0.min.js",
+  "note": "New Relic 1.322.0 lazy chunk, loaded by nr-loader-spa-1.322.0.min.js: recorder chunk 249 (rrweb); imported by the session_replay instrument (preload, or replay mode FULL/ERROR). sha256 checked; also matches the loader SRI sha512",
+  "sha256": "f1315e43435ef2850a51b743426023aaa3afbc5ac6314e768a081b424e414d00",
+  "fetched": "2026-09-26"
+ },
+ "https://js-agent.newrelic.com/nr-spa-compressor-1.322.0.min.js": {
+  "file": "nr-spa-compressor-1.322.0.min.js",
+  "note": "New Relic 1.322.0 lazy chunk, loaded by nr-loader-spa-1.322.0.min.js: compressor chunk 212 (fflate gzip); imported by the session_replay aggregate (prepUtils). sha256 checked; also matches the loader SRI sha512",
+  "sha256": "4776356733a3e637aadb6406484f34cec1066e9c8853c12f3d5df23e25f67cea",
+  "fetched": "2026-09-26"
+ },
+ "https://js-agent.newrelic.com/nr-spa-iframe-message-handler-1.322.0.min.js": {
+  "file": "nr-spa-iframe-message-handler-1.322.0.min.js",
+  "note": "New Relic 1.322.0 lazy chunk, loaded by nr-loader-spa-1.322.0.min.js: iframe message handler chunk 238; imported only with init.api.register.allow_iframe_bridge. sha256 checked; also matches the loader SRI sha512",
+  "sha256": "da703dbdff0c7b2753fc6ee15fea18f36ca76ac1cdc6eed86575823cd57d090b",
+  "fetched": "2026-09-26"
+ }
+}

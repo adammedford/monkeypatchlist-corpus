@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>fixture: restore-local-capture</title></head>
+<body>
+<h1>restore-local-capture</h1>
+<button id="corpus-button" type="button">click</button>
+<script>
+var o = XMLHttpRequest.prototype.open;
+XMLHttpRequest.prototype.open = function () { return o.apply(this, arguments); };
+function teardown() { /*R{*/XMLHttpRequest.prototype.open = o;/*}R*/ }
+window.__corpusTeardown = teardown;
+</script>
+<script>window.__corpusReady = true;</script>
+</body>
+</html>

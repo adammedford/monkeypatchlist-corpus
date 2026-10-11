@@ -1,0 +1,32 @@
+{
+ "site": "static/control-named-setter-setprototypeof",
+ "url": "https://app.corpus.test/index.html",
+ "browser": "chromium 153.0.8010.12",
+ "settleMs": 300,
+ "snapshot": {
+  "holders": 1962,
+  "descriptors": 15442
+ },
+ "mutations": [
+  {
+   "target": "localStorage.[[Prototype]]",
+   "holder": "localStorage",
+   "holderKind": "singleton",
+   "interface": "Storage",
+   "key": "[[Prototype]]",
+   "change": "prototype",
+   "before": null,
+   "after": null,
+   "effect": "prototype-change",
+   "wrapEvidence": null,
+   "definedAt": null
+  }
+ ],
+ "expandos": [],
+ "newGlobals": [
+  "__corpusReady"
+ ],
+ "workers": [],
+ "blockedOrigins": [],
+ "pageErrors": []
+}

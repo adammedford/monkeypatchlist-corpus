@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>fixture: ineffective-immutable-prototype-proto-assign</title></head>
+<body>
+<h1>ineffective-immutable-prototype-proto-assign</h1>
+<button id="corpus-button" type="button">click</button>
+<script>
+try { window.__proto__ = Object.create(null); } catch (e) {}
+try { Object.prototype.__proto__ = Object.create(null); } catch (e) {}
+</script>
+<script>window.__corpusReady = true;</script>
+</body>
+</html>

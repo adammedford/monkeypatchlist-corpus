@@ -1,0 +1,55 @@
+{
+ "site": "static/restore-local-capture",
+ "url": "https://app.corpus.test/index.html",
+ "browser": "chromium 153.0.8010.12",
+ "settleMs": 300,
+ "snapshot": {
+  "holders": 1962,
+  "descriptors": 15442
+ },
+ "mutations": [
+  {
+   "target": "XMLHttpRequest.prototype.open",
+   "holder": "XMLHttpRequest.prototype",
+   "holderKind": "prototype",
+   "interface": "XMLHttpRequest",
+   "key": "open",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "holder:Window.o",
+   "definedAt": {
+    "url": "https://app.corpus.test/index.html",
+    "line": 9,
+    "column": 41
+   }
+  }
+ ],
+ "expandos": [],
+ "newGlobals": [
+  "__corpusReady",
+  "__corpusTeardown",
+  "o",
+  "teardown"
+ ],
+ "workers": [],
+ "blockedOrigins": [],
+ "pageErrors": [],
+ "afterTeardown": {
+  "mutations": [],
+  "expandos": []
+ }
+}

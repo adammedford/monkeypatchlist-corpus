@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>fixture: control-named-setter-setprototypeof</title></head>
+<body>
+<h1>control-named-setter-setprototypeof</h1>
+<button id="corpus-button" type="button">click</button>
+<script>
+Object.setPrototypeOf(localStorage, Object.create(Storage.prototype));
+</script>
+<script>window.__corpusReady = true;</script>
+</body>
+</html>

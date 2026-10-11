@@ -1,0 +1,54 @@
+{
+ "site": "static/restore-descriptor-dead-fallback",
+ "url": "https://app.corpus.test/index.html",
+ "browser": "chromium 153.0.8010.12",
+ "settleMs": 300,
+ "snapshot": {
+  "holders": 1962,
+  "descriptors": 15442
+ },
+ "mutations": [
+  {
+   "target": "HTMLInputElement.prototype.value",
+   "holder": "HTMLInputElement.prototype",
+   "holderKind": "prototype",
+   "interface": "HTMLInputElement",
+   "key": "value",
+   "change": "descriptor",
+   "before": {
+    "kind": "accessor",
+    "get": true,
+    "set": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "accessor",
+    "get": true,
+    "set": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "descriptor-change",
+   "wrapEvidence": "closure:d.set",
+   "definedAt": {
+    "url": "https://app.corpus.test/index.html",
+    "line": 10,
+    "column": 46
+   }
+  }
+ ],
+ "expandos": [],
+ "newGlobals": [
+  "__corpusReady",
+  "__corpusTeardown",
+  "hook"
+ ],
+ "workers": [],
+ "blockedOrigins": [],
+ "pageErrors": [],
+ "afterTeardown": {
+  "mutations": [],
+  "expandos": []
+ }
+}

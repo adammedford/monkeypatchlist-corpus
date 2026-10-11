@@ -1,0 +1,631 @@
+{
+ "$schema": "Mutations present in the code that the runtime run did not execute. Applies to every bundler/variant of the app (and its CDN site where noted). Hand-labeled 2026-09-24 against Chromium 153; effect is what the write would do if it ran there. Entries with a `correction` had their reachability corrected on 2026-09-26 from the exercise variants; `correction.from` is the old label.",
+ "whatwg-fetch": [
+  {
+   "target": "Window.fetch",
+   "effect": "replace",
+   "reachability": "guarded-native-absence",
+   "reason": "One `if (!g.fetch)` guard covers all four writes; Chromium has fetch.",
+   "source": "whatwg-fetch@3.6.20 dist/fetch.umd.js L643-648"
+  },
+  {
+   "target": "Window.Headers",
+   "effect": "replace",
+   "reachability": "guarded-native-absence",
+   "reason": "One `if (!g.fetch)` guard covers all four writes; Chromium has fetch.",
+   "source": "whatwg-fetch@3.6.20 dist/fetch.umd.js L643-648"
+  },
+  {
+   "target": "Window.Request",
+   "effect": "replace",
+   "reachability": "guarded-native-absence",
+   "reason": "One `if (!g.fetch)` guard covers all four writes; Chromium has fetch.",
+   "source": "whatwg-fetch@3.6.20 dist/fetch.umd.js L643-648"
+  },
+  {
+   "target": "Window.Response",
+   "effect": "replace",
+   "reachability": "guarded-native-absence",
+   "reason": "One `if (!g.fetch)` guard covers all four writes; Chromium has fetch.",
+   "source": "whatwg-fetch@3.6.20 dist/fetch.umd.js L643-648"
+  }
+ ],
+ "promise-polyfill": [
+  {
+   "target": "Window.Promise",
+   "effect": "replace",
+   "reachability": "guarded-native-absence",
+   "reason": "typeof globalNS['Promise'] !== 'function' is false in Chromium.",
+   "source": "promise-polyfill@8.3.0 lib/polyfill.js"
+  },
+  {
+   "target": "Promise.prototype.finally",
+   "effect": "replace",
+   "reachability": "guarded-native-absence",
+   "reason": "Per-member `if (!…)` guards; all native in Chromium.",
+   "source": "promise-polyfill@8.3.0 lib/polyfill.js"
+  },
+  {
+   "target": "Promise.allSettled",
+   "effect": "replace",
+   "reachability": "guarded-native-absence",
+   "reason": "Per-member `if (!…)` guards; all native in Chromium.",
+   "source": "promise-polyfill@8.3.0 lib/polyfill.js"
+  },
+  {
+   "target": "Promise.any",
+   "effect": "replace",
+   "reachability": "guarded-native-absence",
+   "reason": "Per-member `if (!…)` guards; all native in Chromium.",
+   "source": "promise-polyfill@8.3.0 lib/polyfill.js"
+  }
+ ],
+ "es6-promise": [
+  {
+   "target": "Window.Promise",
+   "effect": "replace",
+   "reachability": "conditional",
+   "reason": "polyfill() returns early when the native Promise passes the [object Promise] brand check.",
+   "source": "es6-promise@4.2.8 dist/es6-promise.auto.js L1131-1168",
+   "correction": {
+    "kind": "label correction, not a relabel: the finding stays a true positive and only its reachability label changes, so it is not counted under the relabel counter",
+    "from": "guarded-native-absence",
+    "date": "2026-09-26",
+    "ticket": "exercise-variant correction, applying the label-derivation rules (the reachability rules win over conflicting labels)",
+    "citation": "es6-promise@4.2.8 dist/es6-promise.js L1146-1161 (what auto.js runs; the dist/es6-promise.auto.js L1131-1168 cited above is the same code): `var P = local.Promise; if (P) { promiseToString = Object.prototype.toString.call(P.resolve()); if (promiseToString === '[object Promise]' && !P.cast) return; } local.Promise = Promise$1`. With a native Promise present the write still runs when the brand check fails or P.cast exists, so the guard is not only an absence test.",
+    "why": "es6-promise has a brand check."
+   }
+  }
+ ],
+ "core-js": [
+  {
+   "target": "Array.prototype.at",
+   "effect": "replace",
+   "reachability": "conditional",
+   "reason": "core-js FORCED / isForced() feature tests pass in Chromium 153, so the $() / defineBuiltIn write is skipped. Observed at runtime: Window.structuredClone (wrap) and Function.prototype.toString (replace). Writes to core-js's own URL/URLSearchParams polyfill prototypes are local-class writes and are not labeled.",
+   "source": "static read of the imported core-js@3.50.0 modules and their transitive modules/*: $({target,proto|stat|global}) keys and defineBuiltIn on native holders",
+   "correction": {
+    "kind": "label correction, not a relabel: the finding stays a true positive and only its reachability label changes, so it is not counted under the relabel counter",
+    "from": "guarded-native-absence",
+    "date": "2026-09-26",
+    "ticket": "exercise-variant correction, applying the label-derivation rules (the reachability rules win over conflicting labels)",
+    "citation": "core-js@3.50.0 internals/is-forced.js L7-12: isForced(feature, detection) returns isForced.data[feature] (POLYFILL -> true) before it runs the feature test; apps set isForced.data through core-js/configurator (configurator.js L16-20), and internals/export.js L43 passes every exported key through isForced. The write runs when the native is missing OR when the app forces it, and the reachability rules make both sides of such an OR `conditional`. Site: core-js@3.50.0 modules/es.array.at.js L10.",
+    "why": "core-js FORCED reads isForced.data, which apps can set through core-js/configurator."
+   }
+  },
+  {
+   "target": "Array.prototype.flat",
+   "effect": "replace",
+   "reachability": "conditional",
+   "reason": "core-js FORCED / isForced() feature tests pass in Chromium 153, so the $() / defineBuiltIn write is skipped. Observed at runtime: Window.structuredClone (wrap) and Function.prototype.toString (replace). Writes to core-js's own URL/URLSearchParams polyfill prototypes are local-class writes and are not labeled.",
+   "source": "static read of the imported core-js@3.50.0 modules and their transitive modules/*: $({target,proto|stat|global}) keys and defineBuiltIn on native holders",
+   "correction": {
+    "kind": "label correction, not a relabel: the finding stays a true positive and only its reachability label changes, so it is not counted under the relabel counter",
+    "from": "guarded-native-absence",
+    "date": "2026-09-26",
+    "ticket": "exercise-variant correction, applying the label-derivation rules (the reachability rules win over conflicting labels)",
+    "citation": "core-js@3.50.0 internals/is-forced.js L7-12: isForced(feature, detection) returns isForced.data[feature] (POLYFILL -> true) before it runs the feature test; apps set isForced.data through core-js/configurator (configurator.js L16-20), and internals/export.js L43 passes every exported key through isForced. The write runs when the native is missing OR when the app forces it, and the reachability rules make both sides of such an OR `conditional`. Site: core-js@3.50.0 modules/es.array.flat.js L11.",
+    "why": "core-js FORCED reads isForced.data, which apps can set through core-js/configurator."
+   }
+  },
+  {
+   "target": "Iterator.prototype.map",
+   "effect": "replace",
+   "reachability": "conditional",
+   "reason": "core-js FORCED / isForced() feature tests pass in Chromium 153, so the $() / defineBuiltIn write is skipped. Observed at runtime: Window.structuredClone (wrap) and Function.prototype.toString (replace). Writes to core-js's own URL/URLSearchParams polyfill prototypes are local-class writes and are not labeled.",
+   "source": "static read of the imported core-js@3.50.0 modules and their transitive modules/*: $({target,proto|stat|global}) keys and defineBuiltIn on native holders",
+   "correction": {
+    "kind": "label correction, not a relabel: the finding stays a true positive and only its reachability label changes, so it is not counted under the relabel counter",
+    "from": "guarded-native-absence",
+    "date": "2026-09-26",
+    "ticket": "exercise-variant correction, applying the label-derivation rules (the reachability rules win over conflicting labels)",
+    "citation": "core-js@3.50.0 internals/is-forced.js L7-12: isForced(feature, detection) returns isForced.data[feature] (POLYFILL -> true) before it runs the feature test; apps set isForced.data through core-js/configurator (configurator.js L16-20), and internals/export.js L43 passes every exported key through isForced. The write runs when the native is missing OR when the app forces it, and the reachability rules make both sides of such an OR `conditional`. Site: core-js@3.50.0 modules/es.iterator.map.js L18, L29.",
+    "why": "core-js FORCED reads isForced.data, which apps can set through core-js/configurator."
+   }
+  },
+  {
+   "target": "Set.prototype.union",
+   "effect": "replace",
+   "reachability": "conditional",
+   "reason": "core-js FORCED / isForced() feature tests pass in Chromium 153, so the $() / defineBuiltIn write is skipped. Observed at runtime: Window.structuredClone (wrap) and Function.prototype.toString (replace). Writes to core-js's own URL/URLSearchParams polyfill prototypes are local-class writes and are not labeled.",
+   "source": "static read of the imported core-js@3.50.0 modules and their transitive modules/*: $({target,proto|stat|global}) keys and defineBuiltIn on native holders",
+   "correction": {
+    "kind": "label correction, not a relabel: the finding stays a true positive and only its reachability label changes, so it is not counted under the relabel counter",
+    "from": "guarded-native-absence",
+    "date": "2026-09-26",
+    "ticket": "exercise-variant correction, applying the label-derivation rules (the reachability rules win over conflicting labels)",
+    "citation": "core-js@3.50.0 internals/is-forced.js L7-12: isForced(feature, detection) returns isForced.data[feature] (POLYFILL -> true) before it runs the feature test; apps set isForced.data through core-js/configurator (configurator.js L16-20), and internals/export.js L43 passes every exported key through isForced. The write runs when the native is missing OR when the app forces it, and the reachability rules make both sides of such an OR `conditional`. Site: core-js@3.50.0 modules/es.set.union.v2.js L7, L11.",
+    "why": "core-js FORCED reads isForced.data, which apps can set through core-js/configurator."
+   }
+  },
+  {
+   "target": "Window.Promise",
+   "effect": "replace",
+   "reachability": "conditional",
+   "reason": "core-js FORCED / isForced() feature tests pass in Chromium 153, so the $() / defineBuiltIn write is skipped. Observed at runtime: Window.structuredClone (wrap) and Function.prototype.toString (replace). Writes to core-js's own URL/URLSearchParams polyfill prototypes are local-class writes and are not labeled.",
+   "source": "static read of the imported core-js@3.50.0 modules and their transitive modules/*: $({target,proto|stat|global}) keys and defineBuiltIn on native holders",
+   "correction": {
+    "kind": "label correction, not a relabel: the finding stays a true positive and only its reachability label changes, so it is not counted under the relabel counter",
+    "from": "guarded-native-absence",
+    "date": "2026-09-26",
+    "ticket": "exercise-variant correction, applying the label-derivation rules (the reachability rules win over conflicting labels)",
+    "citation": "core-js@3.50.0 internals/is-forced.js L7-12: isForced(feature, detection) returns isForced.data[feature] (POLYFILL -> true) before it runs the feature test; apps set isForced.data through core-js/configurator (configurator.js L16-20), and internals/export.js L43 passes every exported key through isForced. The write runs when the native is missing OR when the app forces it, and the reachability rules make both sides of such an OR `conditional`. Site: core-js@3.50.0 internals/promise-constructor-detection.js L17 (isForced('Promise', …)); modules/es.promise.constructor.js L286.",
+    "why": "core-js FORCED reads isForced.data, which apps can set through core-js/configurator."
+   }
+  },
+  {
+   "target": "Promise.all",
+   "effect": "replace",
+   "reachability": "conditional",
+   "reason": "core-js FORCED / isForced() feature tests pass in Chromium 153, so the $() / defineBuiltIn write is skipped. Observed at runtime: Window.structuredClone (wrap) and Function.prototype.toString (replace). Writes to core-js's own URL/URLSearchParams polyfill prototypes are local-class writes and are not labeled.",
+   "source": "static read of the imported core-js@3.50.0 modules and their transitive modules/*: $({target,proto|stat|global}) keys and defineBuiltIn on native holders",
+   "correction": {
+    "kind": "label correction, not a relabel: the finding stays a true positive and only its reachability label changes, so it is not counted under the relabel counter",
+    "from": "guarded-native-absence",
+    "date": "2026-09-26",
+    "ticket": "exercise-variant correction, applying the label-derivation rules (the reachability rules win over conflicting labels)",
+    "citation": "core-js@3.50.0 internals/is-forced.js L7-12: isForced(feature, detection) returns isForced.data[feature] (POLYFILL -> true) before it runs the feature test; apps set isForced.data through core-js/configurator (configurator.js L16-20), and internals/export.js L43 passes every exported key through isForced. The write runs when the native is missing OR when the app forces it, and the reachability rules make both sides of such an OR `conditional`. Site: core-js@3.50.0 modules/es.promise.all.js L12.",
+    "why": "core-js FORCED reads isForced.data, which apps can set through core-js/configurator."
+   }
+  },
+  {
+   "target": "Promise.race",
+   "effect": "replace",
+   "reachability": "conditional",
+   "reason": "core-js FORCED / isForced() feature tests pass in Chromium 153, so the $() / defineBuiltIn write is skipped. Observed at runtime: Window.structuredClone (wrap) and Function.prototype.toString (replace). Writes to core-js's own URL/URLSearchParams polyfill prototypes are local-class writes and are not labeled.",
+   "source": "static read of the imported core-js@3.50.0 modules and their transitive modules/*: $({target,proto|stat|global}) keys and defineBuiltIn on native holders",
+   "correction": {
+    "kind": "label correction, not a relabel: the finding stays a true positive and only its reachability label changes, so it is not counted under the relabel counter",
+    "from": "guarded-native-absence",
+    "date": "2026-09-26",
+    "ticket": "exercise-variant correction, applying the label-derivation rules (the reachability rules win over conflicting labels)",
+    "citation": "core-js@3.50.0 internals/is-forced.js L7-12: isForced(feature, detection) returns isForced.data[feature] (POLYFILL -> true) before it runs the feature test; apps set isForced.data through core-js/configurator (configurator.js L16-20), and internals/export.js L43 passes every exported key through isForced. The write runs when the native is missing OR when the app forces it, and the reachability rules make both sides of such an OR `conditional`. Site: core-js@3.50.0 modules/es.promise.race.js L12.",
+    "why": "core-js FORCED reads isForced.data, which apps can set through core-js/configurator."
+   }
+  },
+  {
+   "target": "Promise.reject",
+   "effect": "replace",
+   "reachability": "conditional",
+   "reason": "core-js FORCED / isForced() feature tests pass in Chromium 153, so the $() / defineBuiltIn write is skipped. Observed at runtime: Window.structuredClone (wrap) and Function.prototype.toString (replace). Writes to core-js's own URL/URLSearchParams polyfill prototypes are local-class writes and are not labeled.",
+   "source": "static read of the imported core-js@3.50.0 modules and their transitive modules/*: $({target,proto|stat|global}) keys and defineBuiltIn on native holders",
+   "correction": {
+    "kind": "label correction, not a relabel: the finding stays a true positive and only its reachability label changes, so it is not counted under the relabel counter",
+    "from": "guarded-native-absence",
+    "date": "2026-09-26",
+    "ticket": "exercise-variant correction, applying the label-derivation rules (the reachability rules win over conflicting labels)",
+    "citation": "core-js@3.50.0 internals/is-forced.js L7-12: isForced(feature, detection) returns isForced.data[feature] (POLYFILL -> true) before it runs the feature test; apps set isForced.data through core-js/configurator (configurator.js L16-20), and internals/export.js L43 passes every exported key through isForced. The write runs when the native is missing OR when the app forces it, and the reachability rules make both sides of such an OR `conditional`. Site: core-js@3.50.0 modules/es.promise.reject.js L8.",
+    "why": "core-js FORCED reads isForced.data, which apps can set through core-js/configurator."
+   }
+  },
+  {
+   "target": "Promise.resolve",
+   "effect": "replace",
+   "reachability": "conditional",
+   "reason": "core-js FORCED / isForced() feature tests pass in Chromium 153, so the $() / defineBuiltIn write is skipped. Observed at runtime: Window.structuredClone (wrap) and Function.prototype.toString (replace). Writes to core-js's own URL/URLSearchParams polyfill prototypes are local-class writes and are not labeled.",
+   "source": "static read of the imported core-js@3.50.0 modules and their transitive modules/*: $({target,proto|stat|global}) keys and defineBuiltIn on native holders",
+   "correction": {
+    "kind": "label correction, not a relabel: the finding stays a true positive and only its reachability label changes, so it is not counted under the relabel counter",
+    "from": "guarded-native-absence",
+    "date": "2026-09-26",
+    "ticket": "exercise-variant correction, applying the label-derivation rules (the reachability rules win over conflicting labels)",
+    "citation": "core-js@3.50.0 internals/is-forced.js L7-12: isForced(feature, detection) returns isForced.data[feature] (POLYFILL -> true) before it runs the feature test; apps set isForced.data through core-js/configurator (configurator.js L16-20), and internals/export.js L43 passes every exported key through isForced. The write runs when the native is missing OR when the app forces it, and the reachability rules make both sides of such an OR `conditional`. Site: core-js@3.50.0 modules/es.promise.resolve.js L14.",
+    "why": "core-js FORCED reads isForced.data, which apps can set through core-js/configurator."
+   }
+  },
+  {
+   "target": "Promise.prototype.then",
+   "effect": "replace",
+   "reachability": "conditional",
+   "reason": "core-js FORCED / isForced() feature tests pass in Chromium 153, so the $() / defineBuiltIn write is skipped. Observed at runtime: Window.structuredClone (wrap) and Function.prototype.toString (replace). Writes to core-js's own URL/URLSearchParams polyfill prototypes are local-class writes and are not labeled.",
+   "source": "static read of the imported core-js@3.50.0 modules and their transitive modules/*: $({target,proto|stat|global}) keys and defineBuiltIn on native holders",
+   "correction": {
+    "kind": "label correction, not a relabel: the finding stays a true positive and only its reachability label changes, so it is not counted under the relabel counter",
+    "from": "guarded-native-absence",
+    "date": "2026-09-26",
+    "ticket": "exercise-variant correction, applying the label-derivation rules (the reachability rules win over conflicting labels)",
+    "citation": "core-js@3.50.0 internals/is-forced.js L7-12: isForced(feature, detection) returns isForced.data[feature] (POLYFILL -> true) before it runs the feature test; apps set isForced.data through core-js/configurator (configurator.js L16-20), and internals/export.js L43 passes every exported key through isForced. The write runs when the native is missing OR when the app forces it, and the reachability rules make both sides of such an OR `conditional`. Site: core-js@3.50.0 modules/es.promise.constructor.js L198, L263 (inside if (FORCED_PROMISE_CONSTRUCTOR)).",
+    "why": "core-js FORCED reads isForced.data, which apps can set through core-js/configurator."
+   }
+  },
+  {
+   "target": "Promise.prototype.catch",
+   "effect": "replace",
+   "reachability": "conditional",
+   "reason": "core-js FORCED / isForced() feature tests pass in Chromium 153, so the $() / defineBuiltIn write is skipped. Observed at runtime: Window.structuredClone (wrap) and Function.prototype.toString (replace). Writes to core-js's own URL/URLSearchParams polyfill prototypes are local-class writes and are not labeled.",
+   "source": "static read of the imported core-js@3.50.0 modules and their transitive modules/*: $({target,proto|stat|global}) keys and defineBuiltIn on native holders",
+   "correction": {
+    "kind": "label correction, not a relabel: the finding stays a true positive and only its reachability label changes, so it is not counted under the relabel counter",
+    "from": "guarded-native-absence",
+    "date": "2026-09-26",
+    "ticket": "exercise-variant correction, applying the label-derivation rules (the reachability rules win over conflicting labels)",
+    "citation": "core-js@3.50.0 internals/is-forced.js L7-12: isForced(feature, detection) returns isForced.data[feature] (POLYFILL -> true) before it runs the feature test; apps set isForced.data through core-js/configurator (configurator.js L16-20), and internals/export.js L43 passes every exported key through isForced. The write runs when the native is missing OR when the app forces it, and the reachability rules make both sides of such an OR `conditional`. Site: core-js@3.50.0 modules/es.promise.catch.js L14, L24.",
+    "why": "core-js FORCED reads isForced.data, which apps can set through core-js/configurator."
+   }
+  },
+  {
+   "target": "Promise.prototype.finally",
+   "effect": "replace",
+   "reachability": "conditional",
+   "reason": "core-js FORCED / isForced() feature tests pass in Chromium 153, so the $() / defineBuiltIn write is skipped. Observed at runtime: Window.structuredClone (wrap) and Function.prototype.toString (replace). Writes to core-js's own URL/URLSearchParams polyfill prototypes are local-class writes and are not labeled.",
+   "source": "static read of the imported core-js@3.50.0 modules and their transitive modules/*: $({target,proto|stat|global}) keys and defineBuiltIn on native holders",
+   "correction": {
+    "kind": "label correction, not a relabel: the finding stays a true positive and only its reachability label changes, so it is not counted under the relabel counter",
+    "from": "guarded-native-absence",
+    "date": "2026-09-26",
+    "ticket": "exercise-variant correction, applying the label-derivation rules (the reachability rules win over conflicting labels)",
+    "citation": "core-js@3.50.0 internals/is-forced.js L7-12: isForced(feature, detection) returns isForced.data[feature] (POLYFILL -> true) before it runs the feature test; apps set isForced.data through core-js/configurator (configurator.js L16-20), and internals/export.js L43 passes every exported key through isForced. The write runs when the native is missing OR when the app forces it, and the reachability rules make both sides of such an OR `conditional`. Site: core-js@3.50.0 modules/es.promise.finally.js L22, L41.",
+    "why": "core-js FORCED reads isForced.data, which apps can set through core-js/configurator."
+   }
+  },
+  {
+   "target": "Window.queueMicrotask",
+   "effect": "replace",
+   "reachability": "conditional",
+   "reason": "core-js FORCED / isForced() feature tests pass in Chromium 153, so the $() / defineBuiltIn write is skipped. Observed at runtime: Window.structuredClone (wrap) and Function.prototype.toString (replace). Writes to core-js's own URL/URLSearchParams polyfill prototypes are local-class writes and are not labeled.",
+   "source": "static read of the imported core-js@3.50.0 modules and their transitive modules/*: $({target,proto|stat|global}) keys and defineBuiltIn on native holders",
+   "correction": {
+    "kind": "label correction, not a relabel: the finding stays a true positive and only its reachability label changes, so it is not counted under the relabel counter",
+    "from": "guarded-native-absence",
+    "date": "2026-09-26",
+    "ticket": "exercise-variant correction, applying the label-derivation rules (the reachability rules win over conflicting labels)",
+    "citation": "core-js@3.50.0 internals/is-forced.js L7-12: isForced(feature, detection) returns isForced.data[feature] (POLYFILL -> true) before it runs the feature test; apps set isForced.data through core-js/configurator (configurator.js L16-20), and internals/export.js L43 passes every exported key through isForced. The write runs when the native is missing OR when the app forces it, and the reachability rules make both sides of such an OR `conditional`. Site: core-js@3.50.0 modules/web.queue-microtask.js L20.",
+    "why": "core-js FORCED reads isForced.data, which apps can set through core-js/configurator."
+   }
+  },
+  {
+   "target": "Window.URL",
+   "effect": "replace",
+   "reachability": "conditional",
+   "reason": "core-js FORCED / isForced() feature tests pass in Chromium 153, so the $() / defineBuiltIn write is skipped. Observed at runtime: Window.structuredClone (wrap) and Function.prototype.toString (replace). Writes to core-js's own URL/URLSearchParams polyfill prototypes are local-class writes and are not labeled.",
+   "source": "static read of the imported core-js@3.50.0 modules and their transitive modules/*: $({target,proto|stat|global}) keys and defineBuiltIn on native holders",
+   "correction": {
+    "kind": "label correction, not a relabel: the finding stays a true positive and only its reachability label changes, so it is not counted under the relabel counter",
+    "from": "guarded-native-absence",
+    "date": "2026-09-26",
+    "ticket": "exercise-variant correction, applying the label-derivation rules (the reachability rules win over conflicting labels)",
+    "citation": "core-js@3.50.0 internals/is-forced.js L7-12: isForced(feature, detection) returns isForced.data[feature] (POLYFILL -> true) before it runs the feature test; apps set isForced.data through core-js/configurator (configurator.js L16-20), and internals/export.js L43 passes every exported key through isForced. The write runs when the native is missing OR when the app forces it, and the reachability rules make both sides of such an OR `conditional`. Site: core-js@3.50.0 modules/web.url.constructor.js L1164.",
+    "why": "core-js FORCED reads isForced.data, which apps can set through core-js/configurator."
+   }
+  },
+  {
+   "target": "Window.URLSearchParams",
+   "effect": "replace",
+   "reachability": "conditional",
+   "reason": "core-js FORCED / isForced() feature tests pass in Chromium 153, so the $() / defineBuiltIn write is skipped. Observed at runtime: Window.structuredClone (wrap) and Function.prototype.toString (replace). Writes to core-js's own URL/URLSearchParams polyfill prototypes are local-class writes and are not labeled.",
+   "source": "static read of the imported core-js@3.50.0 modules and their transitive modules/*: $({target,proto|stat|global}) keys and defineBuiltIn on native holders",
+   "correction": {
+    "kind": "label correction, not a relabel: the finding stays a true positive and only its reachability label changes, so it is not counted under the relabel counter",
+    "from": "guarded-native-absence",
+    "date": "2026-09-26",
+    "ticket": "exercise-variant correction, applying the label-derivation rules (the reachability rules win over conflicting labels)",
+    "citation": "core-js@3.50.0 internals/is-forced.js L7-12: isForced(feature, detection) returns isForced.data[feature] (POLYFILL -> true) before it runs the feature test; apps set isForced.data through core-js/configurator (configurator.js L16-20), and internals/export.js L43 passes every exported key through isForced. The write runs when the native is missing OR when the app forces it, and the reachability rules make both sides of such an OR `conditional`. Site: core-js@3.50.0 modules/web.url-search-params.constructor.js L342.",
+    "why": "core-js FORCED reads isForced.data, which apps can set through core-js/configurator."
+   }
+  }
+ ],
+ "datadog": [
+  {
+   "target": "Window.WebSocket",
+   "effect": "wrap",
+   "reachability": "conditional",
+   "reason": "Config-gated: trackResources && (betaTrackWebSockets || TRACK_WEBSOCKETS experimental flag). Not enabled in the corpus config.",
+   "source": "@datadog/browser-rum-core@7.14.0 esm/boot/startRum.mjs L118"
+  },
+  {
+   "target": "WebSocket.prototype.send",
+   "effect": "wrap",
+   "reachability": "conditional",
+   "reason": "Config-gated: trackResources && (betaTrackWebSockets || TRACK_WEBSOCKETS experimental flag). Not enabled in the corpus config.",
+   "source": "@datadog/browser-rum-core@7.14.0 esm/boot/startRum.mjs L118"
+  },
+  {
+   "target": "CanvasRenderingContext2D.prototype.clearRect",
+   "effect": "wrap",
+   "reachability": "conditional",
+   "reason": "Config-gated: sessionReplayCanvasRecording.enable. Not enabled in the corpus config.",
+   "source": "@datadog/browser-rum@7.14.0 esm/domain/record/trackers/trackCanvasContent.mjs L3-20"
+  },
+  {
+   "target": "CanvasRenderingContext2D.prototype.fillRect",
+   "effect": "wrap",
+   "reachability": "conditional",
+   "reason": "Config-gated: sessionReplayCanvasRecording.enable. Not enabled in the corpus config.",
+   "source": "@datadog/browser-rum@7.14.0 esm/domain/record/trackers/trackCanvasContent.mjs L3-20"
+  },
+  {
+   "target": "CanvasRenderingContext2D.prototype.strokeRect",
+   "effect": "wrap",
+   "reachability": "conditional",
+   "reason": "Config-gated: sessionReplayCanvasRecording.enable. Not enabled in the corpus config.",
+   "source": "@datadog/browser-rum@7.14.0 esm/domain/record/trackers/trackCanvasContent.mjs L3-20"
+  },
+  {
+   "target": "CanvasRenderingContext2D.prototype.fill",
+   "effect": "wrap",
+   "reachability": "conditional",
+   "reason": "Config-gated: sessionReplayCanvasRecording.enable. Not enabled in the corpus config.",
+   "source": "@datadog/browser-rum@7.14.0 esm/domain/record/trackers/trackCanvasContent.mjs L3-20"
+  },
+  {
+   "target": "CanvasRenderingContext2D.prototype.stroke",
+   "effect": "wrap",
+   "reachability": "conditional",
+   "reason": "Config-gated: sessionReplayCanvasRecording.enable. Not enabled in the corpus config.",
+   "source": "@datadog/browser-rum@7.14.0 esm/domain/record/trackers/trackCanvasContent.mjs L3-20"
+  },
+  {
+   "target": "CanvasRenderingContext2D.prototype.fillText",
+   "effect": "wrap",
+   "reachability": "conditional",
+   "reason": "Config-gated: sessionReplayCanvasRecording.enable. Not enabled in the corpus config.",
+   "source": "@datadog/browser-rum@7.14.0 esm/domain/record/trackers/trackCanvasContent.mjs L3-20"
+  },
+  {
+   "target": "CanvasRenderingContext2D.prototype.strokeText",
+   "effect": "wrap",
+   "reachability": "conditional",
+   "reason": "Config-gated: sessionReplayCanvasRecording.enable. Not enabled in the corpus config.",
+   "source": "@datadog/browser-rum@7.14.0 esm/domain/record/trackers/trackCanvasContent.mjs L3-20"
+  },
+  {
+   "target": "CanvasRenderingContext2D.prototype.drawImage",
+   "effect": "wrap",
+   "reachability": "conditional",
+   "reason": "Config-gated: sessionReplayCanvasRecording.enable. Not enabled in the corpus config.",
+   "source": "@datadog/browser-rum@7.14.0 esm/domain/record/trackers/trackCanvasContent.mjs L3-20"
+  },
+  {
+   "target": "CanvasRenderingContext2D.prototype.putImageData",
+   "effect": "wrap",
+   "reachability": "conditional",
+   "reason": "Config-gated: sessionReplayCanvasRecording.enable. Not enabled in the corpus config.",
+   "source": "@datadog/browser-rum@7.14.0 esm/domain/record/trackers/trackCanvasContent.mjs L3-20"
+  },
+  {
+   "target": "CanvasRenderingContext2D.prototype.drawFocusIfNeeded",
+   "effect": "wrap",
+   "reachability": "conditional",
+   "reason": "Config-gated: sessionReplayCanvasRecording.enable. Not enabled in the corpus config.",
+   "source": "@datadog/browser-rum@7.14.0 esm/domain/record/trackers/trackCanvasContent.mjs L3-20"
+  },
+  {
+   "target": "CanvasRenderingContext2D.prototype.reset",
+   "effect": "wrap",
+   "reachability": "conditional",
+   "reason": "Config-gated: sessionReplayCanvasRecording.enable. Not enabled in the corpus config.",
+   "source": "@datadog/browser-rum@7.14.0 esm/domain/record/trackers/trackCanvasContent.mjs L3-20"
+  },
+  {
+   "target": "CSSMediaRule.prototype.insertRule",
+   "effect": "wrap",
+   "reachability": "guarded-native-absence",
+   "reason": "Fallback branch taken only when typeof CSSGroupingRule === \"undefined\"; Chromium takes the CSSGroupingRule branch (observed).",
+   "source": "mutation-idioms research note, Datadog row",
+   "correction": {
+    "kind": "label correction, not a relabel: the finding stays a true positive and only its reachability label changes, so it is not counted under the relabel counter",
+    "from": "conditional",
+    "date": "2026-09-26",
+    "ticket": "exercise-variant correction, applying the label-derivation rules (the reachability rules win over conflicting labels)",
+    "citation": "@datadog/browser-rum@7.14.0 esm/domain/record/trackers/trackStyleSheet.mjs L26-30: `if (typeof CSSGroupingRule !== \"undefined\") instrumentGroupingCSSRuleClass(CSSGroupingRule); else { instrumentGroupingCSSRuleClass(CSSMediaRule); instrumentGroupingCSSRuleClass(CSSSupportsRule) }`. The fallback runs only when a native is absent.",
+    "why": "Label-derivation rule: absence of any native gives guarded-native-absence, even when the tested native is not the target (the typeof CSSGroupingRule choice)."
+   }
+  },
+  {
+   "target": "CSSMediaRule.prototype.deleteRule",
+   "effect": "wrap",
+   "reachability": "guarded-native-absence",
+   "reason": "Fallback branch taken only when typeof CSSGroupingRule === \"undefined\"; Chromium takes the CSSGroupingRule branch (observed).",
+   "source": "mutation-idioms research note, Datadog row",
+   "correction": {
+    "kind": "label correction, not a relabel: the finding stays a true positive and only its reachability label changes, so it is not counted under the relabel counter",
+    "from": "conditional",
+    "date": "2026-09-26",
+    "ticket": "exercise-variant correction, applying the label-derivation rules (the reachability rules win over conflicting labels)",
+    "citation": "@datadog/browser-rum@7.14.0 esm/domain/record/trackers/trackStyleSheet.mjs L26-30: `if (typeof CSSGroupingRule !== \"undefined\") instrumentGroupingCSSRuleClass(CSSGroupingRule); else { instrumentGroupingCSSRuleClass(CSSMediaRule); instrumentGroupingCSSRuleClass(CSSSupportsRule) }`. The fallback runs only when a native is absent.",
+    "why": "Label-derivation rule: absence of any native gives guarded-native-absence, even when the tested native is not the target (the typeof CSSGroupingRule choice)."
+   }
+  },
+  {
+   "target": "CSSSupportsRule.prototype.insertRule",
+   "effect": "wrap",
+   "reachability": "guarded-native-absence",
+   "reason": "Fallback branch taken only when typeof CSSGroupingRule === \"undefined\"; Chromium takes the CSSGroupingRule branch (observed).",
+   "source": "mutation-idioms research note, Datadog row",
+   "correction": {
+    "kind": "label correction, not a relabel: the finding stays a true positive and only its reachability label changes, so it is not counted under the relabel counter",
+    "from": "conditional",
+    "date": "2026-09-26",
+    "ticket": "exercise-variant correction, applying the label-derivation rules (the reachability rules win over conflicting labels)",
+    "citation": "@datadog/browser-rum@7.14.0 esm/domain/record/trackers/trackStyleSheet.mjs L26-30: `if (typeof CSSGroupingRule !== \"undefined\") instrumentGroupingCSSRuleClass(CSSGroupingRule); else { instrumentGroupingCSSRuleClass(CSSMediaRule); instrumentGroupingCSSRuleClass(CSSSupportsRule) }`. The fallback runs only when a native is absent.",
+    "why": "Label-derivation rule: absence of any native gives guarded-native-absence, even when the tested native is not the target (the typeof CSSGroupingRule choice)."
+   }
+  },
+  {
+   "target": "CSSSupportsRule.prototype.deleteRule",
+   "effect": "wrap",
+   "reachability": "guarded-native-absence",
+   "reason": "Fallback branch taken only when typeof CSSGroupingRule === \"undefined\"; Chromium takes the CSSGroupingRule branch (observed).",
+   "source": "mutation-idioms research note, Datadog row",
+   "correction": {
+    "kind": "label correction, not a relabel: the finding stays a true positive and only its reachability label changes, so it is not counted under the relabel counter",
+    "from": "conditional",
+    "date": "2026-09-26",
+    "ticket": "exercise-variant correction, applying the label-derivation rules (the reachability rules win over conflicting labels)",
+    "citation": "@datadog/browser-rum@7.14.0 esm/domain/record/trackers/trackStyleSheet.mjs L26-30: `if (typeof CSSGroupingRule !== \"undefined\") instrumentGroupingCSSRuleClass(CSSGroupingRule); else { instrumentGroupingCSSRuleClass(CSSMediaRule); instrumentGroupingCSSRuleClass(CSSSupportsRule) }`. The fallback runs only when a native is absent.",
+    "why": "Label-derivation rule: absence of any native gives guarded-native-absence, even when the tested native is not the target (the typeof CSSGroupingRule choice)."
+   }
+  }
+ ],
+ "newrelic": [
+  {
+   "target": "Window.WebSocket",
+   "effect": "replace",
+   "reachability": "conditional",
+   "reason": "Config-gated: init.feature_flags includes 'websockets' or init.web_sockets.enabled. Not enabled in the corpus config.",
+   "source": "@newrelic/browser-agent@1.322.0 src/features/generic_events/instrument/index.js L30, L57-59"
+  }
+ ],
+ "datadog-cdn": [
+  {
+   "target": "Window.WebSocket",
+   "effect": "wrap",
+   "reachability": "conditional",
+   "reason": "Config-gated: trackResources && (betaTrackWebSockets || TRACK_WEBSOCKETS experimental flag). Not enabled in the corpus config.",
+   "source": "@datadog/browser-rum-core@7.14.0 esm/boot/startRum.mjs L118"
+  },
+  {
+   "target": "WebSocket.prototype.send",
+   "effect": "wrap",
+   "reachability": "conditional",
+   "reason": "Config-gated: trackResources && (betaTrackWebSockets || TRACK_WEBSOCKETS experimental flag). Not enabled in the corpus config.",
+   "source": "@datadog/browser-rum-core@7.14.0 esm/boot/startRum.mjs L118"
+  },
+  {
+   "target": "CanvasRenderingContext2D.prototype.clearRect",
+   "effect": "wrap",
+   "reachability": "conditional",
+   "reason": "Config-gated: sessionReplayCanvasRecording.enable. Not enabled in the corpus config.",
+   "source": "@datadog/browser-rum@7.14.0 esm/domain/record/trackers/trackCanvasContent.mjs L3-20"
+  },
+  {
+   "target": "CanvasRenderingContext2D.prototype.fillRect",
+   "effect": "wrap",
+   "reachability": "conditional",
+   "reason": "Config-gated: sessionReplayCanvasRecording.enable. Not enabled in the corpus config.",
+   "source": "@datadog/browser-rum@7.14.0 esm/domain/record/trackers/trackCanvasContent.mjs L3-20"
+  },
+  {
+   "target": "CanvasRenderingContext2D.prototype.strokeRect",
+   "effect": "wrap",
+   "reachability": "conditional",
+   "reason": "Config-gated: sessionReplayCanvasRecording.enable. Not enabled in the corpus config.",
+   "source": "@datadog/browser-rum@7.14.0 esm/domain/record/trackers/trackCanvasContent.mjs L3-20"
+  },
+  {
+   "target": "CanvasRenderingContext2D.prototype.fill",
+   "effect": "wrap",
+   "reachability": "conditional",
+   "reason": "Config-gated: sessionReplayCanvasRecording.enable. Not enabled in the corpus config.",
+   "source": "@datadog/browser-rum@7.14.0 esm/domain/record/trackers/trackCanvasContent.mjs L3-20"
+  },
+  {
+   "target": "CanvasRenderingContext2D.prototype.stroke",
+   "effect": "wrap",
+   "reachability": "conditional",
+   "reason": "Config-gated: sessionReplayCanvasRecording.enable. Not enabled in the corpus config.",
+   "source": "@datadog/browser-rum@7.14.0 esm/domain/record/trackers/trackCanvasContent.mjs L3-20"
+  },
+  {
+   "target": "CanvasRenderingContext2D.prototype.fillText",
+   "effect": "wrap",
+   "reachability": "conditional",
+   "reason": "Config-gated: sessionReplayCanvasRecording.enable. Not enabled in the corpus config.",
+   "source": "@datadog/browser-rum@7.14.0 esm/domain/record/trackers/trackCanvasContent.mjs L3-20"
+  },
+  {
+   "target": "CanvasRenderingContext2D.prototype.strokeText",
+   "effect": "wrap",
+   "reachability": "conditional",
+   "reason": "Config-gated: sessionReplayCanvasRecording.enable. Not enabled in the corpus config.",
+   "source": "@datadog/browser-rum@7.14.0 esm/domain/record/trackers/trackCanvasContent.mjs L3-20"
+  },
+  {
+   "target": "CanvasRenderingContext2D.prototype.drawImage",
+   "effect": "wrap",
+   "reachability": "conditional",
+   "reason": "Config-gated: sessionReplayCanvasRecording.enable. Not enabled in the corpus config.",
+   "source": "@datadog/browser-rum@7.14.0 esm/domain/record/trackers/trackCanvasContent.mjs L3-20"
+  },
+  {
+   "target": "CanvasRenderingContext2D.prototype.putImageData",
+   "effect": "wrap",
+   "reachability": "conditional",
+   "reason": "Config-gated: sessionReplayCanvasRecording.enable. Not enabled in the corpus config.",
+   "source": "@datadog/browser-rum@7.14.0 esm/domain/record/trackers/trackCanvasContent.mjs L3-20"
+  },
+  {
+   "target": "CanvasRenderingContext2D.prototype.drawFocusIfNeeded",
+   "effect": "wrap",
+   "reachability": "conditional",
+   "reason": "Config-gated: sessionReplayCanvasRecording.enable. Not enabled in the corpus config.",
+   "source": "@datadog/browser-rum@7.14.0 esm/domain/record/trackers/trackCanvasContent.mjs L3-20"
+  },
+  {
+   "target": "CanvasRenderingContext2D.prototype.reset",
+   "effect": "wrap",
+   "reachability": "conditional",
+   "reason": "Config-gated: sessionReplayCanvasRecording.enable. Not enabled in the corpus config.",
+   "source": "@datadog/browser-rum@7.14.0 esm/domain/record/trackers/trackCanvasContent.mjs L3-20"
+  },
+  {
+   "target": "CSSMediaRule.prototype.insertRule",
+   "effect": "wrap",
+   "reachability": "guarded-native-absence",
+   "reason": "Fallback branch taken only when typeof CSSGroupingRule === \"undefined\"; Chromium takes the CSSGroupingRule branch (observed).",
+   "source": "mutation-idioms research note, Datadog row",
+   "correction": {
+    "kind": "label correction, not a relabel: the finding stays a true positive and only its reachability label changes, so it is not counted under the relabel counter",
+    "from": "conditional",
+    "date": "2026-09-26",
+    "ticket": "exercise-variant correction, applying the label-derivation rules (the reachability rules win over conflicting labels)",
+    "citation": "@datadog/browser-rum@7.14.0 esm/domain/record/trackers/trackStyleSheet.mjs L26-30: `if (typeof CSSGroupingRule !== \"undefined\") instrumentGroupingCSSRuleClass(CSSGroupingRule); else { instrumentGroupingCSSRuleClass(CSSMediaRule); instrumentGroupingCSSRuleClass(CSSSupportsRule) }` (the CDN bundle is the same 7.14.0 release). The fallback runs only when a native is absent.",
+    "why": "Label-derivation rule: absence of any native gives guarded-native-absence, even when the tested native is not the target (the typeof CSSGroupingRule choice)."
+   }
+  },
+  {
+   "target": "CSSMediaRule.prototype.deleteRule",
+   "effect": "wrap",
+   "reachability": "guarded-native-absence",
+   "reason": "Fallback branch taken only when typeof CSSGroupingRule === \"undefined\"; Chromium takes the CSSGroupingRule branch (observed).",
+   "source": "mutation-idioms research note, Datadog row",
+   "correction": {
+    "kind": "label correction, not a relabel: the finding stays a true positive and only its reachability label changes, so it is not counted under the relabel counter",
+    "from": "conditional",
+    "date": "2026-09-26",
+    "ticket": "exercise-variant correction, applying the label-derivation rules (the reachability rules win over conflicting labels)",
+    "citation": "@datadog/browser-rum@7.14.0 esm/domain/record/trackers/trackStyleSheet.mjs L26-30: `if (typeof CSSGroupingRule !== \"undefined\") instrumentGroupingCSSRuleClass(CSSGroupingRule); else { instrumentGroupingCSSRuleClass(CSSMediaRule); instrumentGroupingCSSRuleClass(CSSSupportsRule) }` (the CDN bundle is the same 7.14.0 release). The fallback runs only when a native is absent.",
+    "why": "Label-derivation rule: absence of any native gives guarded-native-absence, even when the tested native is not the target (the typeof CSSGroupingRule choice)."
+   }
+  },
+  {
+   "target": "CSSSupportsRule.prototype.insertRule",
+   "effect": "wrap",
+   "reachability": "guarded-native-absence",
+   "reason": "Fallback branch taken only when typeof CSSGroupingRule === \"undefined\"; Chromium takes the CSSGroupingRule branch (observed).",
+   "source": "mutation-idioms research note, Datadog row",
+   "correction": {
+    "kind": "label correction, not a relabel: the finding stays a true positive and only its reachability label changes, so it is not counted under the relabel counter",
+    "from": "conditional",
+    "date": "2026-09-26",
+    "ticket": "exercise-variant correction, applying the label-derivation rules (the reachability rules win over conflicting labels)",
+    "citation": "@datadog/browser-rum@7.14.0 esm/domain/record/trackers/trackStyleSheet.mjs L26-30: `if (typeof CSSGroupingRule !== \"undefined\") instrumentGroupingCSSRuleClass(CSSGroupingRule); else { instrumentGroupingCSSRuleClass(CSSMediaRule); instrumentGroupingCSSRuleClass(CSSSupportsRule) }` (the CDN bundle is the same 7.14.0 release). The fallback runs only when a native is absent.",
+    "why": "Label-derivation rule: absence of any native gives guarded-native-absence, even when the tested native is not the target (the typeof CSSGroupingRule choice)."
+   }
+  },
+  {
+   "target": "CSSSupportsRule.prototype.deleteRule",
+   "effect": "wrap",
+   "reachability": "guarded-native-absence",
+   "reason": "Fallback branch taken only when typeof CSSGroupingRule === \"undefined\"; Chromium takes the CSSGroupingRule branch (observed).",
+   "source": "mutation-idioms research note, Datadog row",
+   "correction": {
+    "kind": "label correction, not a relabel: the finding stays a true positive and only its reachability label changes, so it is not counted under the relabel counter",
+    "from": "conditional",
+    "date": "2026-09-26",
+    "ticket": "exercise-variant correction, applying the label-derivation rules (the reachability rules win over conflicting labels)",
+    "citation": "@datadog/browser-rum@7.14.0 esm/domain/record/trackers/trackStyleSheet.mjs L26-30: `if (typeof CSSGroupingRule !== \"undefined\") instrumentGroupingCSSRuleClass(CSSGroupingRule); else { instrumentGroupingCSSRuleClass(CSSMediaRule); instrumentGroupingCSSRuleClass(CSSSupportsRule) }` (the CDN bundle is the same 7.14.0 release). The fallback runs only when a native is absent.",
+    "why": "Label-derivation rule: absence of any native gives guarded-native-absence, even when the tested native is not the target (the typeof CSSGroupingRule choice)."
+   }
+  }
+ ],
+ "newrelic-cdn": [
+  {
+   "target": "Window.WebSocket",
+   "effect": "replace",
+   "reachability": "conditional",
+   "reason": "Config-gated: init.feature_flags includes 'websockets' or init.web_sockets.enabled. Not enabled in the corpus config.",
+   "source": "@newrelic/browser-agent@1.322.0 src/features/generic_events/instrument/index.js L30, L57-59"
+  }
+ ]
+}

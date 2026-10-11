@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>fixture: restore-shadow-residue</title></head>
+<body>
+<h1>restore-shadow-residue</h1>
+<button id="corpus-button" type="button">click</button>
+<script>
+var o = history.pushState;
+history.pushState = function () { return o.apply(this, arguments); };
+window.__corpusTeardown = function () { /*R{*/history.pushState = o;/*}R*/ };
+</script>
+<script>window.__corpusReady = true;</script>
+</body>
+</html>

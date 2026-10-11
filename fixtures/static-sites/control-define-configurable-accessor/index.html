@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>fixture: control-define-configurable-accessor</title></head>
+<body>
+<h1>control-define-configurable-accessor</h1>
+<button id="corpus-button" type="button">click</button>
+<script>
+Object.defineProperty(navigator, 'userAgent', { get: function () { return 'fixture'; } });
+</script>
+<script>window.__corpusReady = true;</script>
+</body>
+</html>

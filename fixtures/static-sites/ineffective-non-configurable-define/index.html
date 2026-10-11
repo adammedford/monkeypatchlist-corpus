@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>fixture: ineffective-non-configurable-define</title></head>
+<body>
+<h1>ineffective-non-configurable-define</h1>
+<button id="corpus-button" type="button">click</button>
+<script>
+try { Object.defineProperty(Math, 'PI', { value: 3 }); } catch (e) {}
+try { Object.defineProperty(Node, 'ELEMENT_NODE', { value: 9 }); } catch (e) {}
+try { Object.defineProperty(window, 'document', { value: {} }); } catch (e) {}
+try { Object.defineProperty(window, 'top', { get: function () { return null; } }); } catch (e) {}
+</script>
+<script>window.__corpusReady = true;</script>
+</body>
+</html>

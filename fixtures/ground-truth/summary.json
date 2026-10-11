@@ -1,0 +1,243 @@
+{
+ "static/control-declare-configurable-global": {
+  "mutations": 1,
+  "byEffect": {
+   "replace": 1
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "static/control-declare-var-setter": {
+  "mutations": 0,
+  "byEffect": {},
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "static/control-define-configurable-accessor": {
+  "mutations": 1,
+  "byEffect": {
+   "descriptor-change": 1
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "static/control-idl-setter": {
+  "mutations": 0,
+  "byEffect": {},
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "static/control-named-properties-object-assign": {
+  "mutations": 1,
+  "byEffect": {
+   "replace": 1
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "static/control-named-properties-object-define": {
+  "mutations": 1,
+  "byEffect": {
+   "replace": 1
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "static/control-named-properties-object-delete": {
+  "mutations": 0,
+  "byEffect": {},
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "static/control-named-setter-assign": {
+  "mutations": 2,
+  "byEffect": {
+   "replace": 2
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "static/control-named-setter-define": {
+  "mutations": 1,
+  "byEffect": {
+   "replace": 1
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "static/control-named-setter-delete": {
+  "mutations": 0,
+  "byEffect": {},
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "static/control-named-setter-setprototypeof": {
+  "mutations": 1,
+  "byEffect": {
+   "prototype-change": 1
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "static/control-new-global": {
+  "mutations": 0,
+  "byEffect": {},
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "static/control-replaceable-assign": {
+  "mutations": 1,
+  "byEffect": {
+   "replace": 1
+  },
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "static/ineffective-immutable-prototype-location": {
+  "mutations": 0,
+  "byEffect": {},
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "static/ineffective-immutable-prototype-proto-assign": {
+  "mutations": 0,
+  "byEffect": {},
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "static/ineffective-immutable-prototype-setprototypeof": {
+  "mutations": 0,
+  "byEffect": {},
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "static/ineffective-immutable-prototype-windowproperties": {
+  "mutations": 0,
+  "byEffect": {},
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "static/ineffective-lenient-setter-assign": {
+  "mutations": 0,
+  "byEffect": {},
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "static/ineffective-non-configurable-declare": {
+  "mutations": 0,
+  "byEffect": {},
+  "workers": 0,
+  "pageErrors": 5
+ },
+ "static/ineffective-non-configurable-define": {
+  "mutations": 0,
+  "byEffect": {},
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "static/ineffective-non-configurable-delete": {
+  "mutations": 0,
+  "byEffect": {},
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "static/ineffective-non-writable-assign": {
+  "mutations": 0,
+  "byEffect": {},
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "static/ineffective-non-writable-declare": {
+  "mutations": 0,
+  "byEffect": {},
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "static/ineffective-readonly-assign": {
+  "mutations": 0,
+  "byEffect": {},
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "static/ineffective-readonly-declare": {
+  "mutations": 0,
+  "byEffect": {},
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "static/ineffective-readonly-declare-unforgeable": {
+  "mutations": 0,
+  "byEffect": {},
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "static/ineffective-storage-readonly-assign": {
+  "mutations": 0,
+  "byEffect": {},
+  "workers": 0,
+  "pageErrors": 0
+ },
+ "static/restore-closure-capture": {
+  "mutations": 1,
+  "byEffect": {
+   "wrap": 1
+  },
+  "workers": 0,
+  "pageErrors": 0,
+  "afterTeardown": 0
+ },
+ "static/restore-descriptor-dead-fallback": {
+  "mutations": 1,
+  "byEffect": {
+   "descriptor-change": 1
+  },
+  "workers": 0,
+  "pageErrors": 0,
+  "afterTeardown": 0
+ },
+ "static/restore-heap-carried": {
+  "mutations": 1,
+  "byEffect": {
+   "wrap": 1
+  },
+  "workers": 0,
+  "pageErrors": 0,
+  "afterTeardown": 0
+ },
+ "static/restore-identity-guarded": {
+  "mutations": 1,
+  "byEffect": {
+   "wrap": 1
+  },
+  "workers": 0,
+  "pageErrors": 0,
+  "afterTeardown": 0
+ },
+ "static/restore-local-capture": {
+  "mutations": 1,
+  "byEffect": {
+   "wrap": 1
+  },
+  "workers": 0,
+  "pageErrors": 0,
+  "afterTeardown": 0
+ },
+ "static/restore-shadow-residue": {
+  "mutations": 1,
+  "byEffect": {
+   "wrap": 1
+  },
+  "workers": 0,
+  "pageErrors": 0,
+  "afterTeardown": 1
+ },
+ "static/restore-two-level-helper": {
+  "mutations": 1,
+  "byEffect": {
+   "wrap": 1
+  },
+  "workers": 0,
+  "pageErrors": 0,
+  "afterTeardown": 0
+ }
+}

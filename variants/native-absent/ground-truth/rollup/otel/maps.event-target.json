@@ -1,0 +1,387 @@
+{
+ "site": "rollup/otel/maps",
+ "url": "https://app.corpus.test/index.html",
+ "browser": "chromium 153.0.8010.12",
+ "settleMs": 3000,
+ "snapshot": {
+  "holders": 1962,
+  "descriptors": 15442
+ },
+ "mutations": [
+  {
+   "target": "history.back",
+   "holder": "history",
+   "holderKind": "singleton",
+   "interface": "History",
+   "key": "back",
+   "change": "shadow",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "shadows": "History.prototype.back",
+   "effect": "wrap",
+   "wrapEvidence": "own:__original",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-CIAS_ODP.js",
+    "line": 1,
+    "column": 63133
+   }
+  },
+  {
+   "target": "history.forward",
+   "holder": "history",
+   "holderKind": "singleton",
+   "interface": "History",
+   "key": "forward",
+   "change": "shadow",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "shadows": "History.prototype.forward",
+   "effect": "wrap",
+   "wrapEvidence": "own:__original",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-CIAS_ODP.js",
+    "line": 1,
+    "column": 63133
+   }
+  },
+  {
+   "target": "history.go",
+   "holder": "history",
+   "holderKind": "singleton",
+   "interface": "History",
+   "key": "go",
+   "change": "shadow",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "shadows": "History.prototype.go",
+   "effect": "wrap",
+   "wrapEvidence": "own:__original",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-CIAS_ODP.js",
+    "line": 1,
+    "column": 63133
+   }
+  },
+  {
+   "target": "history.pushState",
+   "holder": "history",
+   "holderKind": "singleton",
+   "interface": "History",
+   "key": "pushState",
+   "change": "shadow",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "shadows": "History.prototype.pushState",
+   "effect": "wrap",
+   "wrapEvidence": "own:__original",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-CIAS_ODP.js",
+    "line": 1,
+    "column": 63133
+   }
+  },
+  {
+   "target": "history.replaceState",
+   "holder": "history",
+   "holderKind": "singleton",
+   "interface": "History",
+   "key": "replaceState",
+   "change": "shadow",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "shadows": "History.prototype.replaceState",
+   "effect": "wrap",
+   "wrapEvidence": "own:__original",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-CIAS_ODP.js",
+    "line": 1,
+    "column": 63133
+   }
+  },
+  {
+   "target": "Node.prototype.addEventListener",
+   "holder": "Node.prototype",
+   "holderKind": "prototype",
+   "interface": "Node",
+   "key": "addEventListener",
+   "change": "shadow",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "shadows": "EventTarget.prototype.addEventListener",
+   "effect": "wrap",
+   "wrapEvidence": "own:__original",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-CIAS_ODP.js",
+    "line": 1,
+    "column": 61916
+   }
+  },
+  {
+   "target": "Node.prototype.removeEventListener",
+   "holder": "Node.prototype",
+   "holderKind": "prototype",
+   "interface": "Node",
+   "key": "removeEventListener",
+   "change": "shadow",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "shadows": "EventTarget.prototype.removeEventListener",
+   "effect": "wrap",
+   "wrapEvidence": "own:__original",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-CIAS_ODP.js",
+    "line": 1,
+    "column": 62548
+   }
+  },
+  {
+   "target": "Window.fetch",
+   "holder": "Window",
+   "holderKind": "global",
+   "interface": "Window",
+   "key": "fetch",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "own:__original",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-CIAS_ODP.js",
+    "line": 1,
+    "column": 51880
+   }
+  },
+  {
+   "target": "Window.prototype.addEventListener",
+   "holder": "Window.prototype",
+   "holderKind": "prototype",
+   "interface": "Window",
+   "key": "addEventListener",
+   "change": "shadow",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "shadows": "EventTarget.prototype.addEventListener",
+   "effect": "wrap",
+   "wrapEvidence": "own:__original",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-CIAS_ODP.js",
+    "line": 1,
+    "column": 61916
+   }
+  },
+  {
+   "target": "Window.prototype.removeEventListener",
+   "holder": "Window.prototype",
+   "holderKind": "prototype",
+   "interface": "Window",
+   "key": "removeEventListener",
+   "change": "shadow",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": false,
+    "configurable": true
+   },
+   "shadows": "EventTarget.prototype.removeEventListener",
+   "effect": "wrap",
+   "wrapEvidence": "own:__original",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-CIAS_ODP.js",
+    "line": 1,
+    "column": 62548
+   }
+  },
+  {
+   "target": "XMLHttpRequest.prototype.open",
+   "holder": "XMLHttpRequest.prototype",
+   "holderKind": "prototype",
+   "interface": "XMLHttpRequest",
+   "key": "open",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "own:__original",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-CIAS_ODP.js",
+    "line": 1,
+    "column": 57261
+   }
+  },
+  {
+   "target": "XMLHttpRequest.prototype.send",
+   "holder": "XMLHttpRequest.prototype",
+   "holderKind": "prototype",
+   "interface": "XMLHttpRequest",
+   "key": "send",
+   "change": "value",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "effect": "wrap",
+   "wrapEvidence": "own:__original",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-CIAS_ODP.js",
+    "line": 1,
+    "column": 58298
+   }
+  }
+ ],
+ "expandos": [],
+ "newGlobals": [
+  "[opentelemetry.js.api.1]",
+  "__corpusReady"
+ ],
+ "workers": [],
+ "blockedOrigins": [],
+ "pageErrors": [],
+ "absent": {
+  "run": "event-target",
+  "members": [
+   {
+    "target": "Window.EventTarget",
+    "deleted": true,
+    "snapshotted": true
+   }
+  ]
+ }
+}

@@ -1,0 +1,1035 @@
+[
+ {
+  "name": "restore-local-capture",
+  "kind": "restore",
+  "cell": "local capture",
+  "runtime": {
+   "install": [
+    "XMLHttpRequest.prototype.open|wrap"
+   ],
+   "afterTeardown": [],
+   "pageErrors": []
+  },
+  "resolver": {
+   "findings": [
+    "XMLHttpRequest.prototype.open|wrap"
+   ],
+   "ineffective": [],
+   "restores": [
+    "XMLHttpRequest.prototype.open"
+   ],
+   "restoreSite": {
+    "occurrences": 0,
+    "restoreEntries": 1,
+    "present": true
+   },
+   "errors": []
+  },
+  "fail": {
+   "runtime": [],
+   "expect": [],
+   "vsRuntime": []
+  }
+ },
+ {
+  "name": "restore-closure-capture",
+  "kind": "restore",
+  "cell": "closure capture (rrweb patch)",
+  "runtime": {
+   "install": [
+    "Window.fetch|wrap"
+   ],
+   "afterTeardown": [],
+   "pageErrors": []
+  },
+  "resolver": {
+   "findings": [
+    "Window.fetch|wrap"
+   ],
+   "ineffective": [],
+   "restores": [
+    "Window.fetch"
+   ],
+   "restoreSite": {
+    "occurrences": 0,
+    "restoreEntries": 1,
+    "present": true
+   },
+   "errors": []
+  },
+  "fail": {
+   "runtime": [],
+   "expect": [],
+   "vsRuntime": []
+  }
+ },
+ {
+  "name": "restore-two-level-helper",
+  "kind": "restore",
+  "cell": "parameter through a two-level helper (Datadog instrumentMethod)",
+  "runtime": {
+   "install": [
+    "History.prototype.pushState|wrap"
+   ],
+   "afterTeardown": [],
+   "pageErrors": []
+  },
+  "resolver": {
+   "findings": [
+    "History.prototype.pushState|wrap"
+   ],
+   "ineffective": [],
+   "restores": [
+    "History.prototype.pushState"
+   ],
+   "restoreSite": {
+    "occurrences": 0,
+    "restoreEntries": 1,
+    "present": true
+   },
+   "errors": []
+  },
+  "fail": {
+   "runtime": [],
+   "expect": [],
+   "vsRuntime": []
+  }
+ },
+ {
+  "name": "restore-descriptor-dead-fallback",
+  "kind": "restore",
+  "cell": "descriptor restore with a dead catalog fallback (rrweb hookSetter)",
+  "runtime": {
+   "install": [
+    "HTMLInputElement.prototype.value|descriptor-change"
+   ],
+   "afterTeardown": [],
+   "pageErrors": []
+  },
+  "resolver": {
+   "findings": [
+    "HTMLInputElement.prototype.value|descriptor-change"
+   ],
+   "ineffective": [],
+   "restores": [
+    "HTMLInputElement.prototype.value"
+   ],
+   "restoreSite": {
+    "occurrences": 0,
+    "restoreEntries": 1,
+    "present": true
+   },
+   "errors": []
+  },
+  "fail": {
+   "runtime": [],
+   "expect": [],
+   "vsRuntime": []
+  }
+ },
+ {
+  "name": "restore-identity-guarded",
+  "kind": "restore",
+  "cell": "identity-guarded restore (Datadog, OpenTelemetry)",
+  "runtime": {
+   "install": [
+    "Window.open|wrap"
+   ],
+   "afterTeardown": [],
+   "pageErrors": []
+  },
+  "resolver": {
+   "findings": [
+    "Window.open|wrap"
+   ],
+   "ineffective": [],
+   "restores": [
+    "Window.open"
+   ],
+   "restoreSite": {
+    "occurrences": 0,
+    "restoreEntries": 1,
+    "present": true
+   },
+   "errors": []
+  },
+  "fail": {
+   "runtime": [],
+   "expect": [],
+   "vsRuntime": []
+  }
+ },
+ {
+  "name": "restore-shadow-residue",
+  "kind": "restore",
+  "cell": "shadowing residue (rrweb/PostHog patch(history, …))",
+  "runtime": {
+   "install": [
+    "history.pushState|wrap"
+   ],
+   "afterTeardown": [
+    "history.pushState|shadow"
+   ],
+   "pageErrors": []
+  },
+  "resolver": {
+   "findings": [
+    "history.pushState|wrap"
+   ],
+   "ineffective": [],
+   "restores": [
+    "history.pushState"
+   ],
+   "restoreSite": {
+    "occurrences": 0,
+    "restoreEntries": 1,
+    "present": true
+   },
+   "errors": []
+  },
+  "fail": {
+   "runtime": [],
+   "expect": [],
+   "vsRuntime": []
+  }
+ },
+ {
+  "name": "restore-heap-carried",
+  "kind": "restore",
+  "cell": "heap-carried original (negative)",
+  "runtime": {
+   "install": [
+    "console.log|wrap"
+   ],
+   "afterTeardown": [],
+   "pageErrors": []
+  },
+  "resolver": {
+   "findings": [
+    "console.log|replace",
+    "console.log|wrap"
+   ],
+   "ineffective": [],
+   "restores": [],
+   "restoreSite": {
+    "occurrences": 1,
+    "restoreEntries": 0,
+    "present": true
+   },
+   "errors": []
+  },
+  "fail": {
+   "runtime": [],
+   "expect": [],
+   "vsRuntime": []
+  }
+ },
+ {
+  "name": "ineffective-readonly-assign",
+  "kind": "ineffective",
+  "cell": "readonly × assign",
+  "runtime": {
+   "install": [],
+   "afterTeardown": null,
+   "pageErrors": []
+  },
+  "resolver": {
+   "findings": [],
+   "ineffective": [
+    "Window.top|readonly",
+    "navigator.userAgent|readonly"
+   ],
+   "restores": [],
+   "restoreSite": {
+    "occurrences": 0,
+    "restoreEntries": 0,
+    "present": false
+   },
+   "errors": []
+  },
+  "fail": {
+   "runtime": [],
+   "expect": [],
+   "vsRuntime": []
+  }
+ },
+ {
+  "name": "ineffective-readonly-declare",
+  "kind": "ineffective",
+  "cell": "readonly × declare (var with initializer)",
+  "runtime": {
+   "install": [],
+   "afterTeardown": null,
+   "pageErrors": []
+  },
+  "resolver": {
+   "findings": [
+    "Window.closed|replace"
+   ],
+   "ineffective": [],
+   "restores": [],
+   "restoreSite": {
+    "occurrences": 0,
+    "restoreEntries": 0,
+    "present": false
+   },
+   "errors": []
+  },
+  "fail": {
+   "runtime": [],
+   "expect": [
+    "findings [\"Window.closed|replace\"] ≠ []",
+    "ineffective [] ≠ [\"Window.closed|readonly\"]"
+   ],
+   "vsRuntime": [
+    "finding targets [\"Window.closed\"] ≠ diff targets []",
+    "writes not listed ineffective: Window.closed"
+   ]
+  }
+ },
+ {
+  "name": "ineffective-readonly-declare-unforgeable",
+  "kind": "ineffective",
+  "cell": "readonly × declare, [LegacyUnforgeable] (var top = 1)",
+  "runtime": {
+   "install": [],
+   "afterTeardown": null,
+   "pageErrors": []
+  },
+  "resolver": {
+   "findings": [],
+   "ineffective": [
+    "Window.top|non-configurable"
+   ],
+   "restores": [],
+   "restoreSite": {
+    "occurrences": 0,
+    "restoreEntries": 0,
+    "present": false
+   },
+   "errors": []
+  },
+  "fail": {
+   "runtime": [],
+   "expect": [
+    "ineffective [\"Window.top|non-configurable\"] ≠ [\"Window.top|readonly\"]"
+   ],
+   "vsRuntime": [
+    "reason differs: Window.top|non-configurable"
+   ]
+  }
+ },
+ {
+  "name": "ineffective-lenient-setter-assign",
+  "kind": "ineffective",
+  "cell": "lenient-setter × assign",
+  "runtime": {
+   "install": [],
+   "afterTeardown": null,
+   "pageErrors": []
+  },
+  "resolver": {
+   "findings": [],
+   "ineffective": [],
+   "restores": [],
+   "restoreSite": {
+    "occurrences": 0,
+    "restoreEntries": 0,
+    "present": false
+   },
+   "errors": []
+  },
+  "fail": {
+   "runtime": [],
+   "expect": [
+    "ineffective [] ≠ [\"document.fullscreen|lenient-setter\",\"document.fullscreenEnabled|lenient-setter\"]"
+   ],
+   "vsRuntime": [
+    "writes not listed ineffective: document.fullscreen, document.fullscreenEnabled"
+   ]
+  }
+ },
+ {
+  "name": "ineffective-non-writable-assign",
+  "kind": "ineffective",
+  "cell": "non-writable × assign",
+  "runtime": {
+   "install": [],
+   "afterTeardown": null,
+   "pageErrors": []
+  },
+  "resolver": {
+   "findings": [],
+   "ineffective": [
+    "Array.prototype|non-writable",
+    "Math.PI|non-writable",
+    "Node.ELEMENT_NODE|non-writable"
+   ],
+   "restores": [],
+   "restoreSite": {
+    "occurrences": 0,
+    "restoreEntries": 0,
+    "present": false
+   },
+   "errors": []
+  },
+  "fail": {
+   "runtime": [],
+   "expect": [],
+   "vsRuntime": []
+  }
+ },
+ {
+  "name": "ineffective-non-writable-declare",
+  "kind": "ineffective",
+  "cell": "non-writable × declare (var with initializer)",
+  "runtime": {
+   "install": [],
+   "afterTeardown": null,
+   "pageErrors": []
+  },
+  "resolver": {
+   "findings": [],
+   "ineffective": [
+    "Window.Infinity|non-configurable",
+    "Window.NaN|non-configurable",
+    "Window.undefined|non-configurable"
+   ],
+   "restores": [],
+   "restoreSite": {
+    "occurrences": 0,
+    "restoreEntries": 0,
+    "present": false
+   },
+   "errors": []
+  },
+  "fail": {
+   "runtime": [],
+   "expect": [
+    "ineffective [\"Window.Infinity|non-configurable\",\"Window.NaN|non-configurable\",\"Window.undefined|non-configurable\"] ≠ [\"Window.NaN|non-writable\",\"Window.undefined|non-writable\",\"Window.Infinity|non-writable\"]"
+   ],
+   "vsRuntime": [
+    "reason differs: Window.Infinity|non-configurable, Window.NaN|non-configurable, Window.undefined|non-configurable"
+   ]
+  }
+ },
+ {
+  "name": "ineffective-non-configurable-define",
+  "kind": "ineffective",
+  "cell": "non-configurable × define",
+  "runtime": {
+   "install": [],
+   "afterTeardown": null,
+   "pageErrors": []
+  },
+  "resolver": {
+   "findings": [],
+   "ineffective": [
+    "Math.PI|non-configurable",
+    "Node.ELEMENT_NODE|non-configurable",
+    "Window.document|non-configurable",
+    "Window.top|non-configurable"
+   ],
+   "restores": [],
+   "restoreSite": {
+    "occurrences": 0,
+    "restoreEntries": 0,
+    "present": false
+   },
+   "errors": []
+  },
+  "fail": {
+   "runtime": [],
+   "expect": [],
+   "vsRuntime": []
+  }
+ },
+ {
+  "name": "ineffective-non-configurable-delete",
+  "kind": "ineffective",
+  "cell": "non-configurable × delete",
+  "runtime": {
+   "install": [],
+   "afterTeardown": null,
+   "pageErrors": []
+  },
+  "resolver": {
+   "findings": [],
+   "ineffective": [
+    "Array.prototype|non-configurable",
+    "Math.PI|non-configurable",
+    "Node.ELEMENT_NODE|non-configurable",
+    "Window.document|non-configurable"
+   ],
+   "restores": [],
+   "restoreSite": {
+    "occurrences": 0,
+    "restoreEntries": 0,
+    "present": false
+   },
+   "errors": []
+  },
+  "fail": {
+   "runtime": [],
+   "expect": [],
+   "vsRuntime": []
+  }
+ },
+ {
+  "name": "ineffective-non-configurable-declare",
+  "kind": "ineffective",
+  "cell": "non-configurable × declare (function/let/const/class)",
+  "runtime": {
+   "install": [],
+   "afterTeardown": null,
+   "pageErrors": [
+    "Identifier 'top' has already been declared",
+    "Identifier 'document' has already been declared",
+    "Identifier 'location' has already been declared",
+    "Identifier 'window' has already been declared",
+    "Identifier 'NaN' has already been declared"
+   ]
+  },
+  "resolver": {
+   "findings": [],
+   "ineffective": [
+    "Window.NaN|non-configurable",
+    "Window.document|non-configurable",
+    "Window.location|non-configurable",
+    "Window.top|non-configurable",
+    "Window.window|non-configurable"
+   ],
+   "restores": [],
+   "restoreSite": {
+    "occurrences": 0,
+    "restoreEntries": 0,
+    "present": false
+   },
+   "errors": []
+  },
+  "fail": {
+   "runtime": [],
+   "expect": [],
+   "vsRuntime": []
+  }
+ },
+ {
+  "name": "ineffective-immutable-prototype-setprototypeof",
+  "kind": "ineffective",
+  "cell": "immutable-prototype × setPrototypeOf",
+  "runtime": {
+   "install": [],
+   "afterTeardown": null,
+   "pageErrors": []
+  },
+  "resolver": {
+   "findings": [],
+   "ineffective": [
+    "EventTarget.prototype.[[Prototype]]|immutable-prototype",
+    "Object.prototype.[[Prototype]]|immutable-prototype",
+    "Window.[[Prototype]]|immutable-prototype",
+    "Window.prototype.[[Prototype]]|immutable-prototype"
+   ],
+   "restores": [],
+   "restoreSite": {
+    "occurrences": 0,
+    "restoreEntries": 0,
+    "present": false
+   },
+   "errors": []
+  },
+  "fail": {
+   "runtime": [],
+   "expect": [],
+   "vsRuntime": []
+  }
+ },
+ {
+  "name": "ineffective-immutable-prototype-proto-assign",
+  "kind": "ineffective",
+  "cell": "immutable-prototype × assign to __proto__ (setPrototypeOf through the Object.prototype.__proto__ setter)",
+  "runtime": {
+   "install": [],
+   "afterTeardown": null,
+   "pageErrors": []
+  },
+  "resolver": {
+   "findings": [
+    "Object.prototype.__proto__|add"
+   ],
+   "ineffective": [],
+   "restores": [],
+   "restoreSite": {
+    "occurrences": 0,
+    "restoreEntries": 0,
+    "present": false
+   },
+   "errors": []
+  },
+  "fail": {
+   "runtime": [],
+   "expect": [
+    "findings [\"Object.prototype.__proto__|add\"] ≠ []",
+    "ineffective [] ≠ [\"Window.[[Prototype]]|immutable-prototype\",\"Object.prototype.[[Prototype]]|immutable-prototype\"]"
+   ],
+   "vsRuntime": [
+    "finding targets [\"Object.prototype.__proto__\"] ≠ diff targets []",
+    "writes not listed ineffective: Object.prototype.[[Prototype]], Window.[[Prototype]]"
+   ]
+  }
+ },
+ {
+  "name": "ineffective-immutable-prototype-location",
+  "kind": "ineffective",
+  "cell": "immutable-prototype × setPrototypeOf on Location (HTML [[SetPrototypeOf]])",
+  "runtime": {
+   "install": [],
+   "afterTeardown": null,
+   "pageErrors": []
+  },
+  "resolver": {
+   "findings": [
+    "location.[[Prototype]]|prototype-change"
+   ],
+   "ineffective": [],
+   "restores": [],
+   "restoreSite": {
+    "occurrences": 0,
+    "restoreEntries": 0,
+    "present": false
+   },
+   "errors": []
+  },
+  "fail": {
+   "runtime": [],
+   "expect": [
+    "findings [\"location.[[Prototype]]|prototype-change\"] ≠ []",
+    "ineffective [] ≠ [\"location.[[Prototype]]|immutable-prototype\"]"
+   ],
+   "vsRuntime": [
+    "finding targets [\"location.[[Prototype]]\"] ≠ diff targets []",
+    "writes not listed ineffective: location.[[Prototype]]"
+   ]
+  }
+ },
+ {
+  "name": "ineffective-immutable-prototype-windowproperties",
+  "kind": "ineffective",
+  "cell": "immutable-prototype × setPrototypeOf on WindowProperties",
+  "runtime": {
+   "install": [],
+   "afterTeardown": null,
+   "probe": {
+    "protoUnchanged": true
+   },
+   "pageErrors": []
+  },
+  "resolver": {
+   "findings": [],
+   "ineffective": [
+    "EventTarget.prototype.[[Prototype]]|immutable-prototype"
+   ],
+   "restores": [],
+   "restoreSite": {
+    "occurrences": 0,
+    "restoreEntries": 0,
+    "present": false
+   },
+   "errors": []
+  },
+  "fail": {
+   "runtime": [],
+   "expect": [
+    "ineffective [\"EventTarget.prototype.[[Prototype]]|immutable-prototype\"] ≠ [\"WindowProperties.[[Prototype]]|immutable-prototype\"]"
+   ],
+   "vsRuntime": [
+    "writes not listed ineffective: WindowProperties.[[Prototype]]"
+   ]
+  }
+ },
+ {
+  "name": "ineffective-named-setter-assign",
+  "kind": "ineffective",
+  "cell": "named-setter × assign",
+  "runtime": {
+   "install": [
+    "localStorage.setItem|replace",
+    "sessionStorage.getItem|replace"
+   ],
+   "afterTeardown": null,
+   "pageErrors": []
+  },
+  "resolver": {
+   "findings": [],
+   "ineffective": [
+    "localStorage.setItem|named-setter",
+    "sessionStorage.getItem|named-setter"
+   ],
+   "restores": [],
+   "restoreSite": {
+    "occurrences": 0,
+    "restoreEntries": 0,
+    "present": false
+   },
+   "errors": []
+  },
+  "fail": {
+   "runtime": [
+    "install [\"localStorage.setItem|replace\",\"sessionStorage.getItem|replace\"] ≠ []"
+   ],
+   "expect": [],
+   "vsRuntime": [
+    "finding targets [] ≠ diff targets [\"localStorage.setItem\",\"sessionStorage.getItem\"]"
+   ]
+  }
+ },
+ {
+  "name": "ineffective-named-setter-define",
+  "kind": "ineffective",
+  "cell": "named-setter × define",
+  "runtime": {
+   "install": [
+    "localStorage.setItem|replace"
+   ],
+   "afterTeardown": null,
+   "pageErrors": []
+  },
+  "resolver": {
+   "findings": [],
+   "ineffective": [
+    "localStorage.setItem|named-setter"
+   ],
+   "restores": [],
+   "restoreSite": {
+    "occurrences": 0,
+    "restoreEntries": 0,
+    "present": false
+   },
+   "errors": []
+  },
+  "fail": {
+   "runtime": [
+    "install [\"localStorage.setItem|replace\"] ≠ []"
+   ],
+   "expect": [],
+   "vsRuntime": [
+    "finding targets [] ≠ diff targets [\"localStorage.setItem\"]"
+   ]
+  }
+ },
+ {
+  "name": "ineffective-named-setter-delete",
+  "kind": "ineffective",
+  "cell": "named-setter × delete",
+  "runtime": {
+   "install": [],
+   "afterTeardown": null,
+   "pageErrors": []
+  },
+  "resolver": {
+   "findings": [],
+   "ineffective": [
+    "localStorage.setItem|named-setter"
+   ],
+   "restores": [],
+   "restoreSite": {
+    "occurrences": 0,
+    "restoreEntries": 0,
+    "present": false
+   },
+   "errors": []
+  },
+  "fail": {
+   "runtime": [],
+   "expect": [],
+   "vsRuntime": []
+  }
+ },
+ {
+  "name": "ineffective-named-properties-object-assign",
+  "kind": "ineffective",
+  "cell": "named-properties-object × assign",
+  "runtime": {
+   "install": [],
+   "afterTeardown": null,
+   "probe": {
+    "ownKeysUnchanged": false
+   },
+   "pageErrors": []
+  },
+  "resolver": {
+   "findings": [
+    "EventTarget.prototype.addEventListener|replace"
+   ],
+   "ineffective": [],
+   "restores": [],
+   "restoreSite": {
+    "occurrences": 0,
+    "restoreEntries": 0,
+    "present": false
+   },
+   "errors": []
+  },
+  "fail": {
+   "runtime": [
+    "probe {\"ownKeysUnchanged\":false} ≠ {\"ownKeysUnchanged\":true}"
+   ],
+   "expect": [
+    "findings [\"EventTarget.prototype.addEventListener|replace\"] ≠ []",
+    "ineffective [] ≠ [\"WindowProperties.addEventListener|named-properties-object\"]"
+   ],
+   "vsRuntime": [
+    "finding targets [\"EventTarget.prototype.addEventListener\"] ≠ diff targets []"
+   ]
+  }
+ },
+ {
+  "name": "ineffective-named-properties-object-define",
+  "kind": "ineffective",
+  "cell": "named-properties-object × define",
+  "runtime": {
+   "install": [],
+   "afterTeardown": null,
+   "probe": {
+    "ownKeysUnchanged": false
+   },
+   "pageErrors": []
+  },
+  "resolver": {
+   "findings": [
+    "EventTarget.prototype.addEventListener|replace"
+   ],
+   "ineffective": [],
+   "restores": [],
+   "restoreSite": {
+    "occurrences": 0,
+    "restoreEntries": 0,
+    "present": false
+   },
+   "errors": []
+  },
+  "fail": {
+   "runtime": [
+    "probe {\"ownKeysUnchanged\":false} ≠ {\"ownKeysUnchanged\":true}"
+   ],
+   "expect": [
+    "findings [\"EventTarget.prototype.addEventListener|replace\"] ≠ []",
+    "ineffective [] ≠ [\"WindowProperties.addEventListener|named-properties-object\"]"
+   ],
+   "vsRuntime": [
+    "finding targets [\"EventTarget.prototype.addEventListener\"] ≠ diff targets []"
+   ]
+  }
+ },
+ {
+  "name": "ineffective-named-properties-object-delete",
+  "kind": "ineffective",
+  "cell": "named-properties-object × delete (a named element)",
+  "runtime": {
+   "install": [],
+   "afterTeardown": null,
+   "probe": {
+    "namedStillVisible": true
+   },
+   "pageErrors": []
+  },
+  "resolver": {
+   "findings": [],
+   "ineffective": [],
+   "restores": [],
+   "restoreSite": {
+    "occurrences": 0,
+    "restoreEntries": 0,
+    "present": false
+   },
+   "errors": []
+  },
+  "fail": {
+   "runtime": [],
+   "expect": [
+    "ineffective [] ≠ [\"WindowProperties.corpusNamed|named-properties-object\"]"
+   ],
+   "vsRuntime": [
+    "writes not listed ineffective: WindowProperties.corpusNamed"
+   ]
+  }
+ },
+ {
+  "name": "control-define-configurable-accessor",
+  "kind": "control",
+  "cell": "readonly attribute × define (configurable, so effective)",
+  "runtime": {
+   "install": [
+    "navigator.userAgent|descriptor-change"
+   ],
+   "afterTeardown": null,
+   "pageErrors": []
+  },
+  "resolver": {
+   "findings": [
+    "navigator.userAgent|descriptor-change"
+   ],
+   "ineffective": [],
+   "restores": [],
+   "restoreSite": {
+    "occurrences": 0,
+    "restoreEntries": 0,
+    "present": false
+   },
+   "errors": []
+  },
+  "fail": {
+   "runtime": [],
+   "expect": [],
+   "vsRuntime": []
+  }
+ },
+ {
+  "name": "control-idl-setter",
+  "kind": "control",
+  "cell": "IDL setter × assign (API use)",
+  "runtime": {
+   "install": [],
+   "afterTeardown": null,
+   "pageErrors": []
+  },
+  "resolver": {
+   "findings": [],
+   "ineffective": [],
+   "restores": [],
+   "restoreSite": {
+    "occurrences": 0,
+    "restoreEntries": 0,
+    "present": false
+   },
+   "errors": []
+  },
+  "fail": {
+   "runtime": [],
+   "expect": [],
+   "vsRuntime": []
+  }
+ },
+ {
+  "name": "control-replaceable-assign",
+  "kind": "control",
+  "cell": "[Replaceable] × assign (mutation)",
+  "runtime": {
+   "install": [
+    "Window.length|descriptor-change"
+   ],
+   "afterTeardown": null,
+   "pageErrors": []
+  },
+  "resolver": {
+   "findings": [],
+   "ineffective": [],
+   "restores": [],
+   "restoreSite": {
+    "occurrences": 0,
+    "restoreEntries": 0,
+    "present": false
+   },
+   "errors": []
+  },
+  "fail": {
+   "runtime": [
+    "install [\"Window.length|descriptor-change\"] ≠ [\"Window.length|replace\"]"
+   ],
+   "expect": [
+    "findings [] ≠ [\"Window.length|replace\"]"
+   ],
+   "vsRuntime": [
+    "finding targets [] ≠ diff targets [\"Window.length\"]"
+   ]
+  }
+ },
+ {
+  "name": "control-declare-configurable-global",
+  "kind": "control",
+  "cell": "declare over a configurable global (replace)",
+  "runtime": {
+   "install": [
+    "Window.fetch|descriptor-change"
+   ],
+   "afterTeardown": null,
+   "pageErrors": []
+  },
+  "resolver": {
+   "findings": [
+    "Window.fetch|replace"
+   ],
+   "ineffective": [],
+   "restores": [],
+   "restoreSite": {
+    "occurrences": 0,
+    "restoreEntries": 0,
+    "present": false
+   },
+   "errors": []
+  },
+  "fail": {
+   "runtime": [
+    "install [\"Window.fetch|descriptor-change\"] ≠ [\"Window.fetch|replace\"]"
+   ],
+   "expect": [],
+   "vsRuntime": []
+  }
+ },
+ {
+  "name": "control-named-setter-setprototypeof",
+  "kind": "control",
+  "cell": "named-setter object × setPrototypeOf (prototype-change)",
+  "runtime": {
+   "install": [
+    "localStorage.[[Prototype]]|prototype-change"
+   ],
+   "afterTeardown": null,
+   "pageErrors": []
+  },
+  "resolver": {
+   "findings": [
+    "localStorage.[[Prototype]]|prototype-change"
+   ],
+   "ineffective": [],
+   "restores": [],
+   "restoreSite": {
+    "occurrences": 0,
+    "restoreEntries": 0,
+    "present": false
+   },
+   "errors": []
+  },
+  "fail": {
+   "runtime": [],
+   "expect": [],
+   "vsRuntime": []
+  }
+ },
+ {
+  "name": "control-new-global",
+  "kind": "control",
+  "cell": "new non-native globals (not findings)",
+  "runtime": {
+   "install": [],
+   "afterTeardown": null,
+   "pageErrors": []
+  },
+  "resolver": {
+   "findings": [],
+   "ineffective": [],
+   "restores": [],
+   "restoreSite": {
+    "occurrences": 0,
+    "restoreEntries": 0,
+    "present": false
+   },
+   "errors": []
+  },
+  "fail": {
+   "runtime": [],
+   "expect": [],
+   "vsRuntime": []
+  }
+ }
+]

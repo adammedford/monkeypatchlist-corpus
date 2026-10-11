@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>corpus: newrelic-cdn</title>
+<script>
+window.NREUM || (NREUM = {});
+NREUM.init = { distributed_tracing: { enabled: true }, privacy: { cookies_enabled: true }, ajax: { deny_list: [] } };
+NREUM.loader_config = { accountID: "1", trustKey: "1", agentID: "1", licenseKey: "NRJS-00000000000000000000", applicationID: "1" };
+NREUM.info = { beacon: "bam.example.invalid", errorBeacon: "bam.example.invalid", licenseKey: "NRJS-00000000000000000000", applicationID: "1", sa: 1 };
+</script>
+<script src="https://js-agent.newrelic.com/nr-loader-spa-1.322.0.min.js"></script>
+</head>
+<body>
+<h1>newrelic-cdn</h1>
+<button id="corpus-button" type="button">click</button>
+</body>
+</html>

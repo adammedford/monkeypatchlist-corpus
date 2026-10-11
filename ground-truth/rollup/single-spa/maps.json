@@ -1,0 +1,140 @@
+{
+ "site": "rollup/single-spa/maps",
+ "url": "https://app.corpus.test/index.html",
+ "browser": "chromium 153.0.8010.12",
+ "settleMs": 3000,
+ "snapshot": {
+  "holders": 1962,
+  "descriptors": 15442
+ },
+ "mutations": [
+  {
+   "target": "history.pushState",
+   "holder": "history",
+   "holderKind": "singleton",
+   "interface": "History",
+   "key": "pushState",
+   "change": "shadow",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "shadows": "History.prototype.pushState",
+   "effect": "wrap",
+   "wrapEvidence": "closure:t",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-D6Mx8D3I.js",
+    "line": 1,
+    "column": 9669
+   }
+  },
+  {
+   "target": "history.replaceState",
+   "holder": "history",
+   "holderKind": "singleton",
+   "interface": "History",
+   "key": "replaceState",
+   "change": "shadow",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "shadows": "History.prototype.replaceState",
+   "effect": "wrap",
+   "wrapEvidence": "closure:t",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-D6Mx8D3I.js",
+    "line": 1,
+    "column": 9669
+   }
+  },
+  {
+   "target": "Window.addEventListener",
+   "holder": "Window",
+   "holderKind": "global",
+   "interface": "Window",
+   "key": "addEventListener",
+   "change": "shadow",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "shadows": "EventTarget.prototype.addEventListener",
+   "effect": "wrap",
+   "wrapEvidence": "closure:e",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-D6Mx8D3I.js",
+    "line": 1,
+    "column": 10347
+   }
+  },
+  {
+   "target": "Window.removeEventListener",
+   "holder": "Window",
+   "holderKind": "global",
+   "interface": "Window",
+   "key": "removeEventListener",
+   "change": "shadow",
+   "before": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "after": {
+    "kind": "data",
+    "type": "function",
+    "writable": true,
+    "enumerable": true,
+    "configurable": true
+   },
+   "shadows": "EventTarget.prototype.removeEventListener",
+   "effect": "wrap",
+   "wrapEvidence": "closure:n",
+   "definedAt": {
+    "url": "https://app.corpus.test/main-D6Mx8D3I.js",
+    "line": 1,
+    "column": 10495
+   }
+  }
+ ],
+ "expandos": [],
+ "newGlobals": [
+  "__corpusReady",
+  "singleSpaNavigate"
+ ],
+ "workers": [],
+ "blockedOrigins": [],
+ "pageErrors": []
+}
