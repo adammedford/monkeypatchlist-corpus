@@ -54,7 +54,7 @@ const builders = {
       entryPoints: { main: `apps/${app}/index.js` },
       bundle: true, minify: true, format: 'iife', sourcemap: true, metafile: true,
       entryNames: '[name]-[hash]', outdir: out, define, logLevel: 'error', legalComments: 'none',
-      // No tsconfig.json: esbuild would otherwise read the Patchline repository's, above the corpus, whose `strict`
+      // No tsconfig.json: esbuild would otherwise read the monkeypatchlist repository's, above the corpus, whose `strict`
       // adds "use strict" to every bundle, so the build would no longer reproduce manifest.json.
       tsconfigRaw: {},
     });

@@ -2,7 +2,7 @@
   "name": "patchline-validation-corpus",
   "private": true,
   "type": "module",
-  "description": "Throwaway validation corpus and runtime ground truth for Patchline R0. Not production code.",
+  "description": "Throwaway validation corpus and runtime ground truth for monkeypatchlist R0. Not production code.",
   "scripts": {
     "vendor": "node scripts/vendor.mjs",
     "build": "node scripts/build.mjs",

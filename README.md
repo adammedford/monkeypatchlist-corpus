@@ -1,5 +1,7 @@
 # Validation corpus and runtime ground truth
 
+> The corpus's internal package names (`patchline-validation-corpus`, `patchline-scale-fixture`) predate the product's rename to monkeypatchlist. They are baked into the built bundles and the recorded ground truth, so they are kept.
+
 Throwaway evidence for Validation corpus and runtime ground truth. It exists so R0 precision and recall can be measured. It is not production code.
 
 ## Layout

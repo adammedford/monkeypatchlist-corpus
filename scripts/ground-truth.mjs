@@ -24,7 +24,7 @@ const OUT = args.includes('--out') ? resolve(args[args.indexOf('--out') + 1]) : 
 const ABSENT = args.includes('--absent') ? JSON.parse(await readFile(resolve(args[args.indexOf('--absent') + 1]), 'utf8')) : null;
 const ABSENT_JS = ABSENT ? await readFile(join(HARNESS, 'scripts/absent.js'), 'utf8') : null;
 const CONCURRENCY = 4;
-const KEY = `globalThis[Symbol.for('patchline.corpus')]`;
+const KEY = `globalThis[Symbol.for('monkeypatchlist.corpus')]`;
 const TYPES = { '.html': 'text/html', '.js': 'text/javascript', '.mjs': 'text/javascript', '.map': 'application/json', '.css': 'text/css', '.json': 'application/json', '.wasm': 'application/wasm' };
 
 const vendor = JSON.parse(await readFile(join(ROOT, 'vendor/sources.json'), 'utf8').catch(() => '{}'));

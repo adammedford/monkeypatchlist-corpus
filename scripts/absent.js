@@ -5,7 +5,7 @@
 // `Window.fetch`, `NodeList.prototype.forEach`, `Array.prototype.[Symbol.iterator]`.
 (list) => {
   const R = Reflect;
-  const api = globalThis[Symbol.for('patchline.corpus')];
+  const api = globalThis[Symbol.for('monkeypatchlist.corpus')];
   const keyOf = (s) => { const m = /^\[Symbol\.(\w+)\]$/.exec(s); return m ? Symbol[m[1]] : s; };
   const holderOf = (path) => {
     if (path === 'Window') return globalThis;

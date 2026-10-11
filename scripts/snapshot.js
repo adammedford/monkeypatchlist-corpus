@@ -3,7 +3,7 @@
 // from the global object, and leaves a collector that diffs them after load.
 // It must not modify any native, because libraries feature-detect (toString, descriptors) before patching.
 (() => {
-  const KEY = Symbol.for('patchline.corpus');
+  const KEY = Symbol.for('monkeypatchlist.corpus');
   const R = Reflect;
   const ownKeys = R.ownKeys, gopd = R.getOwnPropertyDescriptor, getProto = R.getPrototypeOf, apply = R.apply;
   const fnToString = Function.prototype.toString;
